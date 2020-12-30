@@ -55,7 +55,8 @@
 				"argsIgnorePattern": "^_"
 			}
 		],
-		"no-console": 1
+		"no-console": 1,
+		"react/require-default-props": 0
 	},
 	"settings": {
 		"import/resolver": {
