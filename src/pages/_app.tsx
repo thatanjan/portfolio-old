@@ -5,6 +5,8 @@ import { ThemeProvider } from '@material-ui/core/styles'
 import CssBaseline from '@material-ui/core/CssBaseline'
 import theme from 'themes/theme'
 
+import PageLayout from 'components/PageLayout/PageLayout'
+
 export default function MyApp(props: AppProps) {
 	const { Component, pageProps } = props
 
@@ -26,7 +28,9 @@ export default function MyApp(props: AppProps) {
 			</Head>
 			<ThemeProvider theme={theme}>
 				<CssBaseline />
-				<Component {...pageProps} />
+				<PageLayout>
+					<Component {...pageProps} />
+				</PageLayout>
 			</ThemeProvider>
 		</>
 	)
