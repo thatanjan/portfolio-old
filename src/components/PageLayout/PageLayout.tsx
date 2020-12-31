@@ -6,12 +6,13 @@ import { makeStyles } from '@material-ui/core/styles'
 import useLargerThanMD from 'hooks/useLargerThanMD'
 
 import Navigation from 'components/Navigation/Navigation'
+import AppHeader from 'components/AppHeader/AppHeader'
 
 interface Props {
 	children?: ReactNode
 }
 
-const useStyles = makeStyles({
+const useStyles = makeStyles(theme => ({
 	paperWrapper: {
 		maxHeight: '100vh',
 		maxWidth: '100vw',
@@ -27,8 +28,23 @@ const useStyles = makeStyles({
 	},
 	container: {
 		flexWrap: 'nowrap',
+		maxWidth: '100vw',
+		position: 'relative',
+		top: theme.mixins.toolbar.minHeight,
+		[theme.breakpoints.up('xs')]: {
+			top:
+				theme.mixins.toolbar['@media (min-width:0px) and (orientation: landscape)']
+					.minHeight,
+		},
+		[theme.breakpoints.up('xs')]: {
+			top: theme.mixins.toolbar.minHeight,
+		},
+		[theme.breakpoints.up('sm')]: {
+			top: theme.mixins.toolbar['@media (min-width:600px)'].minHeight,
+		},
 	},
-})
+	paperStyle: {},
+}))
 
 const PageLayout = ({ children }: Props) => {
 	const { background1, background2, container, paperWrapper } = useStyles()
@@ -38,6 +54,7 @@ const PageLayout = ({ children }: Props) => {
 	return (
 		<>
 			<Paper className={paperWrapper}>
+				<AppHeader />
 				<Grid container className={container}>
 					<Grid item className={background1}>
 						{children}
