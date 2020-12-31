@@ -1,7 +1,8 @@
 import React, { ReactNode } from 'react'
 import Grid from '@material-ui/core/Grid'
 import Paper from '@material-ui/core/Paper'
-import { makeStyles } from '@material-ui/core/styles'
+import { makeStyles, useTheme } from '@material-ui/core/styles'
+import useMediaQuery from '@material-ui/core/useMediaQuery'
 
 import Navigation from 'components/Navigation/Navigation'
 
@@ -30,6 +31,10 @@ const useStyles = makeStyles({
 
 const PageLayout = ({ children }: Props) => {
 	const { background1, background2, container, paperWrapper } = useStyles()
+
+	const theme = useTheme()
+	const matches = useMediaQuery(theme.breakpoints.up('md'))
+
 	return (
 		<>
 			<Paper className={paperWrapper}>
@@ -37,7 +42,8 @@ const PageLayout = ({ children }: Props) => {
 					<Grid item className={background1}>
 						{children}
 					</Grid>
-					<Grid item className={background2} />
+
+					{matches && <Grid item className={background2} />}
 				</Grid>
 				<Navigation />
 			</Paper>
