@@ -3,7 +3,8 @@ import Grid from '@material-ui/core/Grid'
 import Paper from '@material-ui/core/Paper'
 import { makeStyles } from '@material-ui/core/styles'
 
-import useLargerThanMd from 'hooks/useLargerThanMd'
+import useLargerThanMD from 'hooks/useLargerThanMD'
+
 import Navigation from 'components/Navigation/Navigation'
 
 interface Props {
@@ -32,7 +33,7 @@ const useStyles = makeStyles({
 const PageLayout = ({ children }: Props) => {
 	const { background1, background2, container, paperWrapper } = useStyles()
 
-	const matches = useLargerThanMd()
+	const matches = useLargerThanMD()
 
 	return (
 		<>
