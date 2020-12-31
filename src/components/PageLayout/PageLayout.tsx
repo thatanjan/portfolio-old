@@ -1,9 +1,9 @@
 import React, { ReactNode } from 'react'
 import Grid from '@material-ui/core/Grid'
 import Paper from '@material-ui/core/Paper'
-import { makeStyles, useTheme } from '@material-ui/core/styles'
-import useMediaQuery from '@material-ui/core/useMediaQuery'
+import { makeStyles } from '@material-ui/core/styles'
 
+import useLargerThanMd from 'hooks/useLargerThanMd'
 import Navigation from 'components/Navigation/Navigation'
 
 interface Props {
@@ -32,8 +32,7 @@ const useStyles = makeStyles({
 const PageLayout = ({ children }: Props) => {
 	const { background1, background2, container, paperWrapper } = useStyles()
 
-	const theme = useTheme()
-	const matches = useMediaQuery(theme.breakpoints.up('md'))
+	const matches = useLargerThanMd()
 
 	return (
 		<>
