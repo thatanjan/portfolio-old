@@ -7,7 +7,7 @@ import { makeStyles } from '@material-ui/core/styles'
 import Navigation from 'components/Navigation/Navigation'
 
 interface Props {
-	Content?: ReactNode
+	children?: ReactNode
 }
 
 const useStyles = makeStyles({
@@ -24,7 +24,7 @@ const useStyles = makeStyles({
 	},
 })
 
-const PageLayout = ({ Content }: Props) => {
+const PageLayout = ({ children }: Props) => {
 	const { background1, background2, container } = useStyles()
 	return (
 		<>
@@ -35,10 +35,10 @@ const PageLayout = ({ Content }: Props) => {
 
 			<Paper>
 				<Grid container className={container}>
-					<Grid item className={background1} />
-					<Grid item className={background2}>
-						{Content}
+					<Grid item className={background1}>
+						{children}
 					</Grid>
+					<Grid item className={background2} />
 				</Grid>
 				<Navigation />
 			</Paper>
