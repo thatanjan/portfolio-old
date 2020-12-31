@@ -1,4 +1,3 @@
-import Head from 'next/head'
 import React, { ReactNode } from 'react'
 import Grid from '@material-ui/core/Grid'
 import Paper from '@material-ui/core/Paper'
@@ -11,6 +10,11 @@ interface Props {
 }
 
 const useStyles = makeStyles({
+	paperWrapper: {
+		maxHeight: '100vh',
+		maxWidth: '100vw',
+		overflow: 'hidden',
+	},
 	background1: {
 		width: '60vw',
 		height: '100vh',
@@ -25,15 +29,10 @@ const useStyles = makeStyles({
 })
 
 const PageLayout = ({ children }: Props) => {
-	const { background1, background2, container } = useStyles()
+	const { background1, background2, container, paperWrapper } = useStyles()
 	return (
 		<>
-			<Head>
-				<title>Create Next App</title>
-				<link rel='icon' href='/favicon.ico' />
-			</Head>
-
-			<Paper>
+			<Paper className={paperWrapper}>
 				<Grid container className={container}>
 					<Grid item className={background1}>
 						{children}
