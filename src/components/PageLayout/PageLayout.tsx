@@ -4,6 +4,8 @@ import Grid from '@material-ui/core/Grid'
 import Paper from '@material-ui/core/Paper'
 import { makeStyles } from '@material-ui/core/styles'
 
+import Navigation from 'components/Navigation/Navigation'
+
 interface Props {
 	Content?: ReactNode
 }
@@ -38,6 +40,7 @@ const PageLayout = ({ Content }: Props) => {
 						{Content}
 					</Grid>
 				</Grid>
+				<Navigation />
 			</Paper>
 		</>
 	)
