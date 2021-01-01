@@ -7,6 +7,7 @@ import { nanoid } from 'nanoid'
 import navigationOptions, {
 	Option,
 } from 'components/Navigation/navigationOptions'
+import useLargerThanMD from 'hooks/useLargerThanMD'
 
 function a11yProps(index: number) {
 	return {
@@ -18,10 +19,11 @@ function a11yProps(index: number) {
 const FullWidthTabs = () => {
 	const [value, setValue] = React.useState(0)
 
+	const largerThanMD = useLargerThanMD()
+
 	const handleChange = (_: React.ChangeEvent<{}>, newValue: number) => {
 		setValue(newValue)
 	}
-
 	return (
 		<Tabs
 			value={value}
@@ -30,7 +32,7 @@ const FullWidthTabs = () => {
 			textColor='primary'
 			variant='fullWidth'
 			aria-label='full width tabs example'
-			orientation='horizontal'
+			orientation={!largerThanMD ? 'vertical' : 'horizontal'}
 		>
 			{navigationOptions.map(({ href, label }: Option, index: number) => (
 				<Link
