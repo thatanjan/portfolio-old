@@ -1,4 +1,5 @@
 import React from 'react'
+import { makeStyles, Theme } from '@material-ui/core/styles'
 import Tabs from '@material-ui/core/Tabs'
 import Tab from '@material-ui/core/Tab'
 import Link from 'components/Links/MuiLink'
@@ -16,8 +17,14 @@ function a11yProps(index: number) {
 	}
 }
 
+const useStyles = makeStyles(({ breakpoints: { up } }: Theme) => ({
+	tabsStyle: { width: '70vw', [up('md')]: { width: '100vw' } },
+}))
+
 const FullWidthTabs = () => {
 	const [value, setValue] = React.useState(0)
+
+	const { tabsStyle } = useStyles()
 
 	const largerThanMD = useLargerThanMD()
 
@@ -33,6 +40,7 @@ const FullWidthTabs = () => {
 			variant='fullWidth'
 			aria-label='full width tabs example'
 			orientation={!largerThanMD ? 'vertical' : 'horizontal'}
+			className={tabsStyle}
 		>
 			{navigationOptions.map(({ href, label }: Option, index: number) => (
 				<Link
