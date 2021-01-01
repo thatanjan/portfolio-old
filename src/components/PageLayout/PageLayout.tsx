@@ -41,7 +41,7 @@ const PageLayout = ({ children }: Props) => {
 		wholeGridContainer,
 	} = useStyles()
 
-	const matches = useLargerThanMD()
+	const largerThanMD = useLargerThanMD()
 
 	return (
 		<>
@@ -56,12 +56,14 @@ const PageLayout = ({ children }: Props) => {
 							{children}
 						</Grid>
 
-						{matches && <Grid item className={background2} />}
+						{largerThanMD && <Grid item className={background2} />}
 					</Grid>
 
-					<Grid item>
-						<Navigation />
-					</Grid>
+					{largerThanMD && (
+						<Grid item>
+							<Navigation />
+						</Grid>
+					)}
 				</Grid>
 			</Paper>
 		</>
