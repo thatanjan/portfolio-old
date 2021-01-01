@@ -19,7 +19,7 @@ const NextComposed = React.forwardRef(function NextComposed(
 
 interface Props {
 	MuiComponent: Function
-	href: string
+	href: string | any
 	[key: string]: any
 }
 
