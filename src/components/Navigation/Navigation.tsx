@@ -1,5 +1,4 @@
 import React from 'react'
-import clsx from 'clsx'
 import { makeStyles, Theme } from '@material-ui/core/styles'
 import AppBar from '@material-ui/core/AppBar'
 import Tabs from '@material-ui/core/Tabs'
@@ -21,18 +20,10 @@ const useStyles = makeStyles((theme: Theme) => ({
 		backgroundColor: theme.palette.background.paper,
 		width: '100vw',
 	},
-	appBarStyle: {
-		bottom: 0,
-		top: 'initial',
-		height: '10vh',
-	},
-	tabsStyle: {
-		height: 'inherit',
-	},
 }))
 
 export default function FullWidthTabs() {
-	const { root, appBarStyle, tabsStyle } = useStyles()
+	const { root } = useStyles()
 
 	const [value, setValue] = React.useState(0)
 
@@ -41,9 +32,8 @@ export default function FullWidthTabs() {
 	}
 
 	return (
-		<AppBar className={clsx(root, appBarStyle)} position='static' color='default'>
+		<AppBar className={root} position='static' color='default'>
 			<Tabs
-				className={tabsStyle}
 				value={value}
 				indicatorColor='primary'
 				onChange={handleChange}

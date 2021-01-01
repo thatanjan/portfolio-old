@@ -7,19 +7,15 @@ import Typography from '@material-ui/core/Typography'
 const useStyles = makeStyles({
 	root: {
 		width: '100vw',
-		height: '10vh',
-	},
-	toolbarStyle: {
-		height: 'inherit',
 	},
 })
 
 export default function ButtonAppBar() {
-	const { root, toolbarStyle } = useStyles()
+	const { root } = useStyles()
 
 	return (
 		<AppBar className={root} position='static' color='transparent'>
-			<Toolbar className={toolbarStyle}>
+			<Toolbar>
 				<Typography variant='h6'>Anjan</Typography>
 			</Toolbar>
 		</AppBar>

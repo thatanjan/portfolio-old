@@ -20,41 +20,23 @@ const useStyles = makeStyles(theme => ({
 	},
 	background1: {
 		width: '60vw',
-		// height: '100vh',
 	},
 	background2: {
 		width: '40vw',
-		// height: '100vh',
 	},
-	container: {
-		flexWrap: 'nowrap',
+	contentContainerStyle: {
 		maxWidth: '100vw',
 		position: 'relative',
-		// top: theme.mixins.toolbar.minHeight,
-		// [theme.breakpoints.up('xs')]: {
-		// 	top:
-		// 		theme.mixins.toolbar['@media (min-width:0px) and (orientation: landscape)']
-		// 			.minHeight,
-		// },
-		// [theme.breakpoints.up('xs')]: {
-		// 	top: theme.mixins.toolbar.minHeight,
-		// },
-		// [theme.breakpoints.up('sm')]: {
-		// 	top: theme.mixins.toolbar['@media (min-width:600px)'].minHeight,
-		// },
+		flexGrow: 1,
 	},
-	wholeGridContainer: { height: '100vh' },
-	navigation: {
-		height: '10vh',
-	},
+	wholeGridContainer: { height: '100vh', flexDirection: 'column' },
 }))
 
 const PageLayout = ({ children }: Props) => {
 	const {
-		navigation,
 		background1,
 		background2,
-		container,
+		contentContainerStyle,
 		paperWrapper,
 		wholeGridContainer,
 	} = useStyles()
@@ -69,7 +51,7 @@ const PageLayout = ({ children }: Props) => {
 						<AppHeader />
 					</Grid>
 
-					<Grid item container className={container}>
+					<Grid item container className={contentContainerStyle}>
 						<Grid item className={background1}>
 							{children}
 						</Grid>
@@ -77,7 +59,7 @@ const PageLayout = ({ children }: Props) => {
 						{matches && <Grid item className={background2} />}
 					</Grid>
 
-					<Grid item className={navigation}>
+					<Grid item>
 						<Navigation />
 					</Grid>
 				</Grid>
