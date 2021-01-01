@@ -6,25 +6,22 @@ import Typography from '@material-ui/core/Typography'
 
 const useStyles = makeStyles({
 	root: {
-		flexGrow: 1,
+		width: '100vw',
+		height: '10vh',
 	},
-	title: {
-		flexGrow: 1,
+	toolbarStyle: {
+		height: 'inherit',
 	},
 })
 
 export default function ButtonAppBar() {
-	const { root, title } = useStyles()
+	const { root, toolbarStyle } = useStyles()
 
 	return (
-		<div className={root}>
-			<AppBar position='fixed' color='transparent'>
-				<Toolbar>
-					<Typography variant='h6' className={title}>
-						Anjan
-					</Typography>
-				</Toolbar>
-			</AppBar>
-		</div>
+		<AppBar className={root} position='static' color='transparent'>
+			<Toolbar className={toolbarStyle}>
+				<Typography variant='h6'>Anjan</Typography>
+			</Toolbar>
+		</AppBar>
 	)
 }

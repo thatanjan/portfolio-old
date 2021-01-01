@@ -20,49 +20,67 @@ const useStyles = makeStyles(theme => ({
 	},
 	background1: {
 		width: '60vw',
-		height: '100vh',
+		// height: '100vh',
 	},
 	background2: {
 		width: '40vw',
-		height: '100vh',
+		// height: '100vh',
 	},
 	container: {
 		flexWrap: 'nowrap',
 		maxWidth: '100vw',
 		position: 'relative',
-		top: theme.mixins.toolbar.minHeight,
-		[theme.breakpoints.up('xs')]: {
-			top:
-				theme.mixins.toolbar['@media (min-width:0px) and (orientation: landscape)']
-					.minHeight,
-		},
-		[theme.breakpoints.up('xs')]: {
-			top: theme.mixins.toolbar.minHeight,
-		},
-		[theme.breakpoints.up('sm')]: {
-			top: theme.mixins.toolbar['@media (min-width:600px)'].minHeight,
-		},
+		// top: theme.mixins.toolbar.minHeight,
+		// [theme.breakpoints.up('xs')]: {
+		// 	top:
+		// 		theme.mixins.toolbar['@media (min-width:0px) and (orientation: landscape)']
+		// 			.minHeight,
+		// },
+		// [theme.breakpoints.up('xs')]: {
+		// 	top: theme.mixins.toolbar.minHeight,
+		// },
+		// [theme.breakpoints.up('sm')]: {
+		// 	top: theme.mixins.toolbar['@media (min-width:600px)'].minHeight,
+		// },
 	},
-	paperStyle: {},
+	wholeGridContainer: { height: '100vh' },
+	navigation: {
+		height: '10vh',
+	},
 }))
 
 const PageLayout = ({ children }: Props) => {
-	const { background1, background2, container, paperWrapper } = useStyles()
+	const {
+		navigation,
+		background1,
+		background2,
+		container,
+		paperWrapper,
+		wholeGridContainer,
+	} = useStyles()
 
 	const matches = useLargerThanMD()
 
 	return (
 		<>
 			<Paper className={paperWrapper}>
-				<AppHeader />
-				<Grid container className={container}>
-					<Grid item className={background1}>
-						{children}
+				<Grid container className={wholeGridContainer}>
+					<Grid item>
+						<AppHeader />
 					</Grid>
 
-					{matches && <Grid item className={background2} />}
+					<Grid item container className={container}>
+						<Grid item className={background1}>
+							{children}
+						</Grid>
+
+						{matches && <Grid item className={background2} />}
+					</Grid>
+
+					<Grid item className={navigation}>
+						<Navigation />
+					</Grid>
 				</Grid>
-				<Navigation />
 			</Paper>
 		</>
 	)
