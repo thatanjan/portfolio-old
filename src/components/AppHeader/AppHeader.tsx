@@ -1,22 +1,35 @@
 import React from 'react'
-import { makeStyles } from '@material-ui/core/styles'
+import { makeStyles, Theme } from '@material-ui/core/styles'
 import AppBar from '@material-ui/core/AppBar'
 import Toolbar from '@material-ui/core/Toolbar'
 import Typography from '@material-ui/core/Typography'
 
-const useStyles = makeStyles({
+import MenuIcon from 'components/Menu/MenuIcon'
+
+const useStyles = makeStyles((theme: Theme) => ({
 	root: {
 		width: '100vw',
+		flexGrow: 1,
 	},
-})
+	toolbarStyle: {
+		justifyContent: 'space-between',
+	},
+	titleStyle: {
+		marginLeft: theme.spacing(2),
+	},
+}))
 
 export default function ButtonAppBar() {
-	const { root } = useStyles()
+	const { root, titleStyle, toolbarStyle } = useStyles()
 
 	return (
 		<AppBar className={root} position='static' color='transparent'>
-			<Toolbar>
-				<Typography variant='h6'>Anjan</Typography>
+			<Toolbar className={toolbarStyle}>
+				<Typography className={titleStyle} variant='h6'>
+					Anjan
+				</Typography>
+
+				<MenuIcon />
 			</Toolbar>
 		</AppBar>
 	)
