@@ -5,7 +5,7 @@ import { makeStyles } from '@material-ui/core/styles'
 
 import useLargerThanMD from 'hooks/useLargerThanMD'
 
-import Navigation from 'components/Navigation/Navigation'
+import BottomNavigation from 'components/Navigation/BottomNavigation'
 import AppHeader from 'components/AppHeader/AppHeader'
 
 interface Props {
@@ -61,7 +61,7 @@ const PageLayout = ({ children }: Props) => {
 
 					{largerThanMD && (
 						<Grid item>
-							<Navigation />
+							<BottomNavigation />
 						</Grid>
 					)}
 				</Grid>
