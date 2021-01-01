@@ -1,4 +1,5 @@
 import React from 'react'
+import clsx from 'clsx'
 import { makeStyles, Theme } from '@material-ui/core/styles'
 import AppBar from '@material-ui/core/AppBar'
 import Tabs from '@material-ui/core/Tabs'
@@ -23,11 +24,15 @@ const useStyles = makeStyles((theme: Theme) => ({
 	appBarStyle: {
 		bottom: 0,
 		top: 'initial',
+		height: '10vh',
+	},
+	tabsStyle: {
+		height: 'inherit',
 	},
 }))
 
 export default function FullWidthTabs() {
-	const { root, appBarStyle } = useStyles()
+	const { root, appBarStyle, tabsStyle } = useStyles()
 
 	const [value, setValue] = React.useState(0)
 
@@ -36,28 +41,27 @@ export default function FullWidthTabs() {
 	}
 
 	return (
-		<div className={root}>
-			<AppBar className={appBarStyle} position='fixed' color='default'>
-				<Tabs
-					value={value}
-					indicatorColor='primary'
-					onChange={handleChange}
-					textColor='primary'
-					variant='fullWidth'
-					aria-label='full width tabs example'
-					orientation='horizontal'
-				>
-					{navigationOptions.map(({ href, label }: Option, index: number) => (
-						<Link
-							key={nanoid()}
-							href={href}
-							MuiComponent={Tab}
-							label={label}
-							{...a11yProps(index)}
-						/>
-					))}
-				</Tabs>
-			</AppBar>
-		</div>
+		<AppBar className={clsx(root, appBarStyle)} position='static' color='default'>
+			<Tabs
+				className={tabsStyle}
+				value={value}
+				indicatorColor='primary'
+				onChange={handleChange}
+				textColor='primary'
+				variant='fullWidth'
+				aria-label='full width tabs example'
+				orientation='horizontal'
+			>
+				{navigationOptions.map(({ href, label }: Option, index: number) => (
+					<Link
+						key={nanoid()}
+						href={href}
+						MuiComponent={Tab}
+						label={label}
+						{...a11yProps(index)}
+					/>
+				))}
+			</Tabs>
+		</AppBar>
 	)
 }
