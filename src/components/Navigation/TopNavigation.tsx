@@ -32,6 +32,7 @@ const TopNavigation = () => {
 				open={isDrawerOpen}
 				onClose={toggleDrawer(false)}
 				onOpen={toggleDrawer(true)}
+				elevation={0}
 			>
 				<FullWidthTabs />
 			</SwipeableDrawer>
