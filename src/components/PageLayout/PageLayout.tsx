@@ -20,6 +20,7 @@ const useStyles = makeStyles(theme => ({
 	},
 	background1: {
 		width: '60vw',
+		flexGrow: 1,
 	},
 	background2: {
 		width: '40vw',
