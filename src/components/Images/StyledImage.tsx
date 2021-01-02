@@ -13,6 +13,7 @@ const StyledImage = ({ styleClass }: Props) => {
 			height={0}
 			width={0}
 			layout='responsive'
+			objectFit='cover'
 		/>
 	)
 }
