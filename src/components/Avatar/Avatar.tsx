@@ -11,7 +11,7 @@ const useStyles = makeStyles({
 	},
 	avatarContainer: {
 		width: '30vw',
-		margin: '10% auto',
+		margin: '2rem auto',
 	},
 })
 
