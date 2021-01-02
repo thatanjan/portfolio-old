@@ -7,6 +7,7 @@ import useLargerThanMD from 'hooks/useLargerThanMD'
 
 import BottomNavigation from 'components/Navigation/BottomNavigation'
 import AppHeader from 'components/AppHeader/AppHeader'
+import LayoutImage from 'components/PageLayout/LayoutImage'
 
 interface Props {
 	children?: ReactNode
@@ -24,6 +25,9 @@ const useStyles = makeStyles(theme => ({
 	},
 	background2: {
 		width: '40vw',
+		display: 'grid',
+		alignItems: 'end',
+		justifyItems: 'center',
 	},
 	contentContainerStyle: {
 		maxWidth: '100vw',
@@ -57,7 +61,11 @@ const PageLayout = ({ children }: Props) => {
 							{children}
 						</Grid>
 
-						{largerThanMD && <Grid item className={background2} />}
+						{largerThanMD && (
+							<Grid item className={background2}>
+								<LayoutImage />
+							</Grid>
+						)}
 					</Grid>
 
 					{largerThanMD && (
