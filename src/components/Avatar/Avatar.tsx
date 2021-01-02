@@ -1,6 +1,7 @@
 import React from 'react'
-import Image from 'next/image'
 import { makeStyles } from '@material-ui/core/styles'
+
+import StyledImage from 'components/Images/StyledImage'
 
 const useStyles = makeStyles({
 	smallSize: {
@@ -8,26 +9,19 @@ const useStyles = makeStyles({
 		overflow: 'hidden',
 		objectFit: 'cover',
 	},
-	smallAvatarContainer: {
+	avatarContainer: {
 		width: '30vw',
 		margin: '10% auto',
 	},
 })
 
 const Avatar = () => {
-	const { smallSize, smallAvatarContainer } = useStyles()
+	const { smallSize, avatarContainer } = useStyles()
 	return (
 		<>
-			<div className={smallAvatarContainer}>
-				<Image
-					className={smallSize}
-					src='/ww.jpg'
-					height={0}
-					width={0}
-					layout='responsive'
-				/>
+			<div className={avatarContainer}>
+				<StyledImage styleClass={smallSize} />
 			</div>
-			<h1>hello world</h1>
 		</>
 	)
 }
