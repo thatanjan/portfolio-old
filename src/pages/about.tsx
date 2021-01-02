@@ -1,10 +1,15 @@
 import Avatar from 'components/Avatar/Avatar'
 import useLargerThanMD from 'hooks/useLargerThanMD'
+import AboutMe from 'components/AboutMe/AboutMe'
 
 const About = () => {
 	const largerThanMD = useLargerThanMD()
 
-	return <div>{!largerThanMD && <Avatar />}</div>
+	return (
+		<>
+			{!largerThanMD && <Avatar />} <AboutMe />{' '}
+		</>
+	)
 }
 
 export default About
