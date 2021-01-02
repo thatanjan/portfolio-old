@@ -13,6 +13,12 @@ const work: Option = new Option('work')
 
 const about: Option = new Option('about')
 
-const navigationOptions: Option[] = [work, about]
+const blog: Option = new Option('blog')
+
+const services: Option = new Option('services')
+
+const contact: Option = new Option('contact')
+
+const navigationOptions: Option[] = [work, about, blog, services, contact]
 
 export default navigationOptions
