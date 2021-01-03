@@ -4,7 +4,7 @@ export class Option {
 	label: string
 
 	constructor(name: string) {
-		this.href = `/${name}`
+		this.href = name === 'about' ? '/' : `/${name}`
 		this.label = name
 	}
 }
