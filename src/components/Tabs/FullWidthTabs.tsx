@@ -22,7 +22,11 @@ const useStyles = makeStyles(({ breakpoints: { up } }: Theme) => ({
 	tabsStyle: { width: '70vw', [up('md')]: { width: '100vw' } },
 }))
 
-const FullWidthTabs = () => {
+interface Props {
+	setIsDrawerOpen?: Function | undefined
+}
+
+const FullWidthTabs = ({ setIsDrawerOpen }: Props) => {
 	const [value, setValue] = React.useState(0)
 
 	const { tabsStyle } = useStyles()
@@ -39,9 +43,12 @@ const FullWidthTabs = () => {
 		setValue(tabIndex)
 	}, [pathname])
 
+	const handleClick = () => (setIsDrawerOpen ? setIsDrawerOpen(false) : null)
+
 	return (
 		<Tabs
 			value={value}
+			onClick={handleClick}
 			indicatorColor='primary'
 			textColor='primary'
 			variant='fullWidth'
