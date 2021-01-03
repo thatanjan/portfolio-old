@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { makeStyles, Theme } from '@material-ui/core/styles'
 import Tabs from '@material-ui/core/Tabs'
 import Tab from '@material-ui/core/Tab'
 import Link from 'components/Links/MuiLink'
 import { nanoid } from 'nanoid'
+import { useRouter } from 'next/router'
 
 import navigationOptions, {
 	Option,
@@ -28,14 +29,20 @@ const FullWidthTabs = () => {
 
 	const largerThanMD = useLargerThanMD()
 
-	const handleChange = (_: React.ChangeEvent<{}>, newValue: number) => {
-		setValue(newValue)
-	}
+	const { pathname } = useRouter()
+
+	useEffect(() => {
+		const tabIndex = navigationOptions.findIndex(
+			({ href }: Option) => href === pathname
+		)
+
+		setValue(tabIndex)
+	}, [pathname])
+
 	return (
 		<Tabs
 			value={value}
 			indicatorColor='primary'
-			onChange={handleChange}
 			textColor='primary'
 			variant='fullWidth'
 			aria-label='full width tabs example'
