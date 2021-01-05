@@ -21,7 +21,9 @@ const useStyles = makeStyles(theme => ({
 	},
 	background1: {
 		width: '60vw',
-		flexGrow: 1,
+		flex: '1 1 auto',
+		overflowY: 'auto',
+		height: '100%',
 	},
 	background2: {
 		width: '40vw',
@@ -32,9 +34,14 @@ const useStyles = makeStyles(theme => ({
 	contentContainerStyle: {
 		maxWidth: '100vw',
 		position: 'relative',
-		flexGrow: 1,
+		flex: '1 1 auto',
+		height: '0%',
 	},
-	wholeGridContainer: { height: '100vh', flexDirection: 'column' },
+	wholeGridContainer: {
+		height: '100vh',
+		flexDirection: 'column',
+		maxWidth: '100vw',
+	},
 }))
 
 const PageLayout = ({ children }: Props) => {
@@ -60,7 +67,6 @@ const PageLayout = ({ children }: Props) => {
 						<Grid item className={background1}>
 							{children}
 						</Grid>
-
 						{largerThanMD && (
 							<Grid item className={background2}>
 								<LayoutImage />
