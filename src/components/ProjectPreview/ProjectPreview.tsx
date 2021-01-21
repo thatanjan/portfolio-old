@@ -14,7 +14,7 @@ interface Props {
 const useStyles = makeStyles({
 	imageStyle: {},
 	boxStyle: {
-		margin: '0 auto',
+		margin: '5% auto',
 		width: '80%',
 		'& :first-child': {
 			'& :first-child': {
@@ -24,6 +24,7 @@ const useStyles = makeStyles({
 	},
 
 	titleGridContainer: {
+		padding: '0 10%',
 		'& > .MuiGrid-item': {
 			flexBasis: '100%',
 		},
