@@ -41,10 +41,10 @@ const ProjectPreview = ({ title, subtitle }: Props) => {
 
 			<Grid container className={titleGridContainer}>
 				<Grid item>
-					<Typography>{title}</Typography>
+					<Typography variant='h3'>{title}</Typography>
 				</Grid>
 				<Grid item>
-					<Typography>{subtitle}</Typography>
+					<Typography variant='h5'>{subtitle}</Typography>
 				</Grid>
 			</Grid>
 		</>
