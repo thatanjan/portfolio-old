@@ -1,14 +1,23 @@
 import React from 'react'
 import Typography from '@material-ui/core/Typography'
+import Box from '@material-ui/core/Box'
+import { makeStyles } from '@material-ui/core/styles'
 
-interface Props {}
+import Summary from './Summary'
 
-const AboutMe = (props: Props) => {
+const useStyles = makeStyles({ containerStyle: { padding: '5%' } })
+
+const AboutMe = () => {
+	const { containerStyle } = useStyles()
+
 	return (
 		<>
-			<Typography component='h3' variant='h3'>
-				Hey there, My name is Anjan
-			</Typography>
+			<Box className={containerStyle}>
+				<Typography component='h3' variant='h3'>
+					Hey there, My name is Anjan
+				</Typography>
+				<Summary />
+			</Box>
 		</>
 	)
 }
