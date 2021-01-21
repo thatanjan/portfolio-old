@@ -22,10 +22,16 @@ const useStyles = makeStyles({
 			},
 		},
 	},
+
+	titleGridContainer: {
+		'& > .MuiGrid-item': {
+			flexBasis: '100%',
+		},
+	},
 })
 
 const ProjectPreview = ({ title, subtitle }: Props) => {
-	const { imageStyle, boxStyle } = useStyles()
+	const { imageStyle, boxStyle, titleGridContainer } = useStyles()
 
 	return (
 		<>
@@ -33,8 +39,8 @@ const ProjectPreview = ({ title, subtitle }: Props) => {
 				<StyledImage styleClass={imageStyle} />
 			</Box>
 
-			<Grid container>
-				<Grid item lg={12}>
+			<Grid container className={titleGridContainer}>
+				<Grid item>
 					<Typography>{title}</Typography>
 				</Grid>
 				<Grid item>
