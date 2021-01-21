@@ -1,10 +1,15 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import Box from '@material-ui/core/Box'
+import Grid from '@material-ui/core/Grid'
+import Typography from '@material-ui/core/Typography'
 
 import StyledImage from 'components/Images/StyledImage'
 
-interface Props {}
+interface Props {
+	title: string
+	subtitle: string
+}
 
 const useStyles = makeStyles({
 	imageStyle: {},
@@ -19,7 +24,7 @@ const useStyles = makeStyles({
 	},
 })
 
-const ProjectPreview = (props: Props) => {
+const ProjectPreview = ({ title, subtitle }: Props) => {
 	const { imageStyle, boxStyle } = useStyles()
 
 	return (
@@ -27,6 +32,15 @@ const ProjectPreview = (props: Props) => {
 			<Box className={boxStyle}>
 				<StyledImage styleClass={imageStyle} />
 			</Box>
+
+			<Grid container>
+				<Grid item lg={12}>
+					<Typography>{title}</Typography>
+				</Grid>
+				<Grid item>
+					<Typography>{subtitle}</Typography>
+				</Grid>
+			</Grid>
 		</>
 	)
 }
