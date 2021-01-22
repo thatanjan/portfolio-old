@@ -1,9 +1,21 @@
 import React from 'react'
+import Head from 'next/head'
+import dynamic from 'next/dynamic'
 
-interface Props {}
+const ProjectPreview = dynamic(
+	() => import('components/ProjectPreview/ProjectPreview')
+)
 
-const Work = (props: Props) => {
-	return <div>This is work</div>
+const Work = () => {
+	return (
+		<>
+			<Head>
+				<title>Work</title>
+			</Head>
+
+			<ProjectPreview title='Dev Book' subtitle='social media for developers' />
+		</>
+	)
 }
 
 export default Work
