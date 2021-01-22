@@ -39,8 +39,9 @@ const useStyles = makeStyles({
 		...commonContaienrStyle,
 		paddingTop: '2%',
 		paddingBottom: '2%',
+		justifyContent: 'space-evenly',
 		'&  .MuiGrid-item': {
-			flexBasis: '50%',
+			flexBasis: '45%',
 		},
 	},
 })
@@ -69,11 +70,23 @@ const ProjectPreview = ({ title, subtitle }: Props) => {
 			</Grid>
 
 			<Grid container className={buttonContainer}>
-				<MuiLink MuiComponent={Grid} href='/' item component={Button}>
+				<MuiLink
+					MuiComponent={Grid}
+					href='/'
+					item
+					component={Button}
+					variant='contained'
+				>
 					visit {title}
 				</MuiLink>
 
-				<MuiLink MuiComponent={Grid} href='/' item component={Button}>
+				<MuiLink
+					variant='contained'
+					MuiComponent={Grid}
+					href='/'
+					item
+					component={Button}
+				>
 					Learn more
 				</MuiLink>
 			</Grid>
