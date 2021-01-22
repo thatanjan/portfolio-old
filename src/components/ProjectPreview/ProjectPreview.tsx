@@ -6,6 +6,7 @@ import Typography from '@material-ui/core/Typography'
 import Button from '@material-ui/core/Button'
 
 import StyledImage from 'components/Images/StyledImage'
+import MuiLink from 'components/Links/MuiLink'
 
 interface Props {
 	title: string
@@ -67,12 +68,13 @@ const ProjectPreview = ({ title, subtitle }: Props) => {
 			</Grid>
 
 			<Grid container className={buttonContainer}>
-				<Grid item component={Button}>
+				<MuiLink MuiComponent={Grid} href='/' item component={Button}>
 					visit {title}
-				</Grid>
-				<Grid item component={Button}>
+				</MuiLink>
+
+				<MuiLink MuiComponent={Grid} href='/' item component={Button}>
 					Learn more
-				</Grid>
+				</MuiLink>
 			</Grid>
 		</>
 	)
