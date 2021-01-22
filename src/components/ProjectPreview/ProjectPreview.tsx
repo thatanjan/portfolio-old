@@ -16,6 +16,7 @@ interface Props {
 const commonContaienrStyle = {
 	padding: '0 10%',
 }
+
 const useStyles = makeStyles({
 	imageStyle: {},
 	boxStyle: {
@@ -23,7 +24,7 @@ const useStyles = makeStyles({
 		width: '80%',
 		'& :first-child': {
 			'& :first-child': {
-				paddingTop: '60%',
+				paddingTop: '60% !important',
 			},
 		},
 	},
