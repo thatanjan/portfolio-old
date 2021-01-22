@@ -24,6 +24,12 @@ const useStyles = makeStyles(theme => ({
 		flex: '1 1 auto',
 		overflowY: 'auto',
 		height: '100%',
+		'-ms-overflow-style': 'none',
+		scrollbarWidth: 'none',
+
+		'& ::-webkit-scrollbar': {
+			display: 'none',
+		},
 	},
 	background2: {
 		width: '40vw',
