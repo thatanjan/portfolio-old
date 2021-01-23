@@ -3,8 +3,6 @@ import Grid from '@material-ui/core/Grid'
 import Typography from '@material-ui/core/Typography'
 import { makeStyles } from '@material-ui/core/styles'
 
-import { commonContaienrStyle } from './ProjectPreview'
-
 interface Props {
 	title: string
 	subtitle: string
@@ -12,15 +10,15 @@ interface Props {
 
 const useStyles = makeStyles({
 	titleGridContainer: {
-		...commonContaienrStyle,
+		padding: '0 10%',
 		'& > .MuiGrid-item': {
 			flexBasis: '100%',
 		},
 	},
 })
+
 const ProjectTitle = ({ title, subtitle }: Props) => {
 	const { titleGridContainer } = useStyles()
-
 	return (
 		<Grid container className={titleGridContainer}>
 			<Grid item>
