@@ -16,9 +16,7 @@ interface Props {
 	visitLink: string
 }
 
-export const commonContaienrStyle = {
-	padding: '0 10%',
-}
+export const commonContaienrStyle = {}
 
 const useStyles = makeStyles({
 	imageStyle: {},
@@ -33,7 +31,7 @@ const useStyles = makeStyles({
 	},
 
 	buttonContainer: {
-		...commonContaienrStyle,
+		padding: '0 10%',
 		paddingTop: '2%',
 		paddingBottom: '2%',
 		justifyContent: 'space-evenly',
