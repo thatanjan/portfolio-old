@@ -17,22 +17,27 @@ class ApiData {
 
 	addSubtitle(subtitle: string) {
 		this.subtitle = subtitle
+		return this
 	}
 
 	addImage(imagePath: string) {
 		this.imagePath = imagePath
+		return this
 	}
 
 	addVisitLink(visitLink: string) {
 		this.visitLink = visitLink
+		return this
 	}
 
 	addTechStack(technolgies: string[]) {
 		this.backEndTechStack = technolgies
+		return this
 	}
 
 	addFrontEndTechStack(technolgies: string[]) {
 		this.frontEndTechStack = technolgies
+		return this
 	}
 }
 
