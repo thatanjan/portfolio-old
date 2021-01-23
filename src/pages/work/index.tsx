@@ -13,10 +13,12 @@ const Work = () => {
 				<title>Work</title>
 			</Head>
 
-			<ProjectPreview title='Dev Book' subtitle='social media for developers' />
-			<ProjectPreview title='Dev Book' subtitle='social media for developers' />
-			<ProjectPreview title='Dev Book' subtitle='social media for developers' />
-			<ProjectPreview title='Dev Book' subtitle='social media for developers' />
+			<ProjectPreview
+				moreLink='/work/dev-book'
+				visitLink='https://anjan.vercel.app'
+				title='Dev Book'
+				subtitle='social media for developers'
+			/>
 		</>
 	)
 }
