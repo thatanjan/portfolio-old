@@ -50,9 +50,9 @@ const ProjectPreview = ({ title, subtitle }: Props) => {
 				<StyledImage styleClass={imageStyle} />
 			</Box>
 
-			<Grid container className={buttonContainer}>
-				<ProjectTitle title={title} subtitle={subtitle} />
+			<ProjectTitle title={title} subtitle={subtitle} />
 
+			<Grid container className={buttonContainer}>
 				<VisitButton title={title} />
 
 				<MuiLink
