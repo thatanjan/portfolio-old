@@ -19,4 +19,6 @@ export const previewData = allData.forEach((item: ApiData) => {
 		imagePath: item.imagePath,
 		visitLink: item.visitLink,
 	}
+
+	return newObject
 })
