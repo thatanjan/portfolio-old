@@ -5,6 +5,12 @@ class ApiData {
 
 	imagePath: string
 
+	visitLink: string
+
+	backEndTechStack: string[]
+
+	frontEndTechStack: string[]
+
 	constructor(name: string) {
 		this.name = name
 	}
@@ -15,6 +21,18 @@ class ApiData {
 
 	addImage(imagePath: string) {
 		this.imagePath = imagePath
+	}
+
+	addVisitLink(visitLink: string) {
+		this.visitLink = visitLink
+	}
+
+	addTechStack(technolgies: string[]) {
+		this.backEndTechStack = technolgies
+	}
+
+	addFrontEndTechStack(technolgies: string[]) {
+		this.frontEndTechStack = technolgies
 	}
 }
 
