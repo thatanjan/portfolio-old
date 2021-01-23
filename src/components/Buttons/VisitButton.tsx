@@ -6,13 +6,14 @@ import MuiLink from 'components/Links/MuiLink'
 
 interface Props {
 	title: string
+	visitLink: string
 }
 
-const VisitButton = ({ title }: Props) => {
+const VisitButton = ({ visitLink, title }: Props) => {
 	return (
 		<MuiLink
 			MuiComponent={Grid}
-			href='/'
+			href={visitLink}
 			item
 			component={Button}
 			variant='contained'
