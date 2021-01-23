@@ -13,6 +13,11 @@ class ApiData {
 
 	constructor(name: string) {
 		this.name = name
+		this.subtitle = ''
+		this.imagePath = ''
+		this.visitLink = ''
+		this.backEndTechStack = []
+		this.frontEndTechStack = []
 	}
 
 	addSubtitle(subtitle: string) {
