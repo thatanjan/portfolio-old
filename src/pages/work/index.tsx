@@ -14,6 +14,9 @@ const Work = () => {
 			</Head>
 
 			<ProjectPreview title='Dev Book' subtitle='social media for developers' />
+			<ProjectPreview title='Dev Book' subtitle='social media for developers' />
+			<ProjectPreview title='Dev Book' subtitle='social media for developers' />
+			<ProjectPreview title='Dev Book' subtitle='social media for developers' />
 		</>
 	)
 }
