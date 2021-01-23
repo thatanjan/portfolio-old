@@ -45,7 +45,7 @@ const ProjectPreview = ({ title, subtitle }: Props) => {
 	const { imageStyle, boxStyle, buttonContainer } = useStyles()
 
 	return (
-		<>
+		<Box>
 			<Box className={boxStyle}>
 				<StyledImage styleClass={imageStyle} />
 			</Box>
@@ -65,7 +65,7 @@ const ProjectPreview = ({ title, subtitle }: Props) => {
 					Learn more
 				</MuiLink>
 			</Grid>
-		</>
+		</Box>
 	)
 }
 
