@@ -12,6 +12,8 @@ import ProjectTitle from './ProjectTitle'
 interface Props {
 	title: string
 	subtitle: string
+	moreLink: string
+	visitLink: string
 }
 
 export const commonContaienrStyle = {
@@ -41,7 +43,7 @@ const useStyles = makeStyles({
 	},
 })
 
-const ProjectPreview = ({ title, subtitle }: Props) => {
+const ProjectPreview = ({ title, subtitle, moreLink, visitLink }: Props) => {
 	const { imageStyle, boxStyle, buttonContainer } = useStyles()
 
 	return (
@@ -53,12 +55,12 @@ const ProjectPreview = ({ title, subtitle }: Props) => {
 			<ProjectTitle title={title} subtitle={subtitle} />
 
 			<Grid container className={buttonContainer}>
-				<VisitButton title={title} />
+				<VisitButton visitLink={visitLink} title={title} />
 
 				<MuiLink
 					variant='contained'
 					MuiComponent={Grid}
-					href='/'
+					href={moreLink}
 					item
 					component={Button}
 				>
