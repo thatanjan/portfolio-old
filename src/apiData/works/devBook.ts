@@ -1,6 +1,5 @@
 import ApiData from 'apiData/dataClass'
-
-const DEV_BOOK = 'dev-book'
+import { DEV_BOOK } from 'global/variables'
 
 const subtitle = 'social media plattform for developers'
 
