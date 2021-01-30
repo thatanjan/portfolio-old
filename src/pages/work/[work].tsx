@@ -34,7 +34,9 @@ export const getStaticProps: GetStaticProps = async ({
 	params: { work },
 }: Params) => {
 	const paramId = convertSpaceToDash(work)
-	const url = ifProd ? '' : `http://localhost:3000/api/work/${paramId}`
+	const url = ifProd
+		? `${process.env.API_URL}/api/work/${paramId}`
+		: `http://localhost:3000/api/work/${paramId}`
 	const res = await fetch(url)
 	const data = await res.json()
 
