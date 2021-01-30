@@ -3,6 +3,7 @@ import Head from 'next/head'
 import { GetStaticPaths, GetStaticProps } from 'next'
 
 import paths from 'components/utils/paths'
+import { ifProd } from 'global/variables'
 
 const Page = ({ data }: any) => {
 	return (
@@ -23,7 +24,8 @@ export const getStaticPaths: GetStaticPaths = async ctx => {
 }
 
 export const getStaticProps: GetStaticProps = async ctx => {
-	const res = await fetch('http://localhost:3000/api/work/dev-book')
+	const url = ifProd ? '' : 'http://localhost:3000/api/work/dev-book'
+	const res = await fetch(url)
 	const data = await res.json()
 
 	console.log(data)
