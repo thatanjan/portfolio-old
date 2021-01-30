@@ -40,7 +40,11 @@ const FullWidthTabs = ({ setIsDrawerOpen }: Props) => {
 			({ href }: Option) => href === pathname
 		)
 
-		setValue(tabIndex)
+		if (tabIndex < 0) {
+			setValue(0)
+		} else {
+			setValue(tabIndex)
+		}
 	}, [pathname])
 
 	const handleClick = () => (setIsDrawerOpen ? setIsDrawerOpen(false) : null)
