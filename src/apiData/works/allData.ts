@@ -1,5 +1,5 @@
 import devBook from 'apiData/works/devBook'
-import ApiData from 'apiData/dataClass'
+import ApiData from './dataClass'
 
 const allData: ApiData[] = [devBook]
 
