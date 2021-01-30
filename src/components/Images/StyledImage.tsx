@@ -9,7 +9,7 @@ const StyledImage = ({ styleClass }: Props) => {
 	return (
 		<Image
 			className={styleClass}
-			src='/ww.jpg'
+			src='/myImage.jpg'
 			height={0}
 			width={0}
 			layout='responsive'
