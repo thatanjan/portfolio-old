@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from 'next'
-import allData from 'apiData/allData'
+import allData from 'apiData/works/allData'
 import { DEV_BOOK } from 'global/variables'
 
 const workApi = ({ query: { work } }: NextApiRequest, res: NextApiResponse) => {
