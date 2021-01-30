@@ -15,10 +15,10 @@ interface NewObject {
 export const previewData = allData.forEach(
 	({ name, subtitle, imagePath, visitLink }: ApiData) => {
 		const newObject: NewObject = {
-			name: name,
-			subtitle: subtitle,
-			imagePath: imagePath,
-			visitLink: visitLink,
+			name,
+			subtitle,
+			imagePath,
+			visitLink,
 		}
 
 		return newObject
