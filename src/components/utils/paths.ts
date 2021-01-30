@@ -1,6 +1,7 @@
-import { DEV_BOOK } from 'global/variables'
+import allData from 'apiData/works/allData'
+import ApiData from 'apiData/works/dataClass'
 
-class WorkPaths {
+class WorkPath {
 	params: {
 		work: string
 	}
@@ -10,6 +11,12 @@ class WorkPaths {
 	}
 }
 
-const devBook = new WorkPaths(DEV_BOOK)
+const allPaths: WorkPath[] = allData.map(({ name }: ApiData) => {
+	const pathName = name.replace(/\s/g, '-')
 
-export default [devBook]
+	const path = new WorkPath(pathName)
+
+	return path
+})
+
+export default allPaths
