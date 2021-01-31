@@ -35,7 +35,7 @@ class ApiData {
 		return this
 	}
 
-	addTechStack(technolgies: string[]) {
+	addBackEndTechStack(technolgies: string[]) {
 		this.backEndTechStack = technolgies
 		return this
 	}
