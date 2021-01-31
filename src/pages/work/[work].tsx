@@ -2,11 +2,15 @@ import React from 'react'
 import Head from 'next/head'
 import { GetStaticPaths, GetStaticProps } from 'next'
 
+import ApiData from 'apiData/works/dataClass'
 import paths from 'utils/paths'
 import convertSpaceToDash from 'utils/spaceToDash'
 import { ifProd } from 'global/variables'
 
-const Page = ({ data }: any) => {
+interface Props {
+	data: ApiData
+}
+const Page = ({ data }: Props) => {
 	return (
 		<>
 			<Head>
@@ -34,7 +38,7 @@ export const getStaticProps: GetStaticProps = async ({
 	params: { work },
 }: Params) => {
 	const paramId = convertSpaceToDash(work)
-	console.log(process.env.API_URL)
+
 	const url = ifProd
 		? `${process.env.API_URL}/api/work/${paramId}`
 		: `http://localhost:3000/api/work/${paramId}`
