@@ -1,3 +1,5 @@
+const createVisitLink = (actualLink: string) => `/work${actualLink}`
+
 class ApiData {
 	name: string
 
@@ -31,7 +33,7 @@ class ApiData {
 	}
 
 	addVisitLink(visitLink: string) {
-		this.visitLink = visitLink
+		this.visitLink = createVisitLink(visitLink)
 		return this
 	}
 
