@@ -22,7 +22,7 @@ const LayoutImage = () => {
 	return (
 		<>
 			<div className={containerStyle}>
-				<StyledImage styleClass={imageStyle} />
+				<StyledImage source='/myImageLayout.png' styleClass={imageStyle} />
 			</div>
 		</>
 	)

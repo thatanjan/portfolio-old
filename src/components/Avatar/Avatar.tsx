@@ -20,7 +20,7 @@ const Avatar = () => {
 	return (
 		<>
 			<div className={avatarContainer}>
-				<StyledImage styleClass={smallSize} />
+				<StyledImage source='/myImage.jpg' styleClass={smallSize} />
 			</div>
 		</>
 	)
