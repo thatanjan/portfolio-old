@@ -4,6 +4,7 @@ import { GetStaticPaths, GetStaticProps } from 'next'
 
 import ApiData from 'apiData/works/dataClass'
 import paths from 'utils/paths'
+import convertDashToSpace from 'utils/dashToSpace'
 import convertSpaceToDash from 'utils/spaceToDash'
 import { ifProd } from 'global/variables'
 
@@ -11,10 +12,13 @@ interface Props {
 	data: ApiData
 }
 const Page = ({ data }: Props) => {
+	const { name } = data
+	const pageTitle = convertDashToSpace(name)
+
 	return (
 		<>
 			<Head>
-				<title>Dev Book</title>
+				<title>{pageTitle}</title>
 			</Head>
 			<div>this is a Dev book</div>
 			{JSON.stringify(data)}
