@@ -16,7 +16,7 @@ const Work = () => {
 			<ProjectPreview
 				moreLink='/work/dev-book'
 				visitLink='https://anjan.vercel.app'
-				title='Dev Book'
+				name='Dev Book'
 				subtitle='social media for developers'
 			/>
 		</>
