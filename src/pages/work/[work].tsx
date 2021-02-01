@@ -2,6 +2,7 @@ import React from 'react'
 import Head from 'next/head'
 import { GetStaticPaths, GetStaticProps } from 'next'
 
+import ProjectPreview from 'components/ProjectPreview/ProjectPreview'
 import ApiData from 'apiData/works/dataClass'
 import paths from 'utils/paths'
 import convertDashToSpace from 'utils/dashToSpace'
@@ -11,8 +12,8 @@ import { ifProd } from 'global/variables'
 interface Props {
 	data: ApiData
 }
-const Page = ({ data }: Props) => {
-	const { name } = data
+const Page = ({ data: { name, subtitle, visitLink } }: Props) => {
+	const projectPreviewProps = { name, subtitle, visitLink }
 	const pageTitle = convertDashToSpace(name)
 
 	return (
@@ -20,8 +21,10 @@ const Page = ({ data }: Props) => {
 			<Head>
 				<title>{pageTitle}</title>
 			</Head>
-			<div>this is a Dev book</div>
-			{JSON.stringify(data)}
+
+			<>
+				<ProjectPreview {...projectPreviewProps} />
+			</>
 		</>
 	)
 }
