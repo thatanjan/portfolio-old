@@ -2,6 +2,7 @@ import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 
 import StyledImage from 'components/Images/StyledImage'
+import { LAYOUT_IMAGE } from 'global/variables'
 
 const useStyles = makeStyles({
 	imageStyle: {},
@@ -22,7 +23,7 @@ const LayoutImage = () => {
 	return (
 		<>
 			<div className={containerStyle}>
-				<StyledImage source='/myImageLayout.png' styleClass={imageStyle} />
+				<StyledImage source={LAYOUT_IMAGE} styleClass={imageStyle} />
 			</div>
 		</>
 	)

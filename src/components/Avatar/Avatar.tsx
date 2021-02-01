@@ -2,6 +2,7 @@ import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 
 import StyledImage from 'components/Images/StyledImage'
+import { AVATAR } from 'global/variables'
 
 const useStyles = makeStyles({
 	smallSize: {
@@ -20,7 +21,7 @@ const Avatar = () => {
 	return (
 		<>
 			<div className={avatarContainer}>
-				<StyledImage source='/myImage.jpg' styleClass={smallSize} />
+				<StyledImage source={AVATAR} styleClass={smallSize} />
 			</div>
 		</>
 	)
