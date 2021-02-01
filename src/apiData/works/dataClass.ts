@@ -5,6 +5,8 @@ class ApiData {
 
 	subtitle: string
 
+	description: string
+
 	imagePath: string
 
 	visitLink: string
@@ -47,6 +49,11 @@ class ApiData {
 
 	addFrontEndTechStack(technolgies: string[]) {
 		this.frontEndTechStack = technolgies
+		return this
+	}
+
+	addDescription(description: string) {
+		this.description = description
 		return this
 	}
 }
