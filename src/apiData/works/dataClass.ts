@@ -1,3 +1,5 @@
+import convertSpaceToDash from 'utils/spaceToDash'
+
 class ApiData {
 	name: string
 
@@ -6,6 +8,8 @@ class ApiData {
 	imagePath: string
 
 	visitLink: string
+
+	moreLink: string
 
 	backEndTechStack: string[]
 
@@ -18,6 +22,7 @@ class ApiData {
 		this.visitLink = ''
 		this.backEndTechStack = []
 		this.frontEndTechStack = []
+		this.moreLink = `/work/${convertSpaceToDash(name)}`
 	}
 
 	addSubtitle(subtitle: string) {
@@ -31,7 +36,7 @@ class ApiData {
 	}
 
 	addVisitLink(visitLink: string) {
-		this.visitLink = `/work${visitLink}`
+		this.visitLink = visitLink
 		return this
 	}
 
