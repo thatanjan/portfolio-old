@@ -4,8 +4,6 @@ import { makeStyles } from '@material-ui/core/styles'
 
 import StyledImage from 'components/Images/StyledImage'
 
-interface Props {}
-
 const useStyles = makeStyles({
 	imageStyle: {},
 	boxStyle: {
@@ -19,12 +17,12 @@ const useStyles = makeStyles({
 	},
 })
 
-const ProjectImage = (props: Props) => {
+const ProjectImage = () => {
 	const { boxStyle, imageStyle } = useStyles()
 
 	return (
 		<Box className={boxStyle}>
-			<StyledImage styleClass={imageStyle} />
+			<StyledImage source='/ww.jpg' styleClass={imageStyle} />
 		</Box>
 	)
 }
