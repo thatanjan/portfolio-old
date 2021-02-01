@@ -10,7 +10,7 @@ import ProjectTitle from './ProjectTitle'
 import ProjectImage from './ProjectImage'
 
 interface Props {
-	title: string
+	name: string
 	subtitle: string
 	moreLink: string
 	visitLink: string
@@ -30,17 +30,17 @@ const useStyles = makeStyles({
 	},
 })
 
-const ProjectPreview = ({ title, subtitle, moreLink, visitLink }: Props) => {
+const ProjectPreview = ({ name, subtitle, moreLink, visitLink }: Props) => {
 	const { buttonContainer } = useStyles()
 
 	return (
 		<Box>
 			<ProjectImage />
 
-			<ProjectTitle title={title} subtitle={subtitle} />
+			<ProjectTitle title={name} subtitle={subtitle} />
 
 			<Grid container className={buttonContainer}>
-				<VisitButton visitLink={visitLink} title={title} />
+				<VisitButton visitLink={visitLink} title={name} />
 
 				<MuiLink
 					variant='contained'
