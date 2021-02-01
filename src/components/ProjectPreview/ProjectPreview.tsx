@@ -37,7 +37,7 @@ const ProjectPreview = ({ name, subtitle, moreLink, visitLink }: Props) => {
 		<Box>
 			<ProjectImage />
 
-			<ProjectTitle title={name} subtitle={subtitle} />
+			<ProjectTitle name={name} subtitle={subtitle} />
 
 			<Grid container className={buttonContainer}>
 				<VisitButton visitLink={visitLink} title={name} />

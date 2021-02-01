@@ -4,7 +4,7 @@ import Typography from '@material-ui/core/Typography'
 import { makeStyles } from '@material-ui/core/styles'
 
 interface Props {
-	title: string
+	name: string
 	subtitle: string
 }
 
@@ -17,12 +17,12 @@ const useStyles = makeStyles({
 	},
 })
 
-const ProjectTitle = ({ title, subtitle }: Props) => {
+const ProjectTitle = ({ name, subtitle }: Props) => {
 	const { titleGridContainer } = useStyles()
 	return (
 		<Grid container className={titleGridContainer}>
 			<Grid item>
-				<Typography variant='h3'>{title}</Typography>
+				<Typography variant='h3'>{name}</Typography>
 			</Grid>
 			<Grid item>
 				<Typography variant='h5'>{subtitle}</Typography>
