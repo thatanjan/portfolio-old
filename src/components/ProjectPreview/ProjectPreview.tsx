@@ -12,7 +12,7 @@ import ProjectImage from './ProjectImage'
 interface Props {
 	name: string
 	subtitle: string
-	moreLink: string
+	moreLink?: string
 	visitLink: string
 }
 
@@ -42,15 +42,17 @@ const ProjectPreview = ({ name, subtitle, moreLink, visitLink }: Props) => {
 			<Grid container className={buttonContainer}>
 				<VisitButton visitLink={visitLink} title={name} />
 
-				<MuiLink
-					variant='contained'
-					MuiComponent={Grid}
-					href={moreLink}
-					item
-					component={Button}
-				>
-					Learn more
-				</MuiLink>
+				{moreLink && (
+					<MuiLink
+						variant='contained'
+						MuiComponent={Grid}
+						href={moreLink}
+						item
+						component={Button}
+					>
+						Learn more
+					</MuiLink>
+				)}
 			</Grid>
 		</Box>
 	)
