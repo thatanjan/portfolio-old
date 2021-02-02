@@ -10,7 +10,6 @@ interface Props {
 
 const useStyles = makeStyles({
 	titleGridContainer: {
-		padding: '0 10%',
 		'& > .MuiGrid-item': {
 			flexBasis: '100%',
 		},

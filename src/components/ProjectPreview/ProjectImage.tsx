@@ -8,7 +8,6 @@ const useStyles = makeStyles({
 	imageStyle: {},
 	boxStyle: {
 		margin: '5% auto',
-		width: '80%',
 		'& :first-child': {
 			'& :first-child': {
 				paddingTop: '60% !important',

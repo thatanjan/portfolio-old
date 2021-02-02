@@ -20,7 +20,6 @@ export const commonContaienrStyle = {}
 
 const useStyles = makeStyles({
 	buttonContainer: {
-		padding: '0 10%',
 		paddingTop: '2%',
 		paddingBottom: '2%',
 		justifyContent: 'space-evenly',
