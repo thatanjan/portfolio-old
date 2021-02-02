@@ -3,6 +3,7 @@ import Head from 'next/head'
 import { GetStaticPaths, GetStaticProps } from 'next'
 
 import ProjectPreview from 'components/ProjectPreview/ProjectPreview'
+import ProjectDescription from 'components/ProjectPreview/ProjectDescription'
 import ApiData from 'apiData/works/dataClass'
 import paths from 'utils/paths'
 import convertDashToSpace from 'utils/dashToSpace'
@@ -12,8 +13,8 @@ import { ifProd } from 'global/variables'
 interface Props {
 	data: ApiData
 }
-const Page = ({ data: { name, subtitle, visitLink } }: Props) => {
-	const projectPreviewProps = { name, subtitle, visitLink }
+const Page = ({ data: { name, subtitle, visitLink, description } }: Props) => {
+	const projectPreviewProps = { name, subtitle, visitLink, description }
 	const pageTitle = convertDashToSpace(name)
 
 	return (
@@ -24,6 +25,7 @@ const Page = ({ data: { name, subtitle, visitLink } }: Props) => {
 
 			<>
 				<ProjectPreview {...projectPreviewProps} />
+				<ProjectDescription description={description} />
 			</>
 		</>
 	)
