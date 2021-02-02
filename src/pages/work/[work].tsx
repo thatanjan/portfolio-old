@@ -1,6 +1,8 @@
 import React from 'react'
 import Head from 'next/head'
 import { GetStaticPaths, GetStaticProps } from 'next'
+import { makeStyles } from '@material-ui/core/styles'
+import Box from '@material-ui/core/Box'
 
 import ProjectPreview from 'components/ProjectPreview/ProjectPreview'
 import ProjectDescription from 'components/ProjectPreview/ProjectDescription'
@@ -13,9 +15,18 @@ import { ifProd } from 'global/variables'
 interface Props {
 	data: ApiData
 }
+
+const useStyles = makeStyles({
+	boxStyle: {
+		padding: '0 10%',
+	},
+})
+
 const Page = ({ data: { name, subtitle, visitLink, description } }: Props) => {
 	const projectPreviewProps = { name, subtitle, visitLink, description }
 	const pageTitle = convertDashToSpace(name)
+
+	const { boxStyle } = useStyles()
 
 	return (
 		<>
@@ -23,10 +34,10 @@ const Page = ({ data: { name, subtitle, visitLink, description } }: Props) => {
 				<title>{pageTitle}</title>
 			</Head>
 
-			<>
+			<Box className={boxStyle}>
 				<ProjectPreview {...projectPreviewProps} />
 				<ProjectDescription description={description} />
-			</>
+			</Box>
 		</>
 	)
 }
