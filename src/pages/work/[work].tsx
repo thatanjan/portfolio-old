@@ -8,6 +8,7 @@ import ProjectPreview, {
 	commonContaienrStyle,
 } from 'components/ProjectPreview/ProjectPreview'
 import ProjectDescription from 'components/ProjectPreview/ProjectDescription'
+import ProjectTechnologies from 'components/ProjectPreview/ProjectTechnologies'
 import ApiData from 'apiData/works/dataClass'
 import paths from 'utils/paths'
 import convertDashToSpace from 'utils/dashToSpace'
@@ -40,6 +41,7 @@ const Page = ({ data: { name, subtitle, visitLink, description } }: Props) => {
 				<ProjectPreview {...projectPreviewProps} />
 				<Box className={boxStyle}>
 					<ProjectDescription description={description} />
+					<ProjectTechnologies />
 				</Box>
 			</Box>
 		</>
