@@ -16,7 +16,7 @@ interface Props {
 	visitLink: string
 }
 
-export const commonContaienrStyle = {}
+export const commonContaienrStyle = '0 10%'
 
 const useStyles = makeStyles({
 	buttonContainer: {
@@ -28,7 +28,7 @@ const useStyles = makeStyles({
 		},
 	},
 	boxStyle: {
-		padding: '0 10%',
+		padding: commonContaienrStyle,
 	},
 })
 
