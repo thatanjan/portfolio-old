@@ -25,8 +25,18 @@ const useStyles = makeStyles({
 	},
 })
 
-const Page = ({ data: { name, subtitle, visitLink, description } }: Props) => {
+const Page = ({
+	data: {
+		name,
+		subtitle,
+		visitLink,
+		description,
+		frontEndTechStack,
+		backEndTechStack,
+	},
+}: Props) => {
 	const projectPreviewProps = { name, subtitle, visitLink, description }
+	const technolgiesProps = { frontEndTechStack, backEndTechStack }
 	const pageTitle = convertDashToSpace(name)
 
 	const { boxStyle } = useStyles()
@@ -41,7 +51,7 @@ const Page = ({ data: { name, subtitle, visitLink, description } }: Props) => {
 				<ProjectPreview {...projectPreviewProps} />
 				<Box className={boxStyle}>
 					<ProjectDescription description={description} />
-					<ProjectTechnologies />
+					<ProjectTechnologies {...technolgiesProps} />
 				</Box>
 			</Box>
 		</>
