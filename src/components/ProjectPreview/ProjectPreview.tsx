@@ -27,13 +27,16 @@ const useStyles = makeStyles({
 			flexBasis: '45%',
 		},
 	},
+	boxStyle: {
+		padding: '0 10%',
+	},
 })
 
 const ProjectPreview = ({ name, subtitle, moreLink, visitLink }: Props) => {
-	const { buttonContainer } = useStyles()
+	const { buttonContainer, boxStyle } = useStyles()
 
 	return (
-		<Box>
+		<Box className={boxStyle}>
 			<ProjectImage />
 
 			<ProjectTitle name={name} subtitle={subtitle} />

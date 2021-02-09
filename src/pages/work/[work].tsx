@@ -16,17 +16,9 @@ interface Props {
 	data: ApiData
 }
 
-const useStyles = makeStyles({
-	boxStyle: {
-		padding: '0 10%',
-	},
-})
-
 const Page = ({ data: { name, subtitle, visitLink, description } }: Props) => {
 	const projectPreviewProps = { name, subtitle, visitLink, description }
 	const pageTitle = convertDashToSpace(name)
-
-	const { boxStyle } = useStyles()
 
 	return (
 		<>
@@ -34,7 +26,7 @@ const Page = ({ data: { name, subtitle, visitLink, description } }: Props) => {
 				<title>{pageTitle}</title>
 			</Head>
 
-			<Box className={boxStyle}>
+			<Box>
 				<ProjectPreview {...projectPreviewProps} />
 				<ProjectDescription description={description} />
 			</Box>
