@@ -4,7 +4,9 @@ import { GetStaticPaths, GetStaticProps } from 'next'
 import { makeStyles } from '@material-ui/core/styles'
 import Box from '@material-ui/core/Box'
 
-import ProjectPreview from 'components/ProjectPreview/ProjectPreview'
+import ProjectPreview, {
+	commonContaienrStyle,
+} from 'components/ProjectPreview/ProjectPreview'
 import ProjectDescription from 'components/ProjectPreview/ProjectDescription'
 import ApiData from 'apiData/works/dataClass'
 import paths from 'utils/paths'
@@ -16,9 +18,17 @@ interface Props {
 	data: ApiData
 }
 
+const useStyles = makeStyles({
+	boxStyle: {
+		padding: commonContaienrStyle,
+	},
+})
+
 const Page = ({ data: { name, subtitle, visitLink, description } }: Props) => {
 	const projectPreviewProps = { name, subtitle, visitLink, description }
 	const pageTitle = convertDashToSpace(name)
+
+	const { boxStyle } = useStyles()
 
 	return (
 		<>
@@ -28,7 +38,9 @@ const Page = ({ data: { name, subtitle, visitLink, description } }: Props) => {
 
 			<Box>
 				<ProjectPreview {...projectPreviewProps} />
-				<ProjectDescription description={description} />
+				<Box className={boxStyle}>
+					<ProjectDescription description={description} />
+				</Box>
 			</Box>
 		</>
 	)
