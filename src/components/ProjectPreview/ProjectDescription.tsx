@@ -8,8 +8,8 @@ interface Props {
 
 const useStyles = makeStyles({
 	descriptionStyle: {
-		padding: '0 1rem',
-		marginTop: '3%',
+		padding: '1rem',
+		margin: '5% 0',
 		fontSize: '1.3rem',
 	},
 })
