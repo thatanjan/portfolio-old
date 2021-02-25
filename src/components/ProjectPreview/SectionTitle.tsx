@@ -2,7 +2,7 @@ import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import Typography from '@material-ui/core/Typography'
 
-import { commonPadding } from './ProjectDescription'
+import { commonPadding } from 'components/ProjectPreview/ProjectDescription'
 
 interface Props {
 	text: string
@@ -10,7 +10,7 @@ interface Props {
 
 const useStyles = makeStyles({
 	titleStyle: {
-		padding: commonPadding,
+		// padding: commonPadding,
 		paddingBottom: '0',
 	},
 })
@@ -18,6 +18,7 @@ const useStyles = makeStyles({
 const SectionTitle = ({ text }: Props) => {
 	const { titleStyle } = useStyles()
 
+	console.log(commonPadding)
 	return (
 		<>
 			<Typography className={titleStyle} variant='h4'>
