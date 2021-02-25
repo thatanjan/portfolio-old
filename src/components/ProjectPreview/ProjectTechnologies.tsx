@@ -3,8 +3,10 @@ import Paper from '@material-ui/core/Paper'
 import Chip from '@material-ui/core/Chip'
 import Box from '@material-ui/core/Box'
 import Typography from '@material-ui/core/Typography'
+import { makeStyles } from '@material-ui/core/styles'
 import { nanoid } from 'nanoid'
 
+import { titlePadding } from './ProjectDescription'
 import SectionTitle from './SectionTitle'
 
 interface Props {
@@ -17,13 +19,23 @@ interface TechnologiesSectionProps {
 	endType: string
 }
 
+const useStyles = makeStyles({
+	endTypeStyle: {
+		padding: `1rem ${titlePadding + 1}rem `,
+	},
+})
+
 const TechnologiesSection = ({
 	techStack,
 	endType,
 }: TechnologiesSectionProps) => {
+	const { endTypeStyle } = useStyles()
+
 	return (
 		<Box>
-			<Typography variant='h5'>{endType} End</Typography>
+			<Typography variant='h5' className={endTypeStyle}>
+				{endType} End :
+			</Typography>
 
 			{techStack.map(item => (
 				<Chip key={nanoid()} color='secondary' label={item} />
