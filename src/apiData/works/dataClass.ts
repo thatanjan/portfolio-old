@@ -11,6 +11,8 @@ class ApiData {
 
 	visitLink: string
 
+	sourceCodeLink: string
+
 	moreLink: string
 
 	backEndTechStack: string[]
@@ -39,6 +41,11 @@ class ApiData {
 
 	addVisitLink(visitLink: string) {
 		this.visitLink = visitLink
+		return this
+	}
+
+	addSourceCodeLink(sourceCodeLink: string) {
+		this.sourceCodeLink = sourceCodeLink
 		return this
 	}
 
