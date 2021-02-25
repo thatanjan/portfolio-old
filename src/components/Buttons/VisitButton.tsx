@@ -5,22 +5,22 @@ import Button from '@material-ui/core/Button'
 import MuiLink from 'components/Links/MuiLink'
 
 interface Props {
-	title: string
-	visitLink: string
+	text: string
+	link: string
 }
 
-const VisitButton = ({ visitLink, title }: Props) => {
+const LinkButton = ({ link, text }: Props) => {
 	return (
 		<MuiLink
 			MuiComponent={Grid}
-			href={visitLink}
+			href={link}
 			item
 			component={Button}
 			variant='contained'
 		>
-			visit {title}
+			{text}
 		</MuiLink>
 	)
 }
 
-export default VisitButton
+export default LinkButton
