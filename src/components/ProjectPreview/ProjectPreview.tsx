@@ -5,7 +5,7 @@ import Grid from '@material-ui/core/Grid'
 import Button from '@material-ui/core/Button'
 
 import MuiLink from 'components/Links/MuiLink'
-import VisitButton from 'components/Buttons/VisitButton'
+import Button from 'components/Buttons/VisitButton'
 import ProjectTitle from './ProjectTitle'
 import ProjectImage from './ProjectImage'
 
