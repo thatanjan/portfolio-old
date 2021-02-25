@@ -27,6 +27,7 @@ class ApiData {
 		this.backEndTechStack = []
 		this.frontEndTechStack = []
 		this.moreLink = `/work/${convertSpaceToDash(name)}`
+		this.sourceCodeLink = `https://github.com/thatanjan/${this.name.toLowerCase()}`
 	}
 
 	addSubtitle(subtitle: string) {
@@ -41,11 +42,6 @@ class ApiData {
 
 	addVisitLink(visitLink: string) {
 		this.visitLink = visitLink
-		return this
-	}
-
-	addSourceCodeLink(sourceCodeLink: string) {
-		this.sourceCodeLink = sourceCodeLink
 		return this
 	}
 
