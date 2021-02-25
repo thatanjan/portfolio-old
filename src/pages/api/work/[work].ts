@@ -1,10 +1,10 @@
 import { NextApiRequest, NextApiResponse } from 'next'
 import allData from 'apiData/works/allData'
-import { DEV_BOOK } from 'global/variables'
+import { CONFESSION } from 'global/variables'
 
 const workApi = ({ query: { work } }: NextApiRequest, res: NextApiResponse) => {
 	switch (work) {
-		case DEV_BOOK:
+		case CONFESSION:
 			return res.send(allData[0])
 
 		default:
