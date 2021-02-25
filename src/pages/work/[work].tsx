@@ -33,9 +33,16 @@ const Page = ({
 		description,
 		frontEndTechStack,
 		backEndTechStack,
+		sourceCodeLink,
 	},
 }: Props) => {
-	const projectPreviewProps = { name, subtitle, visitLink, description }
+	const projectPreviewProps = {
+		name,
+		subtitle,
+		visitLink,
+		description,
+		sourceCodeLink,
+	}
 	const technolgiesProps = { frontEndTechStack, backEndTechStack }
 	const pageTitle = convertDashToSpace(name)
 
