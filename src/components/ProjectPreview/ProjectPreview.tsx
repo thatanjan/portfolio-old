@@ -13,6 +13,7 @@ interface Props {
 	name: string
 	subtitle: string
 	moreLink?: string
+	sourceCodeLink?: string
 	visitLink: string
 }
 
@@ -32,7 +33,13 @@ const useStyles = makeStyles({
 	},
 })
 
-const ProjectPreview = ({ name, subtitle, moreLink, visitLink }: Props) => {
+const ProjectPreview = ({
+	name,
+	subtitle,
+	moreLink,
+	visitLink,
+	sourceCodeLink,
+}: Props) => {
 	const { buttonContainer, boxStyle } = useStyles()
 
 	return (
@@ -44,17 +51,9 @@ const ProjectPreview = ({ name, subtitle, moreLink, visitLink }: Props) => {
 			<Grid container className={buttonContainer}>
 				<LinkButton link={visitLink} text={`visit ${name}`} />
 
-				{moreLink && (
-					<MuiLink
-						variant='contained'
-						MuiComponent={Grid}
-						href={moreLink}
-						item
-						component={Button}
-					>
-						Learn more
-					</MuiLink>
-				)}
+				{sourceCodeLink && <LinkButton link={sourceCodeLink} text='source code' />}
+
+				{moreLink && <LinkButton link={moreLink} text='learn more' />}
 			</Grid>
 		</Box>
 	)
