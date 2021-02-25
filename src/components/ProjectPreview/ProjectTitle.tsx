@@ -2,6 +2,7 @@ import React from 'react'
 import Grid from '@material-ui/core/Grid'
 import Typography from '@material-ui/core/Typography'
 import { makeStyles } from '@material-ui/core/styles'
+import { CAPITALIZE } from 'global/variables'
 
 interface Props {
 	name: string
@@ -21,10 +22,14 @@ const ProjectTitle = ({ name, subtitle }: Props) => {
 	return (
 		<Grid container className={titleGridContainer}>
 			<Grid item>
-				<Typography variant='h3'>{name}</Typography>
+				<Typography className={CAPITALIZE} variant='h3'>
+					{name}
+				</Typography>
 			</Grid>
 			<Grid item>
-				<Typography variant='h5'>{subtitle}</Typography>
+				<Typography className={CAPITALIZE} variant='h5'>
+					{subtitle}
+				</Typography>
 			</Grid>
 		</Grid>
 	)

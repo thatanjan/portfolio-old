@@ -5,7 +5,9 @@ import Box from '@material-ui/core/Box'
 import Typography from '@material-ui/core/Typography'
 import { makeStyles } from '@material-ui/core/styles'
 import { nanoid } from 'nanoid'
+import clsx from 'clsx'
 
+import { CAPITALIZE } from 'global/variables'
 import { titlePadding } from './ProjectDescription'
 import SectionTitle from './SectionTitle'
 
@@ -39,7 +41,7 @@ const TechnologiesSection = ({
 
 	return (
 		<Box>
-			<Typography variant='h5' className={endTypeStyle}>
+			<Typography variant='h5' className={clsx(CAPITALIZE, endTypeStyle)}>
 				{endType} End :
 			</Typography>
 

@@ -1,6 +1,8 @@
 import React from 'react'
+import clsx from 'clsx'
 import { makeStyles } from '@material-ui/core/styles'
 import Typography from '@material-ui/core/Typography'
+import { CAPITALIZE } from 'global/variables'
 
 // import { titlePadding } from 'components/ProjectPreview/ProjectDescription'
 
@@ -20,7 +22,7 @@ const SectionTitle = ({ text }: Props) => {
 
 	return (
 		<>
-			<Typography className={titleStyle} variant='h4'>
+			<Typography className={clsx(titleStyle, CAPITALIZE)} variant='h4'>
 				{text}
 			</Typography>
 		</>
