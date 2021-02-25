@@ -24,7 +24,10 @@ const useStyles = makeStyles({
 		padding: `1rem ${titlePadding + 1}rem`,
 	},
 	stackContainerStyle: {
-		padding: `1rem ${titlePadding + 2}rem`,
+		padding: `.5rem ${titlePadding + 2}rem 1rem`,
+	},
+	chipStyle: {
+		marginRight: '1rem',
 	},
 })
 
@@ -32,7 +35,7 @@ const TechnologiesSection = ({
 	techStack,
 	endType,
 }: TechnologiesSectionProps) => {
-	const { endTypeStyle, stackContainerStyle } = useStyles()
+	const { chipStyle, endTypeStyle, stackContainerStyle } = useStyles()
 
 	return (
 		<Box>
@@ -42,7 +45,12 @@ const TechnologiesSection = ({
 
 			<Box className={stackContainerStyle}>
 				{techStack.map(item => (
-					<Chip key={nanoid()} color='secondary' label={item} />
+					<Chip
+						className={chipStyle}
+						key={nanoid()}
+						color='secondary'
+						label={item}
+					/>
 				))}
 			</Box>
 		</Box>
