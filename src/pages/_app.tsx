@@ -1,4 +1,5 @@
 import type { AppProps } from 'next/app'
+import '../styles/globals.css'
 import React from 'react'
 import Head from 'next/head'
 import { ThemeProvider } from '@material-ui/core/styles'
