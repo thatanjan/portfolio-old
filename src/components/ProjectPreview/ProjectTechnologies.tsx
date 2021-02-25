@@ -1,29 +1,21 @@
 import React from 'react'
 import Paper from '@material-ui/core/Paper'
-import Typography from '@material-ui/core/Typography'
 import Chip from '@material-ui/core/Chip'
-import { makeStyles } from '@material-ui/core/styles'
 
-import { titleStyle } from './ProjectDescription'
+import SectionTitle from './SectionTitle'
 
 interface Props {
 	frontEndTechStack: [string]
 	backEndTechStack: [string]
 }
 
-const useStyles = makeStyles({ titleStyle })
-
 const ProjectTechnologies = ({
 	frontEndTechStack,
 	backEndTechStack,
 }: Props) => {
-	const { titleStyle: title } = useStyles()
-
 	return (
 		<Paper>
-			<Typography variant='h4' className={title}>
-				Technolgies Used
-			</Typography>
+			<SectionTitle text='technolgies used' />
 			<Chip color='secondary' label='JavaScript' />
 		</Paper>
 	)
