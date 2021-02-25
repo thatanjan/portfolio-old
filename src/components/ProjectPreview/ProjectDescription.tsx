@@ -8,16 +8,17 @@ interface Props {
 }
 
 export const commonPadding = `1rem`
+export const titleStyle = {
+	padding: commonPadding,
+	paddingBottom: '0',
+}
 
 const useStyles = makeStyles({
 	descriptionStyle: {
 		padding: commonPadding,
 		fontSize: '1.3rem',
 	},
-	title: {
-		padding: commonPadding,
-		paddingBottom: '0',
-	},
+	title: titleStyle,
 	descriptionContainer: {
 		marginBottom: '5%',
 	},
