@@ -3,6 +3,7 @@ import Head from 'next/head'
 import dynamic from 'next/dynamic'
 import { GetStaticProps } from 'next'
 import { ifProd } from 'global/variables'
+import { nanoid } from 'nanoid'
 
 import ApiData from 'apiData/works/dataClass'
 
@@ -10,19 +11,23 @@ const ProjectPreview = dynamic(
 	() => import('components/ProjectPreview/ProjectPreview')
 )
 
-const Work = () => {
+interface Props {
+	data: ApiData[]
+}
+
+const Work = ({ data }: Props) => {
 	return (
 		<>
 			<Head>
 				<title>Work</title>
 			</Head>
 
-			<ProjectPreview
-				moreLink='/work/dev-book'
-				visitLink='https://anjan.vercel.app'
-				name='Dev Book'
-				subtitle='social media for developers'
-			/>
+			{data.map(item => {
+				const { name, visitLink, moreLink, subtitle } = item
+
+				const projectPreviewProps = { name, visitLink, moreLink, subtitle }
+				return <ProjectPreview key={nanoid()} {...projectPreviewProps} />
+			})}
 		</>
 	)
 }
