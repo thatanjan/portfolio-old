@@ -5,7 +5,7 @@ import Grid from '@material-ui/core/Grid'
 import Button from '@material-ui/core/Button'
 
 import MuiLink from 'components/Links/MuiLink'
-import Button from 'components/Buttons/VisitButton'
+import LinkButton from 'components/Buttons/LinkButton'
 import ProjectTitle from './ProjectTitle'
 import ProjectImage from './ProjectImage'
 
@@ -42,7 +42,7 @@ const ProjectPreview = ({ name, subtitle, moreLink, visitLink }: Props) => {
 			<ProjectTitle name={name} subtitle={subtitle} />
 
 			<Grid container className={buttonContainer}>
-				<VisitButton visitLink={visitLink} title={name} />
+				<LinkButton link={visitLink} text={`visit ${name}`} />
 
 				{moreLink && (
 					<MuiLink
