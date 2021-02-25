@@ -2,7 +2,7 @@ import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import Typography from '@material-ui/core/Typography'
 
-import { titlePadding } from 'components/ProjectPreview/ProjectDescription'
+// import { titlePadding } from 'components/ProjectPreview/ProjectDescription'
 
 interface Props {
 	text: string
@@ -10,7 +10,7 @@ interface Props {
 
 const useStyles = makeStyles({
 	titleStyle: {
-		padding: titlePadding,
+		padding: '1rem',
 		paddingBottom: '0',
 	},
 })
