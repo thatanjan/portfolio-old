@@ -21,7 +21,10 @@ interface TechnologiesSectionProps {
 
 const useStyles = makeStyles({
 	endTypeStyle: {
-		padding: `1rem ${titlePadding + 1}rem `,
+		padding: `1rem ${titlePadding + 1}rem`,
+	},
+	stackContainerStyle: {
+		padding: `1rem ${titlePadding + 2}rem`,
 	},
 })
 
@@ -29,7 +32,7 @@ const TechnologiesSection = ({
 	techStack,
 	endType,
 }: TechnologiesSectionProps) => {
-	const { endTypeStyle } = useStyles()
+	const { endTypeStyle, stackContainerStyle } = useStyles()
 
 	return (
 		<Box>
@@ -37,9 +40,11 @@ const TechnologiesSection = ({
 				{endType} End :
 			</Typography>
 
-			{techStack.map(item => (
-				<Chip key={nanoid()} color='secondary' label={item} />
-			))}
+			<Box className={stackContainerStyle}>
+				{techStack.map(item => (
+					<Chip key={nanoid()} color='secondary' label={item} />
+				))}
+			</Box>
 		</Box>
 	)
 }
