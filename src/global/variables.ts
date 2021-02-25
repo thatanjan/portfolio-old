@@ -1,4 +1,4 @@
-export const DEV_BOOK = 'dev-book'
+export const CONFESSION = 'confession'
 
 // eslint-disable-next-line
 export const ifProd = process.env.NODE_ENV === 'production' ? true : false
