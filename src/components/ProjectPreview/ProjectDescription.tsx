@@ -8,11 +8,11 @@ interface Props {
 	description: string
 }
 
-export const titlePadding = `1rem`
+export const titlePadding = 1
 
 const useStyles = makeStyles({
 	descriptionStyle: {
-		padding: titlePadding,
+		padding: `${titlePadding}rem`,
 		fontSize: '1.3rem',
 	},
 	descriptionContainer: {
