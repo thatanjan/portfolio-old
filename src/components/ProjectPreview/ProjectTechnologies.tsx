@@ -12,12 +12,12 @@ import { titlePadding } from './ProjectDescription'
 import SectionTitle from './SectionTitle'
 
 interface Props {
-	frontEndTechStack: [string]
-	backEndTechStack: [string]
+	frontEndTechStack: string[]
+	backEndTechStack: string[]
 }
 
 interface TechnologiesSectionProps {
-	techStack: [string]
+	techStack: string[]
 	endType: string
 }
 
@@ -63,7 +63,7 @@ const ProjectTechnologies = ({
 	frontEndTechStack,
 	backEndTechStack,
 }: Props) => {
-	const createSectionProps = (endType: string, techStack: [string]) => ({
+	const createSectionProps = (endType: string, techStack: string[]) => ({
 		endType,
 		techStack,
 	})
