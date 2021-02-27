@@ -20,6 +20,7 @@ const NextComposed = React.forwardRef(function NextComposed(
 interface Props {
 	MuiComponent: Function
 	href: string | any
+	as?: string
 	[key: string]: any
 }
 
@@ -31,6 +32,7 @@ function Link(props: Props) {
 		className: classNameProps,
 		innerRef,
 		naked,
+		as,
 		...other
 	} = props
 
@@ -51,6 +53,7 @@ function Link(props: Props) {
 			component={NextComposed}
 			className={className}
 			ref={innerRef}
+			as={as}
 			href={href}
 			{...other}
 		/>
