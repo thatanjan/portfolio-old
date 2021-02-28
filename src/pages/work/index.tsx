@@ -2,9 +2,9 @@ import React from 'react'
 import Head from 'next/head'
 import dynamic from 'next/dynamic'
 import { GetStaticProps } from 'next'
-import { ifProd } from 'global/variables'
 import { nanoid } from 'nanoid'
 
+import allData from 'apiData/works/allData'
 import ApiData from 'apiData/works/dataClass'
 
 const ProjectPreview = dynamic(
@@ -35,12 +35,7 @@ const Work = ({ data }: Props) => {
 export default Work
 
 export const getStaticProps: GetStaticProps = async () => {
-	const url = ifProd
-		? `${process.env.API_URL}/api/work`
-		: `http://localhost:3000/api/work`
+	const jsonData = JSON.parse(JSON.stringify(allData))
 
-	const res = await fetch(url)
-	const data = await res.json()
-
-	return { props: { data } }
+	return { props: { data: jsonData } }
 }
