@@ -13,6 +13,7 @@ import ApiData from 'apiData/works/dataClass'
 import paths from 'utils/paths'
 import convertDashToSpace from 'utils/dashToSpace'
 import convertSpaceToDash from 'utils/spaceToDash'
+import allData from 'apiData/works/allData'
 import { ifProd } from 'global/variables'
 
 interface Props {
@@ -45,13 +46,13 @@ const Page = ({
 	}
 	const technolgiesProps = { frontEndTechStack, backEndTechStack }
 	const pageTitle = convertDashToSpace(name)
-
 	const { boxStyle } = useStyles()
 
 	return (
 		<>
 			<Head>
-				<title>{pageTitle}</title>
+				{' '}
+				<title>{pageTitle}</title>{' '}
 			</Head>
 
 			<Box>
@@ -80,14 +81,13 @@ interface Params {
 export const getStaticProps: GetStaticProps = async ({
 	params: { work },
 }: Params) => {
-	const paramId = convertDashToSpace(work)
-	console.log(paramId)
+	const paramID = convertDashToSpace(work)
 
-	const url = ifProd
-		? `${process.env.API_URL}/api/work/${paramId}`
-		: `http://localhost:3000/api/work/${paramId}`
-	const res = await fetch(url)
-	const data = await res.json()
+	const data = allData.find(item => {
+		return item.name === paramID
+	})
 
-	return { props: { data } }
+	const jsonData = JSON.parse(JSON.stringify(data))
+
+	return { props: { data: jsonData } }
 }
