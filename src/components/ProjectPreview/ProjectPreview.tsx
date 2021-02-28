@@ -2,9 +2,7 @@ import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import Box from '@material-ui/core/Box'
 import Grid from '@material-ui/core/Grid'
-import Button from '@material-ui/core/Button'
 
-import MuiLink from 'components/Links/MuiLink'
 import LinkButton from 'components/Buttons/LinkButton'
 import ProjectTitle from './ProjectTitle'
 import ProjectImage from './ProjectImage'
@@ -42,6 +40,7 @@ const ProjectPreview = ({
 }: Props) => {
 	const { buttonContainer, boxStyle } = useStyles()
 
+	const staticRoute = '/work/[work]'
 	return (
 		<Box className={boxStyle}>
 			<ProjectImage />
@@ -53,7 +52,9 @@ const ProjectPreview = ({
 
 				{sourceCodeLink && <LinkButton link={sourceCodeLink} text='source code' />}
 
-				{moreLink && <LinkButton link={moreLink} text='learn more' />}
+				{moreLink && (
+					<LinkButton link={moreLink} text='learn more' staticRoute={staticRoute} />
+				)}
 			</Grid>
 		</Box>
 	)
