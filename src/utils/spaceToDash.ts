@@ -1,1 +1,2 @@
-export default (text: string) => text.replace(/\s+/g, '-')
+export default (text: string) =>
+	typeof text !== 'string' ? '' : text.replace(/\s+/g, '-')

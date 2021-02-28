@@ -1,3 +1,4 @@
-const convertDashToSpace = (text: string) => text.replace(/-/g, ' ')
+const convertDashToSpace = (text: string) =>
+	typeof text !== 'string' ? '' : text.replace(/-/g, ' ')
 
 export default convertDashToSpace
