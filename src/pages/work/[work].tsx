@@ -80,7 +80,8 @@ interface Params {
 export const getStaticProps: GetStaticProps = async ({
 	params: { work },
 }: Params) => {
-	const paramId = convertSpaceToDash(work)
+	const paramId = convertDashToSpace(work)
+	console.log(paramId)
 
 	const url = ifProd
 		? `${process.env.API_URL}/api/work/${paramId}`
