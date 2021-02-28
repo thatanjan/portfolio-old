@@ -24,6 +24,10 @@ const useStyles = makeStyles({
 		justifyContent: 'space-evenly',
 		'&  .MuiGrid-item': {
 			flexBasis: '45%',
+
+			'& a': {
+				width: '100%',
+			},
 		},
 	},
 	boxStyle: {
