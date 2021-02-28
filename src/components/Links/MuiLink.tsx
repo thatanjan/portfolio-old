@@ -32,7 +32,6 @@ function Link(props: Props) {
 		className: classNameProps,
 		innerRef,
 		naked,
-		as,
 		...other
 	} = props
 
@@ -53,7 +52,6 @@ function Link(props: Props) {
 			component={NextComposed}
 			className={className}
 			ref={innerRef}
-			as={as}
 			href={href}
 			{...other}
 		/>
