@@ -1,5 +1,4 @@
 import React from 'react'
-import Grid from '@material-ui/core/Grid'
 import Button from '@material-ui/core/Button'
 
 import MuiLink from 'components/Links/MuiLink'
@@ -7,15 +6,15 @@ import MuiLink from 'components/Links/MuiLink'
 interface Props {
 	text: string
 	link: string
+	staticRoute?: string
 }
 
-const LinkButton = ({ link, text }: Props) => {
+const LinkButton = ({ staticRoute, link, text }: Props) => {
 	return (
 		<MuiLink
-			MuiComponent={Grid}
-			href={link}
-			item
-			component={Button}
+			MuiComponent={Button}
+			href={staticRoute || link}
+			as={link}
 			variant='contained'
 		>
 			{text}
