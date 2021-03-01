@@ -12,9 +12,7 @@ import ProjectTechnologies from 'components/ProjectPreview/ProjectTechnologies'
 import ApiData from 'apiData/works/dataClass'
 import paths from 'utils/paths'
 import convertDashToSpace from 'utils/dashToSpace'
-import convertSpaceToDash from 'utils/spaceToDash'
 import allData from 'apiData/works/allData'
-import { ifProd } from 'global/variables'
 
 interface Props {
 	data: ApiData
@@ -35,6 +33,7 @@ const Page = ({
 		frontEndTechStack,
 		backEndTechStack,
 		sourceCodeLink,
+		imagePath,
 	},
 }: Props) => {
 	const projectPreviewProps = {
@@ -43,6 +42,7 @@ const Page = ({
 		visitLink,
 		description,
 		sourceCodeLink,
+		imagePath,
 	}
 	const technolgiesProps = { frontEndTechStack, backEndTechStack }
 	const pageTitle = convertDashToSpace(name)
