@@ -3,7 +3,7 @@ import Grid from '@material-ui/core/Grid'
 import Paper from '@material-ui/core/Paper'
 import { makeStyles } from '@material-ui/core/styles'
 
-import useLargerThanMD from 'hooks/useLargerThanMD'
+import useLargerThanLG from 'hooks/useLargerThanLG'
 
 import BottomNavigation from 'components/Navigation/BottomNavigation'
 import AppHeader from 'components/AppHeader/AppHeader'
@@ -59,7 +59,7 @@ const PageLayout = ({ children }: Props) => {
 		wholeGridContainer,
 	} = useStyles()
 
-	const largerThanMD = useLargerThanMD()
+	const largerThanLG = useLargerThanLG()
 
 	return (
 		<>
@@ -73,14 +73,14 @@ const PageLayout = ({ children }: Props) => {
 						<Grid item className={background1}>
 							{children}
 						</Grid>
-						{largerThanMD && (
+						{largerThanLG && (
 							<Grid item className={background2}>
 								<LayoutImage />
 							</Grid>
 						)}
 					</Grid>
 
-					{largerThanMD && (
+					{largerThanLG && (
 						<Grid item>
 							<BottomNavigation />
 						</Grid>
