@@ -3,18 +3,18 @@ import Image from 'next/image'
 
 interface Props {
 	styleClass: string
-source: string
+	imagePath: string
 }
 
-const StyledImage = ({ styleClass, source }: Props) => {
+const StyledImage = ({ styleClass, imagePath }: Props) => {
 	return (
 		<Image
 			className={styleClass}
-			src={source}
 			height={0}
 			width={0}
 			layout='responsive'
 			objectFit='cover'
+			src={imagePath}
 		/>
 	)
 }
