@@ -13,6 +13,7 @@ interface Props {
 	moreLink?: string
 	sourceCodeLink?: string
 	visitLink: string
+	imagePath: string
 }
 
 export const commonContaienrStyle = '0 10%'
@@ -41,13 +42,14 @@ const ProjectPreview = ({
 	moreLink,
 	visitLink,
 	sourceCodeLink,
+	imagePath,
 }: Props) => {
 	const { buttonContainer, boxStyle } = useStyles()
 
 	const staticRoute = '/work/[work]'
 	return (
 		<Box className={boxStyle}>
-			<ProjectImage />
+			<ProjectImage imagePath={imagePath} />
 
 			<ProjectTitle name={name} subtitle={subtitle} />
 
