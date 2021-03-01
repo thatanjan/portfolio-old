@@ -3,7 +3,7 @@ import ApiData from './dataClass'
 
 const subtitle =
 	'social media plattform for people to overcome their imposter syndrome'
-const imagePath = '/ww.jpg'
+const imagePath = '/project__confession.png'
 const frontEndTechStack = ['javascript', 'typescript', 'react', 'material-ui']
 const backEndTechStack = ['nodejs', 'express', 'graphql', 'mongodb']
 const visitLink = 'https://confession.vercel.app'
