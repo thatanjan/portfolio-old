@@ -1,10 +1,10 @@
 import Head from 'next/head'
 import Avatar from 'components/Avatar/Avatar'
-import useLargerThanMD from 'hooks/useLargerThanMD'
+import useLargerThanLG from 'hooks/useLargerThanLG'
 import AboutMe from 'components/AboutMe/AboutMe'
 
 const Home = () => {
-	const largerThanMD = useLargerThanMD()
+	const largerThanLG = useLargerThanLG()
 
 	return (
 		<>
@@ -12,7 +12,7 @@ const Home = () => {
 				<title>Anjan</title>
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
-			{!largerThanMD && <Avatar />} <AboutMe />{' '}
+			{!largerThanLG && <Avatar />} <AboutMe />{' '}
 		</>
 	)
 }
