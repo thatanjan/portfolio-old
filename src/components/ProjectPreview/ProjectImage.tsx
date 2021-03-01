@@ -16,12 +16,16 @@ const useStyles = makeStyles({
 	},
 })
 
-const ProjectImage = () => {
+interface Props {
+	imagePath: string
+}
+
+const ProjectImage = ({ imagePath }: Props) => {
 	const { boxStyle, imageStyle } = useStyles()
 
 	return (
 		<Box className={boxStyle}>
-			<StyledImage source='/ww.jpg' styleClass={imageStyle} />
+			<StyledImage imagePath={imagePath} styleClass={imageStyle} />
 		</Box>
 	)
 }
