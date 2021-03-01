@@ -1,9 +1,10 @@
 import React from 'react'
+import InDevelopment from 'components/InDevelopment/InDevelopment'
 
 interface Props {}
 
 const Work = (props: Props) => {
-	return <div>This is work</div>
+	return <InDevelopment />
 }
 
 export default Work
