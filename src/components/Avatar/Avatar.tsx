@@ -21,7 +21,7 @@ const Avatar = () => {
 	return (
 		<>
 			<div className={avatarContainer}>
-				<StyledImage source={AVATAR} styleClass={smallSize} />
+				<StyledImage imagePath={AVATAR} styleClass={smallSize} />
 			</div>
 		</>
 	)
