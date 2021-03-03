@@ -32,7 +32,7 @@ const Home = () => {
 			{aboutMeData.map(({ question, answer }: AboutMeData) => (
 				<ProjectDescription
 					key={nanoid()}
-					title={question}
+					title={`${question}?`}
 					description={answer}
 					styleName={stylesForHomePage}
 				/>
