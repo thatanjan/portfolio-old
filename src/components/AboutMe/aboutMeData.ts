@@ -1,13 +1,19 @@
+import { ReactNode } from 'react'
+
 import makeFirstLetterUpperCase from 'utils/firstLetterUpperCase'
 
 export class AboutMeData {
 	question: string
 
-	answer: string
+	answer: string | ReactNode
 
 	constructor(question: string, answer: string) {
 		this.question = question
 		this.answer = makeFirstLetterUpperCase(answer)
+	}
+
+	addReactNode(node: ReactNode) {
+		this.answer = node
 	}
 }
 
