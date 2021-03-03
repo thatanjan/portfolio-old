@@ -19,7 +19,7 @@ function a11yProps(index: number) {
 }
 
 const useStyles = makeStyles(({ breakpoints: { up } }: Theme) => ({
-	tabsStyle: { width: '70vw', [up('md')]: { width: '100vw' } },
+	tabsStyle: { width: '70vw', [up('lg')]: { width: '100vw' } },
 }))
 
 interface Props {
