@@ -16,6 +16,7 @@ export class AboutMeData {
 
 	addReactNode(node: ReactNode) {
 		this.answer = node
+		return this
 	}
 }
 
