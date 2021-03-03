@@ -1,6 +1,9 @@
 const makeFirstLetterUpperCase = (text: string) => {
 	const sentences = text.trim().split('.')
-	sentences.pop()
+
+	if (sentences[length - 1] === '') {
+		sentences.pop()
+	}
 
 	let newString: string = ''
 
