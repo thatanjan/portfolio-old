@@ -87,7 +87,8 @@ const PageLayout = ({ children }: Props) => {
 						<Grid item className={background1}>
 							{children}
 						</Grid>
-						{largerThanLG && (
+
+						{largerThanLG && !isBlogRoute() && (
 							<Grid item className={background2}>
 								<LayoutImage />
 							</Grid>
