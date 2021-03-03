@@ -7,7 +7,7 @@ import { LAYOUT_IMAGE } from 'global/variables'
 const useStyles = makeStyles({
 	imageStyle: {},
 	containerStyle: {
-		width: '85%',
+		width: '100%',
 		height: '90%',
 		display: 'grid',
 		alignItems: 'end',
