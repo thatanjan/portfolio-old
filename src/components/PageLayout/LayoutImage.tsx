@@ -8,7 +8,6 @@ const useStyles = makeStyles({
 	imageStyle: {},
 	containerStyle: {
 		width: '100%',
-		height: '90%',
 		display: 'grid',
 		alignItems: 'end',
 		'& > div': {
