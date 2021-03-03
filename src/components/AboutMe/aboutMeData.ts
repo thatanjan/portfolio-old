@@ -1,4 +1,6 @@
 import { ReactNode } from 'react'
+import Typography from '@material-ui/core/Typography'
+import MuiLink from 'components/Links/MuiLink'
 
 import makeFirstLetterUpperCase from 'utils/firstLetterUpperCase'
 
@@ -40,6 +42,14 @@ const whyDoIDoWhatIDo = new AboutMeData(
 )
 
 const whatHaveIDone = new AboutMeData('what have I done', WHAT_HAVE_I_DONE)
+
+// const Contact = () => {
+// 	return (
+// 		<MuiLink MuiComponent={Typography} href='/contact' variant='h5'>
+// 			makeFirstLetterUpperCase('feel free to contact me')
+// 		</MuiLink>
+// 	)
+// }
 
 const workTogather = new AboutMeData(
 	'Think we should work together',
