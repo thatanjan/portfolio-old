@@ -1,5 +1,6 @@
 import React from 'react'
 import Paper from '@material-ui/core/Paper'
+import Typography from '@material-ui/core/Typography'
 import { makeStyles } from '@material-ui/core/styles'
 import clsx from 'clsx'
 
@@ -16,7 +17,7 @@ export const titlePadding = 1
 const useStyles = makeStyles({
 	descriptionStyle: {
 		padding: `${titlePadding}rem`,
-		fontSize: '1.3rem',
+		// fontSize: '1.3rem',
 	},
 	descriptionContainer: {
 		marginBottom: '5%',
@@ -29,7 +30,9 @@ const ProjectDescription = ({ title, description, styleName }: Props) => {
 	return (
 		<Paper className={clsx(descriptionContainer, true && styleName)}>
 			<SectionTitle text={title} />
-			<Paper className={descriptionStyle}>{description}</Paper>
+			<Typography variant='h5' className={descriptionStyle}>
+				{description}
+			</Typography>
 		</Paper>
 	)
 }
