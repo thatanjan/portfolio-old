@@ -20,7 +20,7 @@ const LinkButton = ({ staticRoute, link, text }: Props) => {
 				as={link}
 				variant='contained'
 			>
-				<Typography variant='h6'>{text}</Typography>
+				<Typography variant='button'>{text}</Typography>
 			</MuiLink>
 		</Grid>
 	)
