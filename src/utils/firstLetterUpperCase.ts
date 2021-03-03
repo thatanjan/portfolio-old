@@ -1,8 +1,8 @@
-const makeGoodString = (text: string) => {
+const makeFirstLetterUpperCase = (text: string) => {
 	const sentences = text.trim().split('.')
 	sentences.pop()
 
-	let newString = ''
+	let newString: string = ''
 
 	sentences.forEach(sentence => {
 		let sentenceCopy = sentence
@@ -19,4 +19,4 @@ const makeGoodString = (text: string) => {
 	return newString
 }
 
-export default makeGoodString
+export default makeFirstLetterUpperCase
