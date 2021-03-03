@@ -1,12 +1,14 @@
 import React from 'react'
 import Paper from '@material-ui/core/Paper'
 import { makeStyles } from '@material-ui/core/styles'
+import clsx from 'clsx'
 
 import SectionTitle from './SectionTitle'
 
 interface Props {
 	title: string
 	description: string
+	styleName?: string
 }
 
 export const titlePadding = 1
@@ -21,11 +23,11 @@ const useStyles = makeStyles({
 	},
 })
 
-const ProjectDescription = ({ title, description }: Props) => {
+const ProjectDescription = ({ title, description, styleName }: Props) => {
 	const { descriptionStyle, descriptionContainer } = useStyles()
 
 	return (
-		<Paper className={descriptionContainer}>
+		<Paper className={clsx(descriptionContainer, true && styleName)}>
 			<SectionTitle text={title} />
 			<Paper className={descriptionStyle}>{description}</Paper>
 		</Paper>
