@@ -6,7 +6,7 @@ export class AboutMeData {
 	answer: string
 
 	constructor(question: string, answer: string) {
-		this.question = makeFirstLetterUpperCase(question)
+		this.question = question
 		this.answer = makeFirstLetterUpperCase(answer)
 	}
 }
