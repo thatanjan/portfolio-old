@@ -1,5 +1,5 @@
 const makeFirstLetterUpperCase = (text: string) => {
-	const sentences = text.trim().split('.')
+	const sentences = text.split('.')
 
 	if (sentences[sentences.length - 1] === '') {
 		sentences.pop()
@@ -12,7 +12,7 @@ const makeFirstLetterUpperCase = (text: string) => {
 
 		sentenceCopy = sentenceCopy.trim()
 
-		sentenceCopy = `${sentenceCopy.charAt(0).toUpperCase()} ${sentenceCopy.slice(
+		sentenceCopy = `${sentenceCopy.charAt(0).toUpperCase()}${sentenceCopy.slice(
 			1
 		)}. `
 
