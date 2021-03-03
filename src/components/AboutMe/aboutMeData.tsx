@@ -47,7 +47,12 @@ const whatHaveIDone = new AboutMeData('what have I done', WHAT_HAVE_I_DONE)
 
 const Contact = () => {
 	return (
-		<MuiLink MuiComponent={Button} href='/contact' variant='contained'>
+		<MuiLink
+			MuiComponent={Button}
+			href='/contact'
+			variant='contained'
+			color='primary'
+		>
 			{makeFirstLetterUpperCase('feel free to contact me')}
 		</MuiLink>
 	)
