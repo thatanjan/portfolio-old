@@ -1,11 +1,13 @@
+import makeFirstLetterUpperCase from 'utils/firstLetterUpperCase'
+
 export class AboutMeData {
 	question: string
 
 	answer: string
 
 	constructor(question: string, answer: string) {
-		this.question = question
-		this.answer = answer
+		this.question = makeFirstLetterUpperCase(question)
+		this.answer = makeFirstLetterUpperCase(answer)
 	}
 }
 
