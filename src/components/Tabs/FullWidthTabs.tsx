@@ -9,7 +9,7 @@ import { useRouter } from 'next/router'
 import navigationOptions, {
 	Option,
 } from 'components/Navigation/navigationOptions'
-import useLargerThanMD from 'hooks/useLargerThanMD'
+import useLargerThanLG from 'hooks/useLargerThanLG'
 
 function a11yProps(index: number) {
 	return {
@@ -31,7 +31,7 @@ const FullWidthTabs = ({ setIsDrawerOpen }: Props) => {
 
 	const { tabsStyle } = useStyles()
 
-	const largerThanMD = useLargerThanMD()
+	const largerThanLG = useLargerThanLG()
 
 	const { pathname } = useRouter()
 
@@ -57,7 +57,7 @@ const FullWidthTabs = ({ setIsDrawerOpen }: Props) => {
 			textColor='primary'
 			variant='fullWidth'
 			aria-label='full width tabs example'
-			orientation={!largerThanMD ? 'vertical' : 'horizontal'}
+			orientation={!largerThanLG ? 'vertical' : 'horizontal'}
 			className={tabsStyle}
 		>
 			{navigationOptions.map(({ href, label }: Option, index: number) => (
