@@ -35,11 +35,17 @@ const whyDoIDoWhatIDo = new AboutMeData(
 
 const whatHaveIDone = new AboutMeData('what have I done', WHAT_HAVE_I_DONE)
 
+const workTogather = new AboutMeData(
+	'Think we should work together',
+	'Feel free to Contact me'
+)
+
 const aboutMeData: AboutMeData[] = [
 	whoAmI,
 	whatProblemsDoISolve,
 	whatHaveIDone,
 	whyDoIDoWhatIDo,
+	workTogather,
 ]
 
 export default aboutMeData
