@@ -1,4 +1,4 @@
-export class Data {
+export class AboutMeData {
 	question: string
 
 	answer: string
@@ -11,8 +11,8 @@ export class Data {
 
 const WHO_AM_I_ANSWER = 'my name is anjan'
 
-const whoAmI = new Data('who am I?', WHO_AM_I_ANSWER)
+const whoAmI = new AboutMeData('who am I?', WHO_AM_I_ANSWER)
 
-const aboutMeData: Data[] = [whoAmI]
+const aboutMeData: AboutMeData[] = [whoAmI]
 
 export default aboutMeData
