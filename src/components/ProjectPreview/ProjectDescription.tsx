@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { ReactNode } from 'react'
 import Paper from '@material-ui/core/Paper'
 import Typography from '@material-ui/core/Typography'
 import { makeStyles } from '@material-ui/core/styles'
@@ -8,7 +8,7 @@ import SectionTitle from './SectionTitle'
 
 interface Props {
 	title: string
-	description: string
+	description: string | ReactNode
 	styleName?: string
 }
 
