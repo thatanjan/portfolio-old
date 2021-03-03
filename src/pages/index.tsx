@@ -3,6 +3,9 @@ import Head from 'next/head'
 import useLargerThanLG from 'hooks/useLargerThanLG'
 import ProjectDescription from 'components/ProjectPreview/ProjectDescription'
 import { makeStyles } from '@material-ui/core/styles'
+import { nanoid } from 'nanoid'
+
+import aboutMeData, { AboutMeData } from 'components/AboutMe/aboutMeData'
 
 const Avatar = dynamic(() => import('components/Avatar/Avatar'))
 
@@ -26,11 +29,14 @@ const Home = () => {
 			</Head>
 			{!largerThanLG && <Avatar />}
 
-			<ProjectDescription
-				title='who am I?'
-				description='My name is Anjan Shomodder. I am from Dhaka bangladesh'
-				styleName={stylesForHomePage}
-			/>
+			{aboutMeData.map(({ question, answer }: AboutMeData) => (
+				<ProjectDescription
+					key={nanoid()}
+					title={question}
+					description={answer}
+					styleName={stylesForHomePage}
+				/>
+			))}
 		</>
 	)
 }
