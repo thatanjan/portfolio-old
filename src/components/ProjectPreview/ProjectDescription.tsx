@@ -30,7 +30,7 @@ const ProjectDescription = ({ title, description, styleName }: Props) => {
 	return (
 		<Paper className={clsx(descriptionContainer, true && styleName)}>
 			<SectionTitle text={title} />
-			<Typography variant='subtitle1' className={descriptionStyle}>
+			<Typography variant='h6' className={descriptionStyle}>
 				{description}
 			</Typography>
 		</Paper>
