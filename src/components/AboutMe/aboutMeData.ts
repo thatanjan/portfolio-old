@@ -1,7 +1,7 @@
 export class Data {
-	question = string
+	question: string
 
-	answer = string
+	answer: string
 
 	constructor(question: string, answer: string) {
 		this.question = question
