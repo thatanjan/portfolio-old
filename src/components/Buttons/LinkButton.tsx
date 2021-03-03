@@ -1,6 +1,7 @@
 import React from 'react'
 import Button from '@material-ui/core/Button'
 import Grid from '@material-ui/core/Grid'
+import Typography from '@material-ui/core/Typography'
 
 import MuiLink from 'components/Links/MuiLink'
 
@@ -19,7 +20,7 @@ const LinkButton = ({ staticRoute, link, text }: Props) => {
 				as={link}
 				variant='contained'
 			>
-				{text}
+				<Typography variant='h6'>{text}</Typography>
 			</MuiLink>
 		</Grid>
 	)
