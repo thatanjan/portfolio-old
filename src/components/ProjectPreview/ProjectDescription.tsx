@@ -5,6 +5,7 @@ import { makeStyles } from '@material-ui/core/styles'
 import SectionTitle from './SectionTitle'
 
 interface Props {
+	title: string
 	description: string
 }
 
@@ -20,12 +21,12 @@ const useStyles = makeStyles({
 	},
 })
 
-const ProjectDescription = ({ description }: Props) => {
+const ProjectDescription = ({ title, description }: Props) => {
 	const { descriptionStyle, descriptionContainer } = useStyles()
 
 	return (
 		<Paper className={descriptionContainer}>
-			<SectionTitle text='description' />
+			<SectionTitle text={title} />
 			<Paper className={descriptionStyle}>{description}</Paper>
 		</Paper>
 	)
