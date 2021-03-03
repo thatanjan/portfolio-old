@@ -1,4 +1,5 @@
 import React, { ReactNode } from 'react'
+import { useRouter } from 'next/router'
 import Grid from '@material-ui/core/Grid'
 import Paper from '@material-ui/core/Paper'
 import { makeStyles } from '@material-ui/core/styles'
@@ -59,7 +60,20 @@ const PageLayout = ({ children }: Props) => {
 		wholeGridContainer,
 	} = useStyles()
 
+	const { route } = useRouter()
+
 	const largerThanLG = useLargerThanLG()
+
+	const isBlogRoute = () => {
+		switch (route) {
+			case '/blog':
+				return true
+			case '/blog/[blog]':
+				return true
+			default:
+				return false
+		}
+	}
 
 	return (
 		<>
