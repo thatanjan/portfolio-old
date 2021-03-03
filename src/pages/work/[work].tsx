@@ -58,7 +58,7 @@ const Page = ({
 			<Box>
 				<ProjectPreview {...projectPreviewProps} />
 				<Box className={boxStyle}>
-					<ProjectDescription description={description} />
+					<ProjectDescription title='description' description={description} />
 					<ProjectTechnologies {...technolgiesProps} />
 				</Box>
 			</Box>
