@@ -72,8 +72,13 @@ const ProjectTechnologies = ({
 		<Paper>
 			<SectionTitle text='technolgies used' />
 
-			<TechnologiesSection {...createSectionProps('front', frontEndTechStack)} />
-			<TechnologiesSection {...createSectionProps('back', backEndTechStack)} />
+			{frontEndTechStack && (
+				<TechnologiesSection {...createSectionProps('front', frontEndTechStack)} />
+			)}
+
+			{backEndTechStack && (
+				<TechnologiesSection {...createSectionProps('back', backEndTechStack)} />
+			)}
 		</Paper>
 	)
 }
