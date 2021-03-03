@@ -15,17 +15,17 @@ class ApiData {
 
 	moreLink: string
 
-	backEndTechStack: string[]
+	backEndTechStack: string[] | null
 
-	frontEndTechStack: string[]
+	frontEndTechStack: string[] | null
 
 	constructor(name: string) {
 		this.name = name
 		this.subtitle = ''
 		this.imagePath = ''
 		this.visitLink = ''
-		this.backEndTechStack = []
-		this.frontEndTechStack = []
+		this.backEndTechStack = null
+		this.frontEndTechStack = null
 		this.moreLink = `/work/${convertSpaceToDash(name)}`
 		this.sourceCodeLink = `https://github.com/thatanjan/${convertSpaceToDash(
 			name
