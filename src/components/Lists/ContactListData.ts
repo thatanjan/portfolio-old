@@ -27,16 +27,18 @@ export class Contact {
 	}
 }
 
-const facebook = new Contact('facebook')
+const USER_NAME = 'thatanjan'
+
+const facebook = new Contact(USER_NAME)
 	.addIcon(Facebook)
 	.addLink('https://www.facebook.com/thatanjan/')
-const instagram = new Contact('instagram')
+const instagram = new Contact(USER_NAME)
 	.addIcon(Instagram)
 	.addLink('https://www.instagram.com/thatanjan/')
-const linkedin = new Contact('Linkedin')
+const linkedin = new Contact(USER_NAME)
 	.addIcon(Linkedin)
 	.addLink('https://www.linkedin.com/in/thatanjan/')
-const twitter = new Contact('twitter')
+const twitter = new Contact(USER_NAME)
 	.addIcon(Twitter)
 	.addLink('https://www.twitter.com/thatanjan/')
 const youtube = new Contact('youtube')
