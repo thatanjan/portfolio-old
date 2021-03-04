@@ -30,6 +30,8 @@ export default function SimpleList() {
 
 	return (
 		<div className={classes.root}>
+			<Typography variant='h3'>Feel Free to contact me</Typography>
+
 			<List component={Paper} aria-label='main mailbox folders'>
 				{allContacts.map(({ name, Icon }: Contact) => (
 					<ListItem key={nanoid()} button>
