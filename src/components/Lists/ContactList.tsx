@@ -26,13 +26,17 @@ const useStyles = makeStyles({
 })
 
 export default function SimpleList() {
-	const classes = useStyles()
+	const { root, listStyle } = useStyles()
 
 	return (
-		<div className={classes.root}>
+		<div className={root}>
 			<Typography variant='h3'>Feel Free to contact me</Typography>
 
-			<List component={Paper} aria-label='main mailbox folders'>
+			<List
+				component={Paper}
+				className={listStyle}
+				aria-label='main mailbox folders'
+			>
 				{allContacts.map(({ name, Icon }: Contact) => (
 					<ListItem key={nanoid()} button>
 						<ListItemIcon>
