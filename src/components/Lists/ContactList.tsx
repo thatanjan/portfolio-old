@@ -1,6 +1,7 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import Paper from '@material-ui/core/Paper'
+import Typography from '@material-ui/core/Typography'
 import List from '@material-ui/core/List'
 import ListItem from '@material-ui/core/ListItem'
 import ListItemIcon from '@material-ui/core/ListItemIcon'
@@ -12,11 +13,15 @@ import allContacts, { Contact } from './ContactListData'
 
 const useStyles = makeStyles({
 	root: {
-		display: 'flex',
-		justifyContent: 'center',
-		height: '70%',
-		alignItems: 'center',
+		display: 'grid',
+		placeItems: 'center',
+		height: '100%',
+		gridTemplateRows: '20% 80%',
 		width: '100%',
+	},
+	listStyle: {
+		width: '70%',
+		alignSelf: 'self-start',
 	},
 })
 
