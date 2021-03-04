@@ -49,7 +49,7 @@ export default function SimpleList() {
 						<ListItemIcon>
 							<SvgIcon component={Icon} fontSize='large' viewBox='0 0 600 476.6' />
 						</ListItemIcon>
-						<ListItemText primary={name} />
+						<ListItemText primary={name} primaryTypographyProps={{ variant: 'h6' }} />
 					</MuiLink>
 				))}
 			</List>
