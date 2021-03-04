@@ -12,12 +12,12 @@ import { titlePadding } from './ProjectDescription'
 import SectionTitle from './SectionTitle'
 
 interface Props {
-	frontEndTechStack: string[]
-	backEndTechStack: string[]
+	frontEndTechStack: string[] | null
+	backEndTechStack: string[] | null
 }
 
 interface TechnologiesSectionProps {
-	techStack: string[]
+	techStack: string[] | null
 	endType: string
 }
 
@@ -46,14 +46,15 @@ const TechnologiesSection = ({
 			</Typography>
 
 			<Box className={stackContainerStyle}>
-				{techStack.map(item => (
-					<Chip
-						className={chipStyle}
-						key={nanoid()}
-						color='secondary'
-						label={item}
-					/>
-				))}
+				{techStack &&
+					techStack.map(item => (
+						<Chip
+							className={chipStyle}
+							key={nanoid()}
+							color='secondary'
+							label={item}
+						/>
+					))}
 			</Box>
 		</Box>
 	)
