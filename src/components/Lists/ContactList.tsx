@@ -1,5 +1,6 @@
 import React from 'react'
-import { createStyles, Theme, makeStyles } from '@material-ui/core/styles'
+import { makeStyles } from '@material-ui/core/styles'
+import Paper from '@material-ui/core/Paper'
 import List from '@material-ui/core/List'
 import ListItem from '@material-ui/core/ListItem'
 import ListItemIcon from '@material-ui/core/ListItemIcon'
@@ -9,23 +10,23 @@ import { nanoid } from 'nanoid'
 
 import allContacts, { Contact } from './ContactListData'
 
-const useStyles = makeStyles((theme: Theme) =>
-	createStyles({
-		root: {
-			width: '100%',
-			maxWidth: 360,
-			backgroundColor: theme.palette.background.paper,
-		},
-	})
-)
+const useStyles = makeStyles({
+	root: {
+		display: 'flex',
+		justifyContent: 'center',
+		height: '70%',
+		alignItems: 'center',
+		width: '100%',
+	},
+})
 
 export default function SimpleList() {
 	const classes = useStyles()
 
 	return (
 		<div className={classes.root}>
-			<List component='nav' aria-label='main mailbox folders'>
-				{allContacts.map(({ name, Icon, link }: Contact) => (
+			<List component={Paper} aria-label='main mailbox folders'>
+				{allContacts.map(({ name, Icon }: Contact) => (
 					<ListItem key={nanoid()} button>
 						<ListItemIcon>
 							<SvgIcon component={Icon} fontSize='large' viewBox='0 0 600 476.6' />
