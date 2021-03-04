@@ -1,13 +1,14 @@
+import { ElementType } from 'react'
 import Instagram from '../../../public/svgs/social_media/instagram.svg'
 import Linkedin from '../../../public/svgs/social_media/linkedin.svg'
 import Facebook from '../../../public/svgs/social_media/facebook.svg'
 import Twitter from '../../../public/svgs/social_media/twitter.svg'
 import Youtube from '../../../public/svgs/social_media/youtube.svg'
 
-class Contact {
+export class Contact {
 	name: string
 
-	Icon: Function
+	Icon: ElementType
 
 	link: string
 
@@ -15,7 +16,7 @@ class Contact {
 		this.name = name
 	}
 
-	addIcon(icon: Function) {
+	addIcon(icon: ElementType) {
 		this.Icon = icon
 		return this
 	}
