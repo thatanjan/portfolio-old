@@ -4,6 +4,7 @@ import Linkedin from '../../../public/svgs/social_media/linkedin.svg'
 import Facebook from '../../../public/svgs/social_media/facebook.svg'
 import Twitter from '../../../public/svgs/social_media/twitter.svg'
 import Youtube from '../../../public/svgs/social_media/youtube.svg'
+import Gmail from '../../../public/svgs/social_media/gmail.svg'
 
 export class Contact {
 	name: string
@@ -44,7 +45,15 @@ const twitter = new Contact(USER_NAME)
 const youtube = new Contact('Cules Coding')
 	.addIcon(Youtube)
 	.addLink('https://www.youtube.com/channel/UCBaGowNYTUsm3IDaHbLRMYw')
+const gmail = new Contact('anjan.cules@gmail.com').addIcon(Gmail).addLink('')
 
-const allContacts: Contact[] = [linkedin, twitter, instagram, youtube, facebook]
+const allContacts: Contact[] = [
+	gmail,
+	linkedin,
+	twitter,
+	instagram,
+	youtube,
+	facebook,
+]
 
 export default allContacts
