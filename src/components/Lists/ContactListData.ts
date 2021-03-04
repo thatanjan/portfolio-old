@@ -41,7 +41,7 @@ const linkedin = new Contact(USER_NAME)
 const twitter = new Contact(USER_NAME)
 	.addIcon(Twitter)
 	.addLink('https://www.twitter.com/thatanjan/')
-const youtube = new Contact('youtube')
+const youtube = new Contact('Cules Coding')
 	.addIcon(Youtube)
 	.addLink('https://www.youtube.com/channel/UCBaGowNYTUsm3IDaHbLRMYw')
 
