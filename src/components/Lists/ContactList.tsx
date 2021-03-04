@@ -7,6 +7,7 @@ import ListItem from '@material-ui/core/ListItem'
 import ListItemIcon from '@material-ui/core/ListItemIcon'
 import ListItemText from '@material-ui/core/ListItemText'
 import SvgIcon from '@material-ui/core/SvgIcon'
+import MuiLink from 'components/Links/MuiLink'
 import { nanoid } from 'nanoid'
 
 import allContacts, { Contact } from './ContactListData'
@@ -37,13 +38,19 @@ export default function SimpleList() {
 				className={listStyle}
 				aria-label='main mailbox folders'
 			>
-				{allContacts.map(({ name, Icon }: Contact) => (
-					<ListItem key={nanoid()} button>
+				{allContacts.map(({ name, Icon, link }: Contact) => (
+					<MuiLink
+						MuiComponent={ListItem}
+						href={link}
+						target='_blank'
+						key={nanoid()}
+						button
+					>
 						<ListItemIcon>
 							<SvgIcon component={Icon} fontSize='large' viewBox='0 0 600 476.6' />
 						</ListItemIcon>
 						<ListItemText primary={name} />
-					</ListItem>
+					</MuiLink>
 				))}
 			</List>
 		</div>
