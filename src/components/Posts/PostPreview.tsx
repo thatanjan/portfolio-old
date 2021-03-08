@@ -31,7 +31,7 @@ export default function RecipeReviewCard() {
 			<CardHeader
 				title='Shrimp and Chorizo Paella'
 				subheader='September 14, 2016'
-				titleTypographyProps={{ variant: 'h1' }}
+				titleTypographyProps={{ variant: 'h3' }}
 			/>
 			<Image
 				layout='intrinsic'
