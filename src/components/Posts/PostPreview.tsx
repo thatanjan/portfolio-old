@@ -12,8 +12,13 @@ import Image from 'next/image'
 const useStyles = makeStyles((theme: Theme) =>
 	createStyles({
 		root: {
-			maxWidth: '80%',
-			margin: '0 auto',
+			maxWidth: '90%',
+
+			margin: '15% auto',
+
+			[theme.breakpoints.up('sm')]: {
+				maxWidth: '80%',
+			},
 		},
 	})
 )
