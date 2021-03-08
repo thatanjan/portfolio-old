@@ -47,7 +47,7 @@ export default function RecipeReviewCard() {
 					if you like.
 				</Typography>
 			</CardContent>
-			<CardActions>
+			<CardActions style={{ justifyContent: 'center' }}>
 				<LinkButton link='/' text='read more' />
 			</CardActions>
 		</Card>
