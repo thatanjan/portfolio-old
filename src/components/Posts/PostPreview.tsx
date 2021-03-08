@@ -12,7 +12,8 @@ import Image from 'next/image'
 const useStyles = makeStyles((theme: Theme) =>
 	createStyles({
 		root: {
-			maxWidth: 500,
+			maxWidth: '80%',
+			margin: '0 auto',
 		},
 	})
 )
