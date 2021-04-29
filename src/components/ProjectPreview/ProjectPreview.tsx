@@ -1,5 +1,5 @@
 import React from 'react'
-import { makeStyles } from '@material-ui/core/styles'
+import { makeStyles, Theme } from '@material-ui/core/styles'
 import Box from '@material-ui/core/Box'
 import Grid from '@material-ui/core/Grid'
 
@@ -18,6 +18,15 @@ interface Props {
 
 export const commonContaienrStyle = '0 10%'
 
+export const useSmallSizeStyle = makeStyles((theme: Theme) => ({
+	boxStyle: {
+		padding: commonContaienrStyle,
+		[theme.breakpoints.down('xs')]: {
+			padding: '0 5%',
+		},
+	},
+}))
+
 const useStyles = makeStyles({
 	buttonContainer: {
 		paddingTop: '2%',
@@ -31,9 +40,6 @@ const useStyles = makeStyles({
 			},
 		},
 	},
-	boxStyle: {
-		padding: commonContaienrStyle,
-	},
 })
 
 const ProjectPreview = ({
@@ -44,7 +50,9 @@ const ProjectPreview = ({
 	sourceCodeLink,
 	imagePath,
 }: Props) => {
-	const { buttonContainer, boxStyle } = useStyles()
+	const { buttonContainer } = useStyles()
+
+	const { boxStyle } = useSmallSizeStyle()
 
 	const staticRoute = '/work/[work]'
 	return (

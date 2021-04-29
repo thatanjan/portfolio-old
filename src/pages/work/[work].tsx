@@ -1,11 +1,11 @@
 import React from 'react'
 import Head from 'next/head'
 import { GetStaticPaths, GetStaticProps } from 'next'
-import { makeStyles } from '@material-ui/core/styles'
 import Box from '@material-ui/core/Box'
 
 import ProjectPreview, {
 	commonContaienrStyle,
+	useSmallSizeStyle,
 } from 'components/ProjectPreview/ProjectPreview'
 import ProjectDescription from 'components/ProjectPreview/ProjectDescription'
 import ProjectTechnologies from 'components/ProjectPreview/ProjectTechnologies'
@@ -17,12 +17,6 @@ import allData from 'apiData/works/allData'
 interface Props {
 	data: ApiData
 }
-
-const useStyles = makeStyles({
-	boxStyle: {
-		padding: commonContaienrStyle,
-	},
-})
 
 const Page = ({
 	data: {
@@ -46,7 +40,7 @@ const Page = ({
 	}
 	const technolgiesProps = { frontEndTechStack, backEndTechStack }
 	const pageTitle = convertDashToSpace(name)
-	const { boxStyle } = useStyles()
+	const { boxStyle } = useSmallSizeStyle()
 
 	return (
 		<>
