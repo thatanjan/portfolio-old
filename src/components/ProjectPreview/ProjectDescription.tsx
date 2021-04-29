@@ -16,8 +16,7 @@ export const titlePadding = 1
 
 const useStyles = makeStyles({
 	descriptionStyle: {
-		padding: `${titlePadding}rem`,
-		// fontSize: '1.3rem',
+		padding: '1rem 0 1rem',
 	},
 	descriptionContainer: {
 		marginBottom: '5%',

@@ -12,7 +12,7 @@ interface Props {
 
 const useStyles = makeStyles({
 	titleStyle: {
-		padding: '1rem',
+		paddingTop: '1rem',
 		paddingBottom: '0',
 	},
 })
