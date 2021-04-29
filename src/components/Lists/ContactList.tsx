@@ -5,7 +5,9 @@ import Typography from '@material-ui/core/Typography'
 import List from '@material-ui/core/List'
 import ListItem from '@material-ui/core/ListItem'
 import ListItemIcon from '@material-ui/core/ListItemIcon'
+import ListItemAvatar from '@material-ui/core/ListItemAvatar'
 import ListItemText from '@material-ui/core/ListItemText'
+import Avatar from '@material-ui/core/Avatar'
 import SvgIcon from '@material-ui/core/SvgIcon'
 import MuiLink from 'components/Links/MuiLink'
 import { nanoid } from 'nanoid'
@@ -42,14 +44,21 @@ export default function SimpleList() {
 					<MuiLink
 						MuiComponent={ListItem}
 						href={link}
-						target='_blank'
+						target={name === 'anjan.cules@gmail.com' ? null : '_blank'}
 						key={nanoid()}
 						button
 					>
-						<ListItemIcon>
-							<SvgIcon component={Icon} fontSize='large' viewBox='0 0 600 476.6' />
-						</ListItemIcon>
-						<ListItemText primary={name} primaryTypographyProps={{ variant: 'h6' }} />
+						<ListItemAvatar>
+							<Avatar src={Icon} alt={name} />
+						</ListItemAvatar>
+
+						<ListItemText
+							primary={name}
+							primaryTypographyProps={{
+								component: 'h1',
+								variant: 'body1',
+							}}
+						/>
 					</MuiLink>
 				))}
 			</List>
