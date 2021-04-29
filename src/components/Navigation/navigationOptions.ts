@@ -3,8 +3,8 @@ export class Option {
 
 	label: string
 
-	constructor(name: string) {
-		this.href = name === 'about' ? '/' : `/${name}`
+	constructor(name: string, href?: string) {
+		this.href = name === 'about' ? '/' : href || `/${name}`
 		this.label = name
 	}
 }
@@ -13,7 +13,7 @@ const work: Option = new Option('work')
 
 const about: Option = new Option('about')
 
-const blog: Option = new Option('blog')
+const blog: Option = new Option('blog', 'https://cules-coding.vercel.app/')
 
 const services: Option = new Option('services')
 
