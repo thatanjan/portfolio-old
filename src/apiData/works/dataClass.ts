@@ -1,4 +1,5 @@
 import convertSpaceToDash from 'utils/spaceToDash'
+import { Tech } from './Techs'
 
 class ApiData {
 	name: string
@@ -15,9 +16,9 @@ class ApiData {
 
 	moreLink: string
 
-	backEndTechStack: string[] | null
+	backEndTechStack: Tech[] | null
 
-	frontEndTechStack: string[] | null
+	frontEndTechStack: Tech[] | null
 
 	constructor(name: string) {
 		this.name = name
@@ -47,12 +48,12 @@ class ApiData {
 		return this
 	}
 
-	addBackEndTechStack(technolgies: string[]) {
+	addBackEndTechStack(technolgies: Tech[]) {
 		this.backEndTechStack = technolgies
 		return this
 	}
 
-	addFrontEndTechStack(technolgies: string[]) {
+	addFrontEndTechStack(technolgies: Tech[]) {
 		this.frontEndTechStack = technolgies
 		return this
 	}
