@@ -62,7 +62,7 @@ const ProjectPreview = ({
 			<ProjectTitle name={name} subtitle={subtitle} />
 
 			<Grid container className={buttonContainer}>
-				<LinkButton link={visitLink} text={`visit ${name}`} />
+				<LinkButton link={visitLink} text='visit project' />
 
 				{sourceCodeLink && <LinkButton link={sourceCodeLink} text='source code' />}
 
