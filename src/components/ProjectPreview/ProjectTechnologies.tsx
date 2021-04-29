@@ -7,17 +7,19 @@ import { makeStyles } from '@material-ui/core/styles'
 import { nanoid } from 'nanoid'
 import clsx from 'clsx'
 
+import { Tech } from 'apiData/works/Techs'
+
 import { CAPITALIZE } from 'global/variables'
 import { titlePadding } from './ProjectDescription'
 import SectionTitle from './SectionTitle'
 
 interface Props {
-	frontEndTechStack: string[] | null
-	backEndTechStack: string[] | null
+	frontEndTechStack: Tech[] | null
+	backEndTechStack: Tech[] | null
 }
 
 interface TechnologiesSectionProps {
-	techStack: string[] | null
+	techStack: Tech[] | null
 	endType: string
 }
 
@@ -64,7 +66,7 @@ const ProjectTechnologies = ({
 	frontEndTechStack,
 	backEndTechStack,
 }: Props) => {
-	const createSectionProps = (endType: string, techStack: string[]) => ({
+	const createSectionProps = (endType: string, techStack: Tech[]) => ({
 		endType,
 		techStack,
 	})
