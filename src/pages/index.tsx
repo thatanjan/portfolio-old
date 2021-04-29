@@ -13,6 +13,7 @@ const useStyles = makeStyles({
 	stylesForHomePage: {
 		width: '90%',
 		margin: '5% auto',
+		paddingLeft: '1rem',
 	},
 })
 
