@@ -26,8 +26,23 @@ const WHO_AM_I_ANSWER = 'my name is anjan. I am a Full stack developer.'
 const WHAT_PROBLEMS_DO_I_SOLVE: string =
 	'I can create complex full stack web applications like social media application, blogging, e-commerce website and many more.'
 
-const WHAT_HAVE_I_DONE: string =
-	'I have developed and currently maintaining an social media application called Confession.'
+const WHAT_HAVE_I_DONE = () => (
+	<>
+		<Typography variant='body1' component='h2' style={{ display: 'inline' }}>
+			I have developed and currently maintaining an social media application called
+			Confession. I have also created other cool projects{' '}
+		</Typography>
+
+		<MuiLink
+			MuiComponent={Button}
+			href='/work'
+			variant='contained'
+			color='primary'
+		>
+			{makeFirstLetterUpperCase('see my work here')}
+		</MuiLink>
+	</>
+)
 
 const WHY_DO_I_DO_WHAT_I_DO = 'I love to solve problems and develop new ideas.'
 
@@ -43,7 +58,9 @@ const whyDoIDoWhatIDo = new AboutMeData(
 	WHY_DO_I_DO_WHAT_I_DO
 )
 
-const whatHaveIDone = new AboutMeData('what have I done', WHAT_HAVE_I_DONE)
+const whatHaveIDone = new AboutMeData('what have I done', '').addReactNode(
+	<WHAT_HAVE_I_DONE />
+)
 
 const Contact = () => {
 	return (
