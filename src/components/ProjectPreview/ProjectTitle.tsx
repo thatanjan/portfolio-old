@@ -22,12 +22,12 @@ const ProjectTitle = ({ name, subtitle }: Props) => {
 	return (
 		<Grid container className={titleGridContainer}>
 			<Grid item>
-				<Typography className={CAPITALIZE} variant='h3'>
+				<Typography className={CAPITALIZE} component='h1' variant='h3'>
 					{name}
 				</Typography>
 			</Grid>
 			<Grid item>
-				<Typography className={CAPITALIZE} variant='h5'>
+				<Typography className={CAPITALIZE} component='h2' variant='subtitle1'>
 					{subtitle}
 				</Typography>
 			</Grid>
