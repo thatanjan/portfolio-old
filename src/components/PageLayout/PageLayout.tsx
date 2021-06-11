@@ -14,9 +14,7 @@ interface Props {
 
 const useStyles = makeStyles(theme => ({
 	paperWrapper: {
-		maxHeight: '100vh',
 		maxWidth: '100vw',
-		overflow: 'hidden',
 	},
 	background1: {
 		width: '60vw',
@@ -42,11 +40,6 @@ const useStyles = makeStyles(theme => ({
 		flex: '1 1 auto',
 		height: '0%',
 	},
-	wholeGridContainer: {
-		height: '100vh',
-		flexDirection: 'column',
-		maxWidth: '100vw',
-	},
 }))
 
 const PageLayout = ({ children }: Props) => {
@@ -55,33 +48,28 @@ const PageLayout = ({ children }: Props) => {
 		background2,
 		contentContainerStyle,
 		paperWrapper,
-		wholeGridContainer,
 	} = useStyles()
 
 	const largerThanLG = useLargerThanLG()
 
 	return (
-		<>
-			<Paper className={paperWrapper}>
-				<Grid container className={wholeGridContainer}>
-					<Grid item>
-						<AppHeader />
-					</Grid>
+		<Grid component={Paper} container className={paperWrapper}>
+			<Grid item>
+				<AppHeader />
+			</Grid>
 
-					<Grid item container className={contentContainerStyle}>
-						<Grid item className={background1}>
-							{children}
-						</Grid>
-
-						{largerThanLG && (
-							<Grid item className={background2}>
-								<LayoutImage />
-							</Grid>
-						)}
-					</Grid>
+			<Grid item container className={contentContainerStyle}>
+				<Grid item className={background1}>
+					{children}
 				</Grid>
-			</Paper>
-		</>
+
+				{largerThanLG && (
+					<Grid item className={background2}>
+						<LayoutImage />
+					</Grid>
+				)}
+			</Grid>
+		</Grid>
 	)
 }
 
