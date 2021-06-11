@@ -9,7 +9,7 @@ import { useRouter } from 'next/router'
 import navigationOptions, {
 	Option,
 } from 'components/Navigation/navigationOptions'
-import useLargerThanLG from 'hooks/useLargerThanLG'
+import useLargerThanMD from 'hooks/useLargerThanMD'
 
 function a11yProps(index: number) {
 	return {
@@ -19,7 +19,7 @@ function a11yProps(index: number) {
 }
 
 const useStyles = makeStyles(({ breakpoints: { up } }: Theme) => ({
-	tabsStyle: { width: '70vw', [up('lg')]: { width: '100vw' } },
+	tabsStyle: { width: '70vw', [up('md')]: { width: 'initial' } },
 }))
 
 interface Props {
@@ -31,7 +31,7 @@ const FullWidthTabs = ({ setIsDrawerOpen }: Props) => {
 
 	const { tabsStyle } = useStyles()
 
-	const largerThanLG = useLargerThanLG()
+	const largerThanMD = useLargerThanMD()
 
 	const { pathname } = useRouter()
 
@@ -57,11 +57,11 @@ const FullWidthTabs = ({ setIsDrawerOpen }: Props) => {
 			textColor='primary'
 			variant='fullWidth'
 			aria-label='full width tabs example'
-			orientation={!largerThanLG ? 'vertical' : 'horizontal'}
+			orientation={!largerThanMD ? 'vertical' : 'horizontal'}
 			className={tabsStyle}
 			TabIndicatorProps={{
 				style: {
-					display: largerThanLG ? 'none' : 'block',
+					display: largerThanMD ? 'none' : 'block',
 				},
 			}}
 		>
