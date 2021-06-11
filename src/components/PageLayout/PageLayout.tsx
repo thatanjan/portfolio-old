@@ -28,12 +28,6 @@ const useStyles = makeStyles(theme => ({
 			display: 'none',
 		},
 	},
-	background2: {
-		width: '40vw',
-		display: 'grid',
-		alignItems: 'end',
-		justifyItems: 'center',
-	},
 	contentContainerStyle: {
 		maxWidth: '100vw',
 		position: 'relative',
@@ -43,14 +37,9 @@ const useStyles = makeStyles(theme => ({
 }))
 
 const PageLayout = ({ children }: Props) => {
-	const {
-		background1,
-		background2,
-		contentContainerStyle,
-		paperWrapper,
-	} = useStyles()
+	const { background1, contentContainerStyle, paperWrapper } = useStyles()
 
-	const largerThanLG = useLargerThanMD()
+	const largerThanMD = useLargerThanMD()
 
 	return (
 		<Grid component={Paper} container className={paperWrapper}>
@@ -59,12 +48,12 @@ const PageLayout = ({ children }: Props) => {
 			</Grid>
 
 			<Grid item container className={contentContainerStyle}>
-				<Grid item className={background1}>
+				<Grid xs={12} item className={background1}>
 					{children}
 				</Grid>
 
-				{largerThanLG && (
-					<Grid item className={background2}>
+				{largerThanMD && (
+					<Grid item xs={12}>
 						<LayoutImage />
 					</Grid>
 				)}
