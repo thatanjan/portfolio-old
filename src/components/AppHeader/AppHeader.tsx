@@ -10,8 +10,12 @@ import FullWidthTabs from 'components/Tabs/FullWidthTabs'
 
 const useStyles = makeStyles((theme: Theme) => ({
 	root: {
-		width: '100vw',
+		width: '90vw',
 		flexGrow: 1,
+		top: '10vh',
+		margin: '0 5%',
+		background: theme.palette.background.paper,
+		borderRadius: '10rem',
 	},
 	toolbarStyle: {
 		justifyContent: 'space-between',
@@ -27,7 +31,7 @@ export default function ButtonAppBar() {
 	const largerThanMD = useLargerThanMD()
 
 	return (
-		<AppBar className={root} position='static' color='transparent'>
+		<AppBar className={root} position='absolute'>
 			<Toolbar className={toolbarStyle}>
 				<Typography className={titleStyle} variant='h6'>
 					Anjan
