@@ -6,6 +6,7 @@ import Typography from '@material-ui/core/Typography'
 
 import useLargerThanLG from 'hooks/useLargerThanLG'
 import TopNavigation from 'components/Navigation/TopNavigation'
+import FullWidthTabs from 'components/Tabs/FullWidthTabs'
 
 const useStyles = makeStyles((theme: Theme) => ({
 	root: {
@@ -32,6 +33,7 @@ export default function ButtonAppBar() {
 					Anjan
 				</Typography>
 
+				{largerThanLG && <FullWidthTabs />}
 				{!largerThanLG && <TopNavigation />}
 			</Toolbar>
 		</AppBar>
