@@ -5,6 +5,8 @@ import Toolbar from '@material-ui/core/Toolbar'
 import Typography from '@material-ui/core/Typography'
 
 import useLargerThanMD from 'hooks/useLargerThanMD'
+
+import MuiLink from 'components/Links/MuiLink'
 import TopNavigation from 'components/Navigation/TopNavigation'
 import FullWidthTabs from 'components/Tabs/FullWidthTabs'
 
@@ -33,9 +35,14 @@ export default function ButtonAppBar() {
 	return (
 		<AppBar className={root} position='absolute'>
 			<Toolbar className={toolbarStyle}>
-				<Typography className={titleStyle} variant='h6'>
+				<MuiLink
+					MuiComponent={Typography}
+					className={titleStyle}
+					variant='h6'
+					href='/'
+				>
 					Anjan
-				</Typography>
+				</MuiLink>
 
 				{largerThanMD && <FullWidthTabs />}
 				{!largerThanMD && <TopNavigation />}
