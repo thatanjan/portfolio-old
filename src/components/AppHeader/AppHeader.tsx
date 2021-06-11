@@ -33,7 +33,7 @@ export default function ButtonAppBar() {
 	const largerThanMD = useLargerThanMD()
 
 	return (
-		<AppBar className={root} position='absolute'>
+		<AppBar className={root} position='fixed'>
 			<Toolbar className={toolbarStyle}>
 				<MuiLink
 					MuiComponent={Typography}
