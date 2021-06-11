@@ -4,7 +4,7 @@ import AppBar from '@material-ui/core/AppBar'
 import Toolbar from '@material-ui/core/Toolbar'
 import Typography from '@material-ui/core/Typography'
 
-import useLargerThanLG from 'hooks/useLargerThanLG'
+import useLargerThanMD from 'hooks/useLargerThanMD'
 import TopNavigation from 'components/Navigation/TopNavigation'
 import FullWidthTabs from 'components/Tabs/FullWidthTabs'
 
@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme: Theme) => ({
 export default function ButtonAppBar() {
 	const { root, titleStyle, toolbarStyle } = useStyles()
 
-	const largerThanLG = useLargerThanLG()
+	const largerThanMD = useLargerThanMD()
 
 	return (
 		<AppBar className={root} position='static' color='transparent'>
@@ -33,8 +33,8 @@ export default function ButtonAppBar() {
 					Anjan
 				</Typography>
 
-				{largerThanLG && <FullWidthTabs />}
-				{!largerThanLG && <TopNavigation />}
+				{largerThanMD && <FullWidthTabs />}
+				{!largerThanMD && <TopNavigation />}
 			</Toolbar>
 		</AppBar>
 	)
