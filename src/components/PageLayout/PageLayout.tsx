@@ -16,10 +16,15 @@ const useStyles = makeStyles(theme => ({
 	paperWrapper: {
 		maxWidth: '100vw',
 	},
+	layoutImageFixStyle: {
+		position: 'fixed',
+		width: '33.333%',
+		height: '100%',
+	},
 }))
 
 const PageLayout = ({ children }: Props) => {
-	const { paperWrapper } = useStyles()
+	const { paperWrapper, layoutImageFixStyle } = useStyles()
 
 	const largerThanMD = useLargerThanMD()
 
@@ -31,7 +36,7 @@ const PageLayout = ({ children }: Props) => {
 
 			<Grid item container>
 				{largerThanMD && (
-					<Grid item xs={12}>
+					<Grid lg={12} item className={layoutImageFixStyle}>
 						<LayoutImage />
 					</Grid>
 				)}
