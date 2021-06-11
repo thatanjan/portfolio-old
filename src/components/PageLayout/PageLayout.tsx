@@ -2,6 +2,7 @@ import React, { ReactNode } from 'react'
 import Grid from '@material-ui/core/Grid'
 import Paper from '@material-ui/core/Paper'
 import { makeStyles } from '@material-ui/core/styles'
+import clsx from 'clsx'
 
 import useLargerThanMD from 'hooks/useLargerThanMD'
 
@@ -21,10 +22,21 @@ const useStyles = makeStyles(theme => ({
 		width: '33.333%',
 		height: '100%',
 	},
+	layoutImageStyle: { width: '100%' },
+	contentStyle: {
+		[theme.breakpoints.up('md')]: {
+			marginLeft: '33.33%',
+		},
+	},
 }))
 
 const PageLayout = ({ children }: Props) => {
-	const { paperWrapper, layoutImageFixStyle } = useStyles()
+	const {
+		paperWrapper,
+		layoutImageFixStyle,
+		layoutImageStyle,
+		contentStyle,
+	} = useStyles()
 
 	const largerThanMD = useLargerThanMD()
 
@@ -35,13 +47,15 @@ const PageLayout = ({ children }: Props) => {
 			</Grid>
 
 			<Grid item container>
-				{largerThanMD && (
-					<Grid lg={12} item className={layoutImageFixStyle}>
-						<LayoutImage />
-					</Grid>
-				)}
+				<Grid
+					lg={12}
+					item
+					className={clsx(largerThanMD ? layoutImageFixStyle : layoutImageStyle)}
+				>
+					<LayoutImage />
+				</Grid>
 
-				<Grid xs={12} md={8} item>
+				<Grid xs={12} md={8} item className={contentStyle}>
 					{children}
 				</Grid>
 			</Grid>
