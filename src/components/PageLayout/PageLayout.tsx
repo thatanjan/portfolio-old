@@ -16,22 +16,10 @@ const useStyles = makeStyles(theme => ({
 	paperWrapper: {
 		maxWidth: '100vw',
 	},
-	background1: {
-		width: '60vw',
-		flex: '1 1 auto',
-		overflowY: 'auto',
-		height: '100%',
-		'-ms-overflow-style': 'none',
-		scrollbarWidth: 'none',
-
-		'&::-webkit-scrollbar': {
-			display: 'none',
-		},
-	},
 }))
 
 const PageLayout = ({ children }: Props) => {
-	const { background1, paperWrapper } = useStyles()
+	const { paperWrapper } = useStyles()
 
 	const largerThanMD = useLargerThanMD()
 
@@ -48,7 +36,7 @@ const PageLayout = ({ children }: Props) => {
 					</Grid>
 				)}
 
-				<Grid xs={12} item className={background1}>
+				<Grid xs={12} md={8} item>
 					{children}
 				</Grid>
 			</Grid>
