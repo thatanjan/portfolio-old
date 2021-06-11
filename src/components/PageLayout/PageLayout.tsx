@@ -23,12 +23,9 @@ const useStyles = makeStyles(theme => ({
 		position: 'fixed',
 		width: '33.333%',
 		height: '100%',
-		marginTop: '10vh',
 	},
-	layoutImageStyle: { width: '100%', marginTop: '10vh' },
+	layoutImageStyle: { width: '100%' },
 	contentStyle: {
-		marginTop: '10vh',
-
 		[theme.breakpoints.up('md')]: {
 			marginLeft: '33.33%',
 		},
@@ -53,7 +50,7 @@ const PageLayout = ({ children }: Props) => {
 				<AppHeader />
 			</Grid>
 
-			<Grid item container>
+			<Grid item container style={{ marginTop: '10vh' }}>
 				{pathname === '/' && (
 					<Grid
 						lg={12}
