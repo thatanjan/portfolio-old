@@ -59,6 +59,11 @@ const FullWidthTabs = ({ setIsDrawerOpen }: Props) => {
 			aria-label='full width tabs example'
 			orientation={!largerThanLG ? 'vertical' : 'horizontal'}
 			className={tabsStyle}
+			TabIndicatorProps={{
+				style: {
+					display: largerThanLG ? 'none' : 'block',
+				},
+			}}
 		>
 			{navigationOptions.map(({ href, label }: Option, index: number) => (
 				<Link
