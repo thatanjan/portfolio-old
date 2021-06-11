@@ -3,7 +3,7 @@ import Grid from '@material-ui/core/Grid'
 import Paper from '@material-ui/core/Paper'
 import { makeStyles } from '@material-ui/core/styles'
 
-import useLargerThanLG from 'hooks/useLargerThanLG'
+import useLargerThanMD from 'hooks/useLargerThanMD'
 
 import AppHeader from 'components/AppHeader/AppHeader'
 import LayoutImage from 'components/PageLayout/LayoutImage'
@@ -50,7 +50,7 @@ const PageLayout = ({ children }: Props) => {
 		paperWrapper,
 	} = useStyles()
 
-	const largerThanLG = useLargerThanLG()
+	const largerThanLG = useLargerThanMD()
 
 	return (
 		<Grid component={Paper} container className={paperWrapper}>
