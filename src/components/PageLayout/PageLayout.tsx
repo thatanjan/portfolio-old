@@ -17,14 +17,18 @@ interface Props {
 const useStyles = makeStyles(theme => ({
 	paperWrapper: {
 		maxWidth: '100vw',
+		minHeight: '100vh',
 	},
 	layoutImageFixStyle: {
 		position: 'fixed',
 		width: '33.333%',
 		height: '100%',
+		marginTop: '10vh',
 	},
-	layoutImageStyle: { width: '100%' },
+	layoutImageStyle: { width: '100%', marginTop: '10vh' },
 	contentStyle: {
+		marginTop: '10vh',
+
 		[theme.breakpoints.up('md')]: {
 			marginLeft: '33.33%',
 		},
