@@ -44,6 +44,14 @@ const PageLayout = ({ children }: Props) => {
 
 	const largerThanMD = useLargerThanMD()
 
+	const showLayoutImage = (): boolean | string => {
+		if (pathname !== '/' && !largerThanMD) return false
+
+		if (pathname === '/' && !largerThanMD) return layoutImageStyle
+
+		return layoutImageFixStyle
+	}
+
 	return (
 		<Grid component={Paper} container className={paperWrapper}>
 			<Grid item>
@@ -51,12 +59,9 @@ const PageLayout = ({ children }: Props) => {
 			</Grid>
 
 			<Grid item container style={{ marginTop: '10vh' }}>
-				{pathname === '/' && (
-					<Grid
-						lg={12}
-						item
-						className={clsx(largerThanMD ? layoutImageFixStyle : layoutImageStyle)}
-					>
+				{showLayoutImage() && (
+					<Grid lg={12} item className={clsx(showLayoutImage())}>
+						{' '}
 						<LayoutImage />
 					</Grid>
 				)}
