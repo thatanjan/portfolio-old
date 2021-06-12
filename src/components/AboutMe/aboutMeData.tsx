@@ -26,24 +26,26 @@ const WHO_AM_I_ANSWER = 'my name is anjan. I am a Full stack developer.'
 const WHAT_PROBLEMS_DO_I_SOLVE: string =
 	'I can create complex full stack web applications like social media application, blogging, e-commerce website and many more.'
 
-const WHAT_HAVE_I_DONE = () => (
-	<>
-		<Typography variant='body1' component='h2' style={{ display: 'inline' }}>
-			I have developed and currently maintaining an social media application called
-			Confession. I have also created other cool projects{' '}
-		</Typography>
+const WHAT_HAVE_I_DONE = () => {
+	return (
+		<>
+			<Typography variant='body1' component='h2' style={{ display: 'inline' }}>
+				I have developed and currently maintaining an social media application
+				called Confession. I have also created other cool projects{' '}
+			</Typography>
 
-		<MuiLink
-			MuiComponent={Button}
-			href='/work'
-			variant='contained'
-			color='primary'
-		>
-			{makeFirstLetterUpperCase('see my work here')}
-		</MuiLink>
-	</>
-)
-
+			<MuiLink
+				MuiComponent={Button}
+				href='/work'
+				variant='contained'
+				color='primary'
+				size='small'
+			>
+				{makeFirstLetterUpperCase('see my work here')}
+			</MuiLink>
+		</>
+	)
+}
 const WHY_DO_I_DO_WHAT_I_DO = 'I love to solve problems and develop new ideas.'
 
 const whoAmI = new AboutMeData('who am I', WHO_AM_I_ANSWER)
@@ -69,6 +71,7 @@ const Contact = () => {
 			href='/contact'
 			variant='contained'
 			color='primary'
+			size='small'
 		>
 			{makeFirstLetterUpperCase('feel free to contact me')}
 		</MuiLink>
