@@ -18,10 +18,6 @@ const useStyles = makeStyles((theme: Theme) => ({
 		margin: '0 5%',
 		background: theme.palette.background.paper,
 		borderRadius: '10rem',
-
-		[theme.breakpoints.up('md')]: {
-			top: '8vh',
-		},
 	},
 	toolbarStyle: {
 		justifyContent: 'space-between',
