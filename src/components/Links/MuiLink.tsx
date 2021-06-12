@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme: Theme) => ({
 
 		'&:hover': {
 			textDecoration: 'initial',
-			color: theme.palette.primary.main,
+			color: theme.palette.secondary.main,
 		},
 	},
 }))
