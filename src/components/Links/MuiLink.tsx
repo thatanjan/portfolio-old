@@ -3,6 +3,20 @@ import React from 'react'
 import clsx from 'clsx'
 import { useRouter } from 'next/router'
 import NextLink from 'next/link'
+import { makeStyles, Theme } from '@material-ui/core/styles'
+
+const useStyles = makeStyles((theme: Theme) => ({
+	linkStyle: {
+		color: 'inherit',
+		textDecoration: 'none',
+		cursor: 'pointer',
+
+		'&:hover': {
+			textDecoration: 'initial',
+			color: theme.palette.secondary.main,
+		},
+	},
+}))
 
 const NextComposed = React.forwardRef(function NextComposed(
 	props: any,
@@ -34,10 +48,11 @@ function Link(props: Props) {
 		naked,
 		...other
 	} = props
+	const { linkStyle } = useStyles()
 
 	const router = useRouter()
 	const pathname = typeof href === 'string' ? href : href.pathname
-	const className = clsx(classNameProps, {
+	const className = clsx(classNameProps, linkStyle, {
 		[activeClassName]: router.pathname === pathname && activeClassName,
 	})
 

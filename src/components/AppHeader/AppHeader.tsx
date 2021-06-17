@@ -4,13 +4,22 @@ import AppBar from '@material-ui/core/AppBar'
 import Toolbar from '@material-ui/core/Toolbar'
 import Typography from '@material-ui/core/Typography'
 
-import useLargerThanLG from 'hooks/useLargerThanLG'
+import useLargerThanMD from 'hooks/useLargerThanMD'
+
+import MuiLink from 'components/Links/MuiLink'
 import TopNavigation from 'components/Navigation/TopNavigation'
+import FullWidthTabs from 'components/Tabs/FullWidthTabs'
 
 const useStyles = makeStyles((theme: Theme) => ({
 	root: {
-		width: '100vw',
+		width: '90vw',
 		flexGrow: 1,
+		top: '5vh',
+		margin: '0 5%',
+		background: theme.palette.background.paper,
+		borderRadius: '10rem',
+
+		[theme.breakpoints.down('sm')]: { background: theme.palette.primary.main },
 	},
 	toolbarStyle: {
 		justifyContent: 'space-between',
@@ -23,16 +32,22 @@ const useStyles = makeStyles((theme: Theme) => ({
 export default function ButtonAppBar() {
 	const { root, titleStyle, toolbarStyle } = useStyles()
 
-	const largerThanLG = useLargerThanLG()
+	const largerThanMD = useLargerThanMD()
 
 	return (
-		<AppBar className={root} position='static' color='transparent'>
+		<AppBar className={root} position='fixed'>
 			<Toolbar className={toolbarStyle}>
-				<Typography className={titleStyle} variant='h6'>
+				<MuiLink
+					MuiComponent={Typography}
+					className={titleStyle}
+					variant='h6'
+					href='/'
+				>
 					Anjan
-				</Typography>
+				</MuiLink>
 
-				{!largerThanLG && <TopNavigation />}
+				{largerThanMD && <FullWidthTabs />}
+				{!largerThanMD && <TopNavigation />}
 			</Toolbar>
 		</AppBar>
 	)
