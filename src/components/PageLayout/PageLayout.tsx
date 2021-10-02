@@ -27,7 +27,11 @@ const useStyles = makeStyles(theme => ({
 	layoutImageStyle: { width: '100%' },
 	contentStyle: {
 		padding: '0 1rem',
+		marginTop: ({ pathname }: { pathname: string }) =>
+			pathname === '/' ? '3rem' : '7rem',
 		[theme.breakpoints.up('md')]: {
+			marginTop: ({ pathname }: { pathname: string }) =>
+				pathname === '/' ? '10rem' : '7rem',
 			marginLeft: '33.33%',
 			padding: '0 2rem',
 		},
@@ -42,7 +46,7 @@ const PageLayout = ({ children }: Props) => {
 		layoutImageFixStyle,
 		layoutImageStyle,
 		contentStyle,
-	} = useStyles()
+	} = useStyles({ pathname })
 
 	const largerThanMD = useLargerThanMD()
 
