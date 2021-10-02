@@ -18,15 +18,6 @@ interface Props {
 
 export const commonContaienrStyle = '0 10%'
 
-export const useSmallSizeStyle = makeStyles((theme: Theme) => ({
-	boxStyle: {
-		padding: commonContaienrStyle,
-		[theme.breakpoints.down('xs')]: {
-			padding: '0 5%',
-		},
-	},
-}))
-
 const useStyles = makeStyles({
 	buttonContainer: {
 		paddingTop: '2%',
@@ -52,11 +43,9 @@ const ProjectPreview = ({
 }: Props) => {
 	const { buttonContainer } = useStyles()
 
-	const { boxStyle } = useSmallSizeStyle()
-
 	const staticRoute = '/work/[work]'
 	return (
-		<Box className={boxStyle}>
+		<Box>
 			<ProjectImage imagePath={imagePath} />
 
 			<ProjectTitle name={name} subtitle={subtitle} />
