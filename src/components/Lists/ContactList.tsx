@@ -46,7 +46,7 @@ export default function SimpleList() {
 					<MuiLink
 						MuiComponent={ListItem}
 						href={link}
-						target={name === 'anjan.cules@gmail.com' ? null : '_blank'}
+						target='_blank'
 						key={nanoid()}
 						button
 					>
