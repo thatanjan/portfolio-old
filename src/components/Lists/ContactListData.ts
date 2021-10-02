@@ -21,6 +21,7 @@ export class Contact {
 }
 
 const USER_NAME = 'thatanjan'
+const emailAddress = 'thatanjan@gmail.com'
 
 const facebook = new Contact(USER_NAME)
 	.addIcon(
@@ -43,11 +44,11 @@ const twitter = new Contact(USER_NAME)
 	)
 	.addLink('https://www.twitter.com/thatanjan/')
 
-const gmail = new Contact('anjan.cules@gmail.com')
+const gmail = new Contact(emailAddress)
 	.addIcon(
 		'https://1.bp.blogspot.com/-Q8pkiM6WmIM/WMNjlRdRLrI/AAAAAAAADhI/nmkOC-CiC6Y24RiblhzDKovYxfZXdRl2wCLcB/s400/google-gmail.jpg'
 	)
-	.addLink('')
+	.addLink(`mailto:${emailAddress}`)
 
 const allContacts: Contact[] = [gmail, linkedin, twitter, instagram, facebook]
 
