@@ -15,10 +15,8 @@ const about: Option = new Option('about')
 
 const blog: Option = new Option('blog', 'https://cules-coding.vercel.app/')
 
-const services: Option = new Option('services')
-
 const contact: Option = new Option('contact')
 
-const navigationOptions: Option[] = [work, about, blog, services, contact]
+const navigationOptions: Option[] = [work, about, blog, contact]
 
 export default navigationOptions
