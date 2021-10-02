@@ -60,7 +60,7 @@ const PageLayout = ({ children }: Props) => {
 				<AppHeader />
 			</Grid>
 
-			<Grid item container style={{ marginTop: '10vh' }}>
+			<Grid item container>
 				{showLayoutImage() && (
 					<Grid lg={12} item className={clsx(showLayoutImage())}>
 						{' '}
