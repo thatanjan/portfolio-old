@@ -5,6 +5,21 @@ import Button from '@material-ui/core/Button'
 
 import makeFirstLetterUpperCase from 'utils/firstLetterUpperCase'
 
+interface SpecialLinkInterface {
+	children: ReactNode
+	href: string
+}
+
+const SpecialLink = ({ children, href }: SpecialLinkInterface) => (
+	<MuiLink
+		MuiComponent={Typography}
+		href={href}
+		style={{ textDecoration: 'underline' }}
+	>
+		{children}
+	</MuiLink>
+)
+
 export class AboutMeData {
 	question: string
 
@@ -31,18 +46,12 @@ const WHAT_HAVE_I_DONE = () => {
 		<>
 			<Typography variant='body1' component='h2' style={{ display: 'inline' }}>
 				I have developed and currently maintaining an social media application
-				called Confession. I have also created other cool projects{' '}
+				called Confession. I have also created other cool projects.{' '}
 			</Typography>
 
-			<MuiLink
-				MuiComponent={Button}
-				href='/work'
-				variant='contained'
-				color='primary'
-				size='small'
-			>
+			<SpecialLink href='/work'>
 				{makeFirstLetterUpperCase('see my work here')}
-			</MuiLink>
+			</SpecialLink>
 		</>
 	)
 }
@@ -66,15 +75,9 @@ const whatHaveIDone = new AboutMeData('what have I done', '').addReactNode(
 
 const Contact = () => {
 	return (
-		<MuiLink
-			MuiComponent={Button}
-			href='/contact'
-			variant='contained'
-			color='primary'
-			size='small'
-		>
+		<SpecialLink href='/contact'>
 			{makeFirstLetterUpperCase('feel free to contact me')}
-		</MuiLink>
+		</SpecialLink>
 	)
 }
 
