@@ -26,7 +26,7 @@ const useStyles = makeStyles(theme => ({
 	},
 	layoutImageStyle: { width: '100%' },
 	contentStyle: {
-		padding: '0 2%',
+		padding: '0 1rem',
 		[theme.breakpoints.up('md')]: {
 			marginLeft: '33.33%',
 			padding: '0 2rem',
