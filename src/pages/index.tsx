@@ -5,17 +5,9 @@ import { nanoid } from 'nanoid'
 
 import aboutMeData, { AboutMeData } from 'components/AboutMe/aboutMeData'
 
-const useStyles = makeStyles({
-	stylesForHomePage: {
-		width: '90%',
-		margin: '5% auto',
-		paddingLeft: '1rem',
-	},
-})
+const useStyles = makeStyles({})
 
 const Home = () => {
-	const { stylesForHomePage } = useStyles()
-
 	return (
 		<>
 			<Head>
@@ -28,7 +20,6 @@ const Home = () => {
 					key={nanoid()}
 					title={`${question}?`}
 					description={answer}
-					styleName={stylesForHomePage}
 				/>
 			))}
 		</>
