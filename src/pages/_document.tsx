@@ -1,24 +1,46 @@
 import React from 'react'
-import Document, { Html, Head, Main, NextScript } from 'next/document'
+import Document, { Html, Main, NextScript } from 'next/document'
 import { ServerStyleSheets } from '@material-ui/core/styles'
-// import theme from 'themes/theme'
+import { NextSeo } from 'next-seo'
+
+const description =
+	"Portfolio website of Anjan Shomodder. Anjan is a full stack web developer, Blogger and instructor at Cules Coding youtube channel. Creator of open source Social media application 'Confession'"
 
 export default class MyDocument extends Document {
 	render() {
 		return (
-			<Html lang='en'>
-				<Head>
-					{/* <meta name='theme-color' content={theme.palette.primary.main} /> */}
-					<link
-						rel='stylesheet'
-						href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap'
+			<>
+				<Html lang='en' prefix='og: https://ogp.me/ns#'>
+					<NextSeo
+						title='Anjan'
+						description={description}
+						additionalLinkTags={[
+							{
+								rel: 'stylesheet',
+								href:
+									'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap',
+							},
+						]}
+						openGraph={{
+							title: 'Anjan',
+							description,
+							locale: 'en_US',
+							type: 'profile',
+							profile: {
+								firstName: 'Anjan',
+								lastName: 'Shomodder',
+								gender: 'Male',
+								username: 'thatanjan',
+							},
+							url: 'https://www.thatanjan.me/',
+						}}
 					/>
-				</Head>
-				<body>
-					<Main />
-					<NextScript />
-				</body>
-			</Html>
+					<body>
+						<Main />
+						<NextScript />
+					</body>
+				</Html>
+			</>
 		)
 	}
 }
