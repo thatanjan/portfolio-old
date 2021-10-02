@@ -27,7 +27,10 @@ const ProjectDescription = ({ title, description, styleName }: Props) => {
 	const { descriptionStyle, descriptionContainer } = useStyles()
 
 	return (
-		<Paper className={clsx(descriptionContainer, true && styleName)}>
+		<Paper
+			className={clsx(descriptionContainer, true && styleName)}
+			elevation={0}
+		>
 			<SectionTitle text={title} />
 			<Typography
 				variant='body1'
