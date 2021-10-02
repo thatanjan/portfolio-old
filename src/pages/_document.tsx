@@ -1,5 +1,5 @@
 import React from 'react'
-import Document, { Html, Main, NextScript } from 'next/document'
+import Document, { Html, Main, Head, NextScript } from 'next/document'
 import { ServerStyleSheets } from '@material-ui/core/styles'
 import { NextSeo } from 'next-seo'
 
@@ -11,6 +11,7 @@ export default class MyDocument extends Document {
 		return (
 			<>
 				<Html lang='en' prefix='og: https://ogp.me/ns#'>
+					<Head></Head>
 					<NextSeo
 						title='Anjan'
 						description={description}
