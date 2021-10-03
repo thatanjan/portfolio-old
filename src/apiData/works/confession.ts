@@ -21,6 +21,17 @@ const visitLink = 'https://confession.vercel.app'
 const description =
 	'A fully developed social media application built on react and nodejs. It has authentication system where users can login to their account.'
 
+const features: string[] = [
+	'User Authentication with JSON Web Token',
+	'User authorization',
+	'Newsfeed',
+	'User profile',
+	'Post creation',
+	'Post interaction',
+	'Follow other users',
+	'Picture upload and many more...',
+]
+
 const confession: ApiData = new ApiData(CONFESSION)
 	.addSubtitle(subtitle)
 	.addImage(imagePath)
@@ -28,5 +39,6 @@ const confession: ApiData = new ApiData(CONFESSION)
 	.addFrontEndTechStack(frontEndTechStack)
 	.addBackEndTechStack(backEndTechStack)
 	.addDescription(description)
+	.addFeatures(features)
 
 export default confession
