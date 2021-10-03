@@ -1,7 +1,6 @@
 import confession from 'apiData/works/confession'
-import portofolio from 'apiData/works/portofolio'
 import ApiData from './dataClass'
 
-const allData: ApiData[] = [confession, portofolio]
+const allData: ApiData[] = [confession]
 
 export default allData
