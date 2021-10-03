@@ -17,7 +17,7 @@ const useStyles = makeStyles({
 })
 
 interface Props {
-	imagePath: string
+	imagePaths: string[]
 }
 
 const ProjectImage = ({ imagePath }: Props) => {
