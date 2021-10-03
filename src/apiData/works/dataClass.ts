@@ -8,7 +8,7 @@ class ApiData {
 
 	description: string
 
-	imagePath: string
+	imagePaths: string[]
 
 	visitLink: string
 
@@ -40,8 +40,8 @@ class ApiData {
 		return this
 	}
 
-	addImage(imagePath: string) {
-		this.imagePath = imagePath
+	addImages(imagePaths: string[]) {
+		this.imagePaths = imagePaths
 		return this
 	}
 
