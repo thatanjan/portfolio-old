@@ -6,6 +6,7 @@ import Box from '@material-ui/core/Box'
 import ProjectPreview from 'components/ProjectPreview/ProjectPreview'
 import ProjectDescription from 'components/ProjectPreview/ProjectDescription'
 import ProjectTechnologies from 'components/ProjectPreview/ProjectTechnologies'
+import ProjectFeatures from 'components/ProjectPreview/ProjectFeatures'
 import ApiData from 'apiData/works/dataClass'
 import paths from 'utils/paths'
 import convertDashToSpace from 'utils/dashToSpace'
@@ -48,6 +49,7 @@ const Page = ({
 				<ProjectPreview {...projectPreviewProps} />
 				<Box>
 					<ProjectDescription title='description' description={description} />
+					<ProjectFeatures />
 					<ProjectTechnologies {...technolgiesProps} />
 				</Box>
 			</Box>
