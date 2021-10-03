@@ -1,9 +1,10 @@
 import React from 'react'
-import Typography from '@material-ui/core/Typography'
 import List from '@material-ui/core/List'
 import ListItem from '@material-ui/core/ListItem'
 import ListItemText from '@material-ui/core/ListItemText'
 import { nanoid } from 'nanoid'
+
+import SectionTitle from 'components/ProjectPreview/SectionTitle'
 
 interface Props {
 	features: string[]
@@ -12,7 +13,7 @@ interface Props {
 const ProjectFeatures = ({ features }: Props) => {
 	return (
 		<>
-			<Typography variant='h3'>Features</Typography>
+			<SectionTitle text='Features' />
 
 			<List>
 				{features.map((feature, index) => (
