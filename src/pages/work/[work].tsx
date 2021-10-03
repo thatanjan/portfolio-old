@@ -26,6 +26,7 @@ const Page = ({
 		backEndTechStack,
 		sourceCodeLink,
 		imagePath,
+		features,
 	},
 }: Props) => {
 	const projectPreviewProps = {
@@ -49,7 +50,7 @@ const Page = ({
 				<ProjectPreview {...projectPreviewProps} />
 				<Box>
 					<ProjectDescription title='description' description={description} />
-					<ProjectFeatures />
+					<ProjectFeatures features={features} />
 					<ProjectTechnologies {...technolgiesProps} />
 				</Box>
 			</Box>
