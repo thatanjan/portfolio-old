@@ -20,6 +20,8 @@ class ApiData {
 
 	frontEndTechStack: Tech[] | null
 
+	features: String[]
+
 	constructor(name: string) {
 		this.name = name
 		this.subtitle = ''
@@ -60,6 +62,11 @@ class ApiData {
 
 	addDescription(description: string) {
 		this.description = description
+		return this
+	}
+
+	addFeatures(features: string[]) {
+		this.features = features
 		return this
 	}
 }
