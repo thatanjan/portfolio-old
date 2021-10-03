@@ -20,7 +20,7 @@ class ApiData {
 
 	frontEndTechStack: Tech[] | null
 
-	features: String[]
+	features: string[]
 
 	constructor(name: string) {
 		this.name = name
