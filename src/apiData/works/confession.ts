@@ -17,7 +17,7 @@ const subtitle =
 const imagePath = '/project__confession.png'
 const frontEndTechStack: Tech[] = [javascript, typescript, react, mui]
 const backEndTechStack: Tech[] = [nodejs, express, graphql, mongodb]
-const visitLink = 'https://confession.vercel.app'
+const visitLink = 'https://con-fession.vercel.app/'
 const description =
 	'A fully developed social media application built on react and nodejs. It has authentication system where users can login to their account.'
 
