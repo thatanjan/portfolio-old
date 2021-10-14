@@ -23,6 +23,9 @@ const useStyles = makeStyles(theme => ({
 		position: 'fixed',
 		width: '33.333%',
 		height: '100%',
+		[theme.breakpoints.down('md')]: {
+			width: '45%',
+		},
 	},
 	layoutImageStyle: { width: '100%' },
 	contentStyle: {
@@ -34,6 +37,12 @@ const useStyles = makeStyles(theme => ({
 				pathname === '/' ? '10rem' : '7rem',
 			marginLeft: '33.33%',
 			padding: '0 2rem',
+		},
+		[theme.breakpoints.down('md')]: {
+			marginLeft: '45%',
+		},
+		[theme.breakpoints.down('sm')]: {
+			marginLeft: '0%',
 		},
 	},
 }))
