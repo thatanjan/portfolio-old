@@ -1,17 +1,24 @@
 import React from 'react'
+import Image from 'next/image'
 import Box from '@material-ui/core/Box'
 import { makeStyles } from '@material-ui/core/styles'
+import { nanoid } from 'nanoid'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import SwiperCore, { Pagination } from 'swiper'
 
-import StyledImage from 'components/Images/StyledImage'
+import 'swiper/swiper.min.css'
+import 'swiper/components/pagination/pagination.min.css'
+
+SwiperCore.use([Pagination])
 
 const useStyles = makeStyles({
-	imageStyle: {},
 	boxStyle: {
 		margin: '5% auto',
-		'& :first-child': {
-			'& :first-child': {
-				paddingTop: '60% !important',
-			},
+	},
+	swiperContainer: {
+		paddingBottom: '3rem',
+		'& .swiper-pagination-bullet': {
+			background: 'white',
 		},
 	},
 })
@@ -20,12 +27,27 @@ interface Props {
 	imagePaths: string[]
 }
 
-const ProjectImage = ({ imagePath }: Props) => {
-	const { boxStyle, imageStyle } = useStyles()
+const ProjectImage = ({ imagePaths }: Props) => {
+	const { boxStyle, swiperContainer } = useStyles()
 
 	return (
 		<Box className={boxStyle}>
-			<StyledImage imagePath={imagePath} styleClass={imageStyle} />
+			<Swiper
+				grabCursor
+				pagination={{
+					clickable: true,
+				}}
+				loop
+				className={swiperContainer}
+			>
+				{imagePaths.map(imagePath => (
+					<SwiperSlide key={nanoid()}>
+						<Box>
+							<Image src={imagePath} layout='responsive' width={16} height={9} />
+						</Box>
+					</SwiperSlide>
+				))}
+			</Swiper>
 		</Box>
 	)
 }
