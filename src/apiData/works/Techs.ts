@@ -57,6 +57,6 @@ export const mdx = new Tech(
 const nextjsImageUrl =
 	'https://images.viblo.asia/a587cb51-7daf-4219-9cb9-875ca90ec031.png'
 
-export const nextjsApiRoutes = new Tech('NextJS', nextjsImageUrl)
+export const nextjsApiRoutes = new Tech('NextJS Api Routes', nextjsImageUrl)
 
 export const nextjs = new Tech('NextJS', nextjsImageUrl)
