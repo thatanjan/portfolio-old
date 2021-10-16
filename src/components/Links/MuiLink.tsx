@@ -13,7 +13,8 @@ const useStyles = makeStyles((theme: Theme) => ({
 
 		'&:hover': {
 			textDecoration: 'initial',
-			color: theme.palette.secondary.main,
+			color: ({ button }: { button: boolean }) =>
+				button ? '#ffffffba' : theme.palette.secondary.main,
 		},
 	},
 }))
@@ -48,7 +49,11 @@ function Link(props: Props) {
 		naked,
 		...other
 	} = props
-	const { linkStyle } = useStyles()
+	const MuiComponentReference = MuiComponent as any
+
+	const { linkStyle } = useStyles({
+		button: MuiComponentReference.Naked.render.name === 'Button',
+	})
 
 	const router = useRouter()
 	const pathname = typeof href === 'string' ? href : href.pathname
