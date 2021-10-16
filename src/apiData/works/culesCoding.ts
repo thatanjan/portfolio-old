@@ -1,3 +1,4 @@
+import generateImagePaths from 'utils/generateImagePaths'
 import ApiData from './dataClass'
 import {
 	Tech,
@@ -9,24 +10,35 @@ import {
 	nextjsApiRoutes,
 } from './Techs'
 
+const CULES_CODING = 'cules-coding'
+
 const subtitle =
-	'Cules Coding is a blogging site and a youtube channel which teaches about Full stack web development, data structure, alghorithms and many more.'
-const imagePath = '/project__confession.png'
+	'Cules Coding is a blogging site  which teaches about people about Full stack web development, data structure, alghorithms and many more.'
+
+const imagePaths = generateImagePaths(CULES_CODING)([
+	'homePage',
+	'allCategoryPage',
+	'singleCategoryPage',
+	'blog',
+])
+
 const frontEndTechStack: Tech[] = [javascript, typescript, react, nextjs]
 const backEndTechStack: Tech[] = [mongodb, nextjsApiRoutes]
 const visitLink = 'https://www.culescoding.space/'
 const description = subtitle
 
 const features: string[] = [
+	'JAMstack oriented',
 	'Static web pages',
 	'Realtime View Counter',
 	'Search blogs',
 	'Reading time',
+	'Good SEO',
 ]
 
 const confession: ApiData = new ApiData('Cules Coding')
 	.addSubtitle(subtitle)
-	.addImage(imagePath)
+	.addImages(imagePaths)
 	.addVisitLink(visitLink)
 	.addFrontEndTechStack(frontEndTechStack)
 	.addBackEndTechStack(backEndTechStack)
