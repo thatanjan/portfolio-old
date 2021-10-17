@@ -1,4 +1,4 @@
-import generateImagePaths from 'utils/generateImagePaths'
+import readImagePaths from 'utils/readImagePaths'
 import ApiData from './dataClass'
 import {
 	Tech,
@@ -15,12 +15,7 @@ const CULES_CODING = 'cules-coding'
 const subtitle =
 	'Cules Coding is a blogging site  which teaches about people about Full stack web development, data structure, alghorithms and many more.'
 
-const imagePaths = generateImagePaths(CULES_CODING)([
-	'homePage',
-	'allCategoryPage',
-	'singleCategoryPage',
-	'blog',
-])
+const imagePaths = readImagePaths(CULES_CODING)
 
 const frontEndTechStack: Tech[] = [javascript, typescript, react, nextjs]
 const backEndTechStack: Tech[] = [mongodb, nextjsApiRoutes]

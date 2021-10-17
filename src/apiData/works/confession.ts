@@ -1,4 +1,4 @@
-import generateImagePaths from 'utils/generateImagePaths'
+import readImagePaths from 'utils/readImagePaths'
 import { CONFESSION } from 'global/variables'
 import ApiData from './dataClass'
 import {
@@ -16,14 +16,7 @@ import {
 const subtitle =
 	'An open source social media plattform for people to overcome their imposter syndrome'
 
-const imagePaths = generateImagePaths(CONFESSION)([
-	'homepage',
-	'mobile view',
-	'profile',
-	'profile2',
-	'post page',
-	'search page',
-])
+const imagePaths = readImagePaths(CONFESSION)
 
 const frontEndTechStack: Tech[] = [javascript, typescript, react, mui]
 const backEndTechStack: Tech[] = [nodejs, express, graphql, mongodb]
