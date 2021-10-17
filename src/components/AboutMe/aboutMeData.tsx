@@ -61,7 +61,7 @@ const WHAT_HAVE_I_DONE = () => {
 			<Typography variant='body1' component='h2' style={{ display: 'inline' }}>
 				I have developed and currently maintaining an social media application
 				called{' '}
-				<SpecialLink href='https://con-fession.vercel.app/'>Confession</SpecialLink>
+				<SpecialLink href='https://con-fession.vercel.app/'>Confession</SpecialLink>{' '}
 				to help people overcome their imposter syndrome. I have also created other
 				cool projects.{' '}
 			</Typography>
