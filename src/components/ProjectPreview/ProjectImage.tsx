@@ -38,6 +38,9 @@ const ProjectImage = ({ imagePaths }: Props) => {
 					clickable: true,
 				}}
 				loop
+				autoplay={{
+					delay: 3000,
+				}}
 				className={swiperContainer}
 			>
 				{imagePaths.map(imagePath => (
