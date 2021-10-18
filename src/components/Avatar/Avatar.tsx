@@ -1,5 +1,5 @@
 import React from 'react'
-import { makeStyles } from '@material-ui/core/styles'
+import makeStyles from '@mui/styles/makeStyles';
 
 import StyledImage from 'components/Images/StyledImage'
 import { AVATAR } from 'global/variables'

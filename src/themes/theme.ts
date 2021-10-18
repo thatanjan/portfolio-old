@@ -1,8 +1,8 @@
-import { createMuiTheme, responsiveFontSizes } from '@material-ui/core/styles'
+import { createTheme, responsiveFontSizes, adaptV4Theme } from '@mui/material/styles';
 
-const darkTheme = createMuiTheme({
+const darkTheme = createTheme(adaptV4Theme({
 	palette: {
-		type: 'dark',
+		mode: 'dark',
 		background: {
 			paper: '#1a1a1a',
 		},
@@ -15,13 +15,13 @@ const darkTheme = createMuiTheme({
 			dark: '#349fda',
 		},
 	},
-})
+}))
 
 const theme = responsiveFontSizes(darkTheme)
 
 theme.typography.button = {
 	...theme.typography.button,
-	[theme.breakpoints.down('xs')]: {
+	[theme.breakpoints.down('sm')]: {
 		fontSize: '0.775rem',
 	},
 }

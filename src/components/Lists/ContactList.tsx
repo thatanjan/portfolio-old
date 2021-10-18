@@ -1,12 +1,13 @@
 import React from 'react'
-import { makeStyles, Theme } from '@material-ui/core/styles'
-import Paper from '@material-ui/core/Paper'
-import Typography from '@material-ui/core/Typography'
-import List from '@material-ui/core/List'
-import ListItem from '@material-ui/core/ListItem'
-import ListItemAvatar from '@material-ui/core/ListItemAvatar'
-import ListItemText from '@material-ui/core/ListItemText'
-import Avatar from '@material-ui/core/Avatar'
+import { Theme } from '@mui/material/styles';
+import makeStyles from '@mui/styles/makeStyles';
+import Paper from '@mui/material/Paper'
+import Typography from '@mui/material/Typography'
+import List from '@mui/material/List'
+import ListItem from '@mui/material/ListItem'
+import ListItemAvatar from '@mui/material/ListItemAvatar'
+import ListItemText from '@mui/material/ListItemText'
+import Avatar from '@mui/material/Avatar'
 import MuiLink from 'components/Links/MuiLink'
 import { nanoid } from 'nanoid'
 
@@ -22,7 +23,7 @@ const useStyles = makeStyles((theme: Theme) => ({
 	},
 	listStyle: {
 		width: '70%',
-		[theme.breakpoints.down('sm')]: {
+		[theme.breakpoints.down('md')]: {
 			width: '100%',
 		},
 		alignSelf: 'self-start',

@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react'
-import { makeStyles, Theme } from '@material-ui/core/styles'
-import Tabs from '@material-ui/core/Tabs'
-import Tab from '@material-ui/core/Tab'
+import { Theme } from '@mui/material/styles';
+import makeStyles from '@mui/styles/makeStyles';
+import Tabs from '@mui/material/Tabs'
+import Tab from '@mui/material/Tab'
 import Link from 'components/Links/MuiLink'
 import { nanoid } from 'nanoid'
 import { useRouter } from 'next/router'

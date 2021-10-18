@@ -2,11 +2,26 @@ import type { AppProps } from 'next/app'
 import '../styles/globals.css'
 import React from 'react'
 import Head from 'next/head'
-import { ThemeProvider } from '@material-ui/core/styles'
-import CssBaseline from '@material-ui/core/CssBaseline'
+import { ThemeProvider, Theme, StyledEngineProvider } from '@mui/material/styles';
+import CssBaseline from '@mui/material/CssBaseline'
 import theme from 'themes/theme'
 
 import PageLayout from 'components/PageLayout/PageLayout'
+
+
+
+declare module '@mui/styles/defaultTheme' {
+  // eslint-disable-next-line @typescript-eslint/no-empty-interface
+  interface DefaultTheme extends Theme {}
+}
+
+
+
+declare module '@mui/styles/defaultTheme' {
+  // eslint-disable-next-line @typescript-eslint/no-empty-interface
+  interface DefaultTheme extends Theme {}
+}
+
 
 export default function MyApp(props: AppProps) {
 	const { Component, pageProps } = props
@@ -19,20 +34,20 @@ export default function MyApp(props: AppProps) {
 		}
 	}, [])
 
-	return (
-		<>
-			<Head>
-				<meta
-					name='viewport'
-					content='minimum-scale=1, initial-scale=1, width=device-width'
-				/>
-			</Head>
-			<ThemeProvider theme={theme}>
+	return <>
+        <Head>
+            <meta
+                name='viewport'
+                content='minimum-scale=1, initial-scale=1, width=device-width'
+            />
+        </Head>
+        <StyledEngineProvider injectFirst>
+            <ThemeProvider theme={theme}>
 				<CssBaseline />
 				<PageLayout>
 					<Component {...pageProps} />
 				</PageLayout>
 			</ThemeProvider>
-		</>
-	)
+        </StyledEngineProvider>
+    </>;
 }

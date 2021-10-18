@@ -3,7 +3,9 @@ import React from 'react'
 import clsx from 'clsx'
 import { useRouter } from 'next/router'
 import NextLink from 'next/link'
-import { makeStyles, Theme } from '@material-ui/core/styles'
+import { Theme } from '@mui/material/styles';
+
+import makeStyles from '@mui/styles/makeStyles';
 
 const useStyles = makeStyles((theme: Theme) => ({
 	linkStyle: {

@@ -1,7 +1,7 @@
 import React, { ReactNode } from 'react'
-import Grid from '@material-ui/core/Grid'
-import Paper from '@material-ui/core/Paper'
-import { makeStyles } from '@material-ui/core/styles'
+import Grid from '@mui/material/Grid'
+import Paper from '@mui/material/Paper'
+import makeStyles from '@mui/styles/makeStyles';
 import clsx from 'clsx'
 import { useRouter } from 'next/router'
 
@@ -23,7 +23,7 @@ const useStyles = makeStyles(theme => ({
 		position: 'fixed',
 		width: '33.333%',
 		height: '100%',
-		[theme.breakpoints.down('md')]: {
+		[theme.breakpoints.down('lg')]: {
 			width: '45%',
 		},
 	},
@@ -38,10 +38,10 @@ const useStyles = makeStyles(theme => ({
 			marginLeft: '33.33%',
 			padding: '0 2rem',
 		},
-		[theme.breakpoints.down('md')]: {
+		[theme.breakpoints.down('lg')]: {
 			marginLeft: '45%',
 		},
-		[theme.breakpoints.down('sm')]: {
+		[theme.breakpoints.down('md')]: {
 			marginLeft: '0%',
 		},
 	},

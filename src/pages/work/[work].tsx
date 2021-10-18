@@ -1,7 +1,7 @@
 import React from 'react'
 import Head from 'next/head'
 import { GetStaticPaths, GetStaticProps } from 'next'
-import Box from '@material-ui/core/Box'
+import Box from '@mui/material/Box'
 
 import ProjectPreview from 'components/ProjectPreview/ProjectPreview'
 import ProjectDescription from 'components/ProjectPreview/ProjectDescription'

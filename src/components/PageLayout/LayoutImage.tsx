@@ -1,7 +1,9 @@
 import React from 'react'
-import Box from '@material-ui/core/Box'
-import Typography from '@material-ui/core/Typography'
-import { makeStyles, Theme } from '@material-ui/core/styles'
+import Box from '@mui/material/Box'
+import Typography from '@mui/material/Typography'
+import { Theme } from '@mui/material/styles';
+
+import makeStyles from '@mui/styles/makeStyles';
 
 import StyledImage from 'components/Images/StyledImage'
 import useLargerThanMD from 'hooks/useLargerThanMD'
@@ -18,7 +20,7 @@ const useStyles = makeStyles((theme: Theme) => ({
 		'& > div': {
 			height: 'inherit',
 		},
-		[theme.breakpoints.down('xs')]: {
+		[theme.breakpoints.down('sm')]: {
 			height: '80vh',
 		},
 	},

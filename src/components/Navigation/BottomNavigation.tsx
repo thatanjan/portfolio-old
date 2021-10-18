@@ -1,6 +1,7 @@
 import React from 'react'
-import { makeStyles, Theme } from '@material-ui/core/styles'
-import AppBar from '@material-ui/core/AppBar'
+import { Theme } from '@mui/material/styles';
+import makeStyles from '@mui/styles/makeStyles';
+import AppBar from '@mui/material/AppBar'
 
 import FullWidthTabs from 'components/Tabs/FullWidthTabs'
 

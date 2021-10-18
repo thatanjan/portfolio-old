@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
-import { makeStyles, Theme } from '@material-ui/core/styles'
-import AppBar from '@material-ui/core/AppBar'
-import Toolbar from '@material-ui/core/Toolbar'
-import Typography from '@material-ui/core/Typography'
+import { Theme } from '@mui/material/styles';
+import makeStyles from '@mui/styles/makeStyles';
+import AppBar from '@mui/material/AppBar'
+import Toolbar from '@mui/material/Toolbar'
+import Typography from '@mui/material/Typography'
 
 import useLargerThanMD from 'hooks/useLargerThanMD'
 
@@ -25,7 +26,7 @@ const useStyles = makeStyles((theme: Theme) => ({
 			shouldBeTransparent ? 'none' : theme.palette.background.paper,
 		borderRadius: '10rem',
 
-		[theme.breakpoints.down('sm')]: {
+		[theme.breakpoints.down('md')]: {
 			background: ({ shouldBeTransparent }: TransparentProps) =>
 				shouldBeTransparent ? 'none' : theme.palette.primary.main,
 		},

@@ -1,13 +1,15 @@
 import React from 'react'
-import Paper from '@material-ui/core/Paper'
-import Typography from '@material-ui/core/Typography'
-import { makeStyles, createStyles, Theme } from '@material-ui/core/styles'
-import Grid from '@material-ui/core/Grid'
-import List from '@material-ui/core/List'
-import Avatar from '@material-ui/core/Avatar'
-import ListItem from '@material-ui/core/ListItem'
-import ListItemAvatar from '@material-ui/core/ListItemAvatar'
-import ListItemText from '@material-ui/core/ListItemText'
+import Paper from '@mui/material/Paper'
+import Typography from '@mui/material/Typography'
+import { Theme } from '@mui/material/styles';
+import makeStyles from '@mui/styles/makeStyles';
+import createStyles from '@mui/styles/createStyles';
+import Grid from '@mui/material/Grid'
+import List from '@mui/material/List'
+import Avatar from '@mui/material/Avatar'
+import ListItem from '@mui/material/ListItem'
+import ListItemAvatar from '@mui/material/ListItemAvatar'
+import ListItemText from '@mui/material/ListItemText'
 import { nanoid } from 'nanoid'
 import clsx from 'clsx'
 

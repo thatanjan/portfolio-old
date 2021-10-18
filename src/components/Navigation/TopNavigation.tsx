@@ -1,5 +1,5 @@
 import React, { useState, MouseEvent, KeyboardEvent } from 'react'
-import SwipeableDrawer from '@material-ui/core/SwipeableDrawer'
+import SwipeableDrawer from '@mui/material/SwipeableDrawer'
 
 import FullWidthTabs from 'components/Tabs/FullWidthTabs'
 

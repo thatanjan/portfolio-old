@@ -1,4 +1,4 @@
-import useMediaQuery from '@material-ui/core/useMediaQuery'
+import useMediaQuery from '@mui/material/useMediaQuery'
 
 const useSmallerThanSm = () => useMediaQuery('max-width:600px')
 

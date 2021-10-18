@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import ProjectDescription from 'components/ProjectPreview/ProjectDescription'
-import { makeStyles } from '@material-ui/core/styles'
+import makeStyles from '@mui/styles/makeStyles';
 import { nanoid } from 'nanoid'
 
 import aboutMeData, { AboutMeData } from 'components/AboutMe/aboutMeData'

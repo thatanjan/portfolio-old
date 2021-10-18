@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
-import Box from '@material-ui/core/Box'
-import { makeStyles } from '@material-ui/core/styles'
+import Box from '@mui/material/Box'
+import makeStyles from '@mui/styles/makeStyles';
 import { nanoid } from 'nanoid'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import SwiperCore, { Pagination } from 'swiper'
