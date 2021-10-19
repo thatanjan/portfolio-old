@@ -3,12 +3,10 @@ import Head from 'next/head'
 import { GetStaticPaths, GetStaticProps } from 'next'
 import Box from '@material-ui/core/Box'
 
-import ProjectPreview, {
-	commonContaienrStyle,
-	useSmallSizeStyle,
-} from 'components/ProjectPreview/ProjectPreview'
+import ProjectPreview from 'components/ProjectPreview/ProjectPreview'
 import ProjectDescription from 'components/ProjectPreview/ProjectDescription'
 import ProjectTechnologies from 'components/ProjectPreview/ProjectTechnologies'
+import ProjectFeatures from 'components/ProjectPreview/ProjectFeatures'
 import ApiData from 'apiData/works/dataClass'
 import paths from 'utils/paths'
 import convertDashToSpace from 'utils/dashToSpace'
@@ -27,7 +25,8 @@ const Page = ({
 		frontEndTechStack,
 		backEndTechStack,
 		sourceCodeLink,
-		imagePath,
+		imagePaths,
+		features,
 	},
 }: Props) => {
 	const projectPreviewProps = {
@@ -36,23 +35,22 @@ const Page = ({
 		visitLink,
 		description,
 		sourceCodeLink,
-		imagePath,
+		imagePaths,
 	}
 	const technolgiesProps = { frontEndTechStack, backEndTechStack }
 	const pageTitle = convertDashToSpace(name)
-	const { boxStyle } = useSmallSizeStyle()
 
 	return (
 		<>
 			<Head>
-				{' '}
-				<title>{pageTitle}</title>{' '}
+				<title>{pageTitle}</title>
 			</Head>
 
 			<Box>
 				<ProjectPreview {...projectPreviewProps} />
-				<Box className={boxStyle}>
+				<Box>
 					<ProjectDescription title='description' description={description} />
+					<ProjectFeatures features={features} />
 					<ProjectTechnologies {...technolgiesProps} />
 				</Box>
 			</Box>

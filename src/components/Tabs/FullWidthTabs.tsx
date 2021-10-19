@@ -71,6 +71,7 @@ const FullWidthTabs = ({ setIsDrawerOpen }: Props) => {
 					href={href}
 					MuiComponent={Tab}
 					label={label}
+					disableRipple={largerThanMD}
 					{...a11yProps(index)}
 				/>
 			))}

@@ -13,19 +13,10 @@ interface Props {
 	moreLink?: string
 	sourceCodeLink?: string
 	visitLink: string
-	imagePath: string
+	imagePaths: string[]
 }
 
 export const commonContaienrStyle = '0 10%'
-
-export const useSmallSizeStyle = makeStyles((theme: Theme) => ({
-	boxStyle: {
-		padding: commonContaienrStyle,
-		[theme.breakpoints.down('xs')]: {
-			padding: '0 5%',
-		},
-	},
-}))
 
 const useStyles = makeStyles({
 	buttonContainer: {
@@ -48,16 +39,14 @@ const ProjectPreview = ({
 	moreLink,
 	visitLink,
 	sourceCodeLink,
-	imagePath,
+	imagePaths,
 }: Props) => {
 	const { buttonContainer } = useStyles()
 
-	const { boxStyle } = useSmallSizeStyle()
-
 	const staticRoute = '/work/[work]'
 	return (
-		<Box className={boxStyle}>
-			<ProjectImage imagePath={imagePath} />
+		<Box>
+			<ProjectImage imagePaths={imagePaths} />
 
 			<ProjectTitle name={name} subtitle={subtitle} />
 

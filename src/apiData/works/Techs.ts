@@ -48,3 +48,15 @@ export const mongodb = new Tech(
 	'MongoDB',
 	'https://onmogul.s3.amazonaws.com/uploads/user/avatar/3077013/4bf54bb806.png'
 )
+
+export const mdx = new Tech(
+	'MDX (Markdown)',
+	'https://im0-tub-com.yandex.net/i?id=d4bbb58a9cec9f3fba8fe8be2cbe0406&n=13&exp=1'
+)
+
+const nextjsImageUrl =
+	'https://images.viblo.asia/a587cb51-7daf-4219-9cb9-875ca90ec031.png'
+
+export const nextjsApiRoutes = new Tech('NextJS Api Routes', nextjsImageUrl)
+
+export const nextjs = new Tech('NextJS', nextjsImageUrl)

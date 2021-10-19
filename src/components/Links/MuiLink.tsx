@@ -13,7 +13,8 @@ const useStyles = makeStyles((theme: Theme) => ({
 
 		'&:hover': {
 			textDecoration: 'initial',
-			color: theme.palette.secondary.main,
+			color: ({ button }: { button: boolean }) =>
+				button ? '#ffffffba' : theme.palette.secondary.main,
 		},
 	},
 }))
@@ -36,6 +37,7 @@ interface Props {
 	href: string | any
 	as?: string
 	[key: string]: any
+	button?: boolean
 }
 
 function Link(props: Props) {
@@ -46,9 +48,11 @@ function Link(props: Props) {
 		className: classNameProps,
 		innerRef,
 		naked,
+		button,
 		...other
 	} = props
-	const { linkStyle } = useStyles()
+
+	const { linkStyle } = useStyles({ button: button || false })
 
 	const router = useRouter()
 	const pathname = typeof href === 'string' ? href : href.pathname

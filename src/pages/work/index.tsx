@@ -23,14 +23,14 @@ const Work = ({ data }: Props) => {
 			</Head>
 
 			{data.map(item => {
-				const { name, visitLink, moreLink, subtitle, imagePath } = item
+				const { name, visitLink, moreLink, subtitle, imagePaths } = item
 
 				const projectPreviewProps = {
 					name,
 					visitLink,
 					moreLink,
 					subtitle,
-					imagePath,
+					imagePaths,
 				}
 				return <ProjectPreview key={nanoid()} {...projectPreviewProps} />
 			})}

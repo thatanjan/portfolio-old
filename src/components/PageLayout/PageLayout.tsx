@@ -23,11 +23,26 @@ const useStyles = makeStyles(theme => ({
 		position: 'fixed',
 		width: '33.333%',
 		height: '100%',
+		[theme.breakpoints.down('md')]: {
+			width: '45%',
+		},
 	},
 	layoutImageStyle: { width: '100%' },
 	contentStyle: {
+		padding: '0 1rem',
+		marginTop: ({ pathname }: { pathname: string }) =>
+			pathname === '/' ? '3rem' : '7rem',
 		[theme.breakpoints.up('md')]: {
+			marginTop: ({ pathname }: { pathname: string }) =>
+				pathname === '/' ? '10rem' : '7rem',
 			marginLeft: '33.33%',
+			padding: '0 2rem',
+		},
+		[theme.breakpoints.down('md')]: {
+			marginLeft: '45%',
+		},
+		[theme.breakpoints.down('sm')]: {
+			marginLeft: '0%',
 		},
 	},
 }))
@@ -40,7 +55,7 @@ const PageLayout = ({ children }: Props) => {
 		layoutImageFixStyle,
 		layoutImageStyle,
 		contentStyle,
-	} = useStyles()
+	} = useStyles({ pathname })
 
 	const largerThanMD = useLargerThanMD()
 
@@ -58,7 +73,7 @@ const PageLayout = ({ children }: Props) => {
 				<AppHeader />
 			</Grid>
 
-			<Grid item container style={{ marginTop: '10vh' }}>
+			<Grid item container>
 				{showLayoutImage() && (
 					<Grid lg={12} item className={clsx(showLayoutImage())}>
 						{' '}

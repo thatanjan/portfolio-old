@@ -8,7 +8,7 @@ class ApiData {
 
 	description: string
 
-	imagePath: string
+	imagePaths: string[]
 
 	visitLink: string
 
@@ -20,10 +20,11 @@ class ApiData {
 
 	frontEndTechStack: Tech[] | null
 
+	features: string[]
+
 	constructor(name: string) {
 		this.name = name
 		this.subtitle = ''
-		this.imagePath = ''
 		this.visitLink = ''
 		this.backEndTechStack = null
 		this.frontEndTechStack = null
@@ -38,8 +39,8 @@ class ApiData {
 		return this
 	}
 
-	addImage(imagePath: string) {
-		this.imagePath = imagePath
+	addImages(imagePaths: string[]) {
+		this.imagePaths = imagePaths
 		return this
 	}
 
@@ -60,6 +61,11 @@ class ApiData {
 
 	addDescription(description: string) {
 		this.description = description
+		return this
+	}
+
+	addFeatures(features: string[]) {
+		this.features = features
 		return this
 	}
 }
