@@ -37,6 +37,7 @@ interface Props {
 	href: string | any
 	as?: string
 	[key: string]: any
+	button?: boolean
 }
 
 function Link(props: Props) {
@@ -47,13 +48,11 @@ function Link(props: Props) {
 		className: classNameProps,
 		innerRef,
 		naked,
+		button,
 		...other
 	} = props
-	const MuiComponentReference = MuiComponent as any
 
-	const { linkStyle } = useStyles({
-		button: MuiComponentReference.Naked.render.name === 'Button',
-	})
+	const { linkStyle } = useStyles({ button: button || false })
 
 	const router = useRouter()
 	const pathname = typeof href === 'string' ? href : href.pathname
