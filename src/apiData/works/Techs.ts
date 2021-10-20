@@ -60,3 +60,8 @@ const nextjsImageUrl =
 export const nextjsApiRoutes = new Tech('NextJS Api Routes', nextjsImageUrl)
 
 export const nextjs = new Tech('NextJS', nextjsImageUrl)
+
+export const stripe = new Tech(
+	'Stripe',
+	'https://novator.co.uk/wp-content/uploads/2019/11/stripe.jpg'
+)
