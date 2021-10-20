@@ -27,7 +27,7 @@ const ProjectTitle = ({ name, subtitle }: Props) => {
 				</Typography>
 			</Grid>
 			<Grid item>
-				<Typography className={CAPITALIZE} component='h2' variant='subtitle1'>
+				<Typography component='h2' variant='subtitle1'>
 					{subtitle}
 				</Typography>
 			</Grid>
