@@ -12,6 +12,7 @@ import {
 	express,
 	nodejs,
 	mui,
+	redux,
 } from './Techs'
 
 const CULES_SHOP = 'cules-shop'
@@ -26,6 +27,7 @@ const frontEndTechStack: Tech[] = [
 	typescript,
 	react,
 	nextjs,
+	redux,
 	mui,
 	stripe,
 ]
