@@ -14,6 +14,11 @@ export const javascript = new Tech(
 	'https://web.archive.org/web/20190831204424if_/https://2ch.pm/b/thumb/202995921/15672793792330s.jpg'
 )
 
+export const rest = new Tech(
+	'REST',
+	'https://inordic.ru/images/decor/icons/restfull_api.png'
+)
+
 export const react = new Tech(
 	'ReactJS',
 	'https://cdn.auth0.com/blog/reactjs16/logo.png'
