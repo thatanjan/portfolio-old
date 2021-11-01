@@ -65,3 +65,8 @@ export const stripe = new Tech(
 	'Stripe',
 	'https://novator.co.uk/wp-content/uploads/2019/11/stripe.jpg'
 )
+
+export const redux = new Tech(
+	'Redux',
+	'https://uploads-ssl.webflow.com/5eacc8815c6b73d93d13b2f5/5ed819a41bec6275eade8334_Redux-p-800.jpeg'
+)
