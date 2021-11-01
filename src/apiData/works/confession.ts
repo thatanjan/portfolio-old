@@ -11,6 +11,7 @@ import {
 	express,
 	graphql,
 	mongodb,
+	redux,
 } from './Techs'
 
 const subtitle =
@@ -18,7 +19,7 @@ const subtitle =
 
 const imagePaths = readImagePaths(CONFESSION)
 
-const frontEndTechStack: Tech[] = [javascript, typescript, react, mui]
+const frontEndTechStack: Tech[] = [javascript, typescript, react, redux, mui]
 const backEndTechStack: Tech[] = [nodejs, express, graphql, mongodb]
 const visitLink = 'https://con-fession.vercel.app/'
 
