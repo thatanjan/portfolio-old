@@ -53,7 +53,7 @@ const SkillDisplayer = ({ skills, skillType }: Props) => {
 					{skillType}
 				</Typography>
 				{skills.map(({ name, avatar }) => (
-					<ListItem key={nanoid()} button>
+					<ListItem key={nanoid()}>
 						<ListItemAvatar>
 							<Avatar src={avatar} alt={name} />
 						</ListItemAvatar>
