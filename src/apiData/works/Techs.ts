@@ -16,7 +16,7 @@ export const javascript = new Tech(
 
 export const rest = new Tech(
 	'REST',
-	'https://inordic.ru/images/decor/icons/restfull_api.png'
+	'https://www.clipartmax.com/png/middle/285-2851044_restful-search-api-rest-web-services-logo.png'
 )
 
 export const react = new Tech(
@@ -26,7 +26,7 @@ export const react = new Tech(
 
 export const typescript = new Tech(
 	'TypeScript',
-	'https://authfix-le-gaulois.tech/wp-content/uploads/2019/03/ts-320x320.png'
+	'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/512px-Typescript_logo_2020.svg.png'
 )
 
 export const mui = new Tech(
