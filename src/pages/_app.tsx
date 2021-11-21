@@ -3,7 +3,13 @@ import Head from 'next/head'
 import { AppProps } from 'next/app'
 import CssBaseline from '@mui/material/CssBaseline'
 import { CacheProvider, EmotionCache } from '@emotion/react'
+import { ThemeProvider } from '@mui/material/styles'
+
 import createEmotionCache from 'utils/createEmotionCache'
+
+import darkTheme from 'themes/darkTheme'
+
+import PageLayout from 'components/Layouts/PageLayout'
 
 const clientSideEmotionCache = createEmotionCache()
 
@@ -19,8 +25,12 @@ export default function MyApp(props: MyAppProps) {
 				<title>My page</title>
 				<meta name='viewport' content='initial-scale=1, width=device-width' />
 			</Head>
-			<CssBaseline />
-			<Component {...pageProps} />
+			<ThemeProvider theme={darkTheme}>
+				<CssBaseline />
+				<PageLayout>
+					<Component {...pageProps} />
+				</PageLayout>
+			</ThemeProvider>
 		</CacheProvider>
 	)
 }
