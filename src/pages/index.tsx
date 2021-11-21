@@ -28,6 +28,13 @@ const Index = () => {
 				columnGap: {
 					md: '3rem',
 				},
+				width: {
+					lg: '80%',
+					xl: '60%',
+				},
+				margin: {
+					lg: '0 auto',
+				},
 			}}
 		>
 			<Box
