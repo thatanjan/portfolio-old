@@ -12,12 +12,21 @@ const Index = () => {
 				height: '100vh',
 				gridTemplateColumns: {
 					xs: '1fr',
+					md: '3fr 5fr',
 				},
 				gridTemplateRows: {
 					xs: '1fr 1fr',
+					md: '1fr',
 				},
 				rowGap: {
 					xs: '2rem',
+					md: '0px',
+				},
+				placeItems: {
+					md: 'center',
+				},
+				columnGap: {
+					md: '3rem',
 				},
 			}}
 		>
@@ -26,6 +35,9 @@ const Index = () => {
 					display: 'grid',
 					placeItems: {
 						xs: 'end center',
+					},
+					justifySelf: {
+						md: 'end',
 					},
 				}}
 			>
