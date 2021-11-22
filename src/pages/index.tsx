@@ -48,7 +48,8 @@ const Index = () => {
 					height: '100vh',
 					gridTemplateColumns: {
 						xs: '1fr',
-						md: '3fr 5fr',
+						md: '40% 40%',
+						lg: '35% 40%',
 					},
 					gridTemplateRows: {
 						xs: '1fr 1fr',
@@ -64,14 +65,8 @@ const Index = () => {
 					columnGap: {
 						md: '3rem',
 					},
-					width: {
-						lg: '80%',
-						xl: '60%',
-					},
-					margin: {
-						lg: '0 auto',
-					},
 					position: 'relative',
+					justifyContent: 'center',
 				}}
 			>
 				<Box
