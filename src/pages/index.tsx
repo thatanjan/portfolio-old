@@ -1,6 +1,8 @@
 import React from 'react'
 import Typography from '@mui/material/Typography'
 import Box from '@mui/material/Box'
+import Grid from '@mui/material/Grid'
+import Button from '@mui/material/Button'
 import Image from 'next/image'
 
 import ProfileImage from 'components/Images/ProfileImage'
@@ -83,13 +85,47 @@ const Index = () => {
 					<ProfileImage />
 				</Box>
 				<Box>
-					<Typography>
-						Maiores eius voluptatum ipsa nesciunt illo sunt ratione fugiat dignissimos
-						odio. Repudiandae dolore a consectetur autem non? Quasi vero corporis
-						quibusdam rem doloremque in. Deleniti quidem ea recusandae alias nostrum
-						Deleniti atque recusandae tempore fuga iste alias Consequuntur saepe sequi
-						maiores sunt molestiae aut fugit.
-					</Typography>
+					<Grid container justifyContent='center'>
+						<Grid
+							item
+							xs={10}
+							component={Typography}
+							variant='h4'
+							sx={{ textTransform: 'uppercase' }}
+						>
+							Hi there!
+						</Grid>
+						<Grid item xs={10}>
+							<Typography
+								component='h1'
+								variant='h3'
+								sx={{
+									textTransform: 'uppercase',
+									fontWeight: 'bold',
+									margin: {
+										xs: '.5rem 0',
+									},
+								}}
+							>
+								I'm a{' '}
+								<Box sx={{ color: 'primary.main' }} component='span'>
+									full stack developer
+								</Box>
+							</Typography>{' '}
+						</Grid>
+						<Grid item xs={10}>
+							<Typography>
+								I'm a Freelance UI/UX Designer and Developer based in London, England. I
+								strives to build immersive and beautiful web applications through
+								carefully crafted code and user-centric design.
+							</Typography>
+						</Grid>
+
+						<Grid item xs={10}>
+							<Button>More about me</Button>
+							<Button>Hire me</Button>
+						</Grid>
+					</Grid>
 				</Box>
 			</Box>
 		</>
