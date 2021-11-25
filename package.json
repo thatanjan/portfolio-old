@@ -17,7 +17,8 @@
 		"nanoid": "^3.1.30",
 		"next": "latest",
 		"react": "latest",
-		"react-dom": "latest"
+		"react-dom": "latest",
+		"swiper": "^7.3.1"
 	},
 	"devDependencies": {
 		"eslint": "7",
