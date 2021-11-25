@@ -5,13 +5,13 @@ import { styled } from '@mui/system'
 import Box from '@mui/material/Box'
 import { nanoid } from 'nanoid'
 import { Swiper, SwiperSlide, SwiperProps } from 'swiper/react'
-import SwiperCore, { Pagination, Navigation } from 'swiper'
+import SwiperCore, { Pagination, Navigation, Autoplay } from 'swiper'
 
 import 'swiper/css'
 import 'swiper/css/pagination'
 import 'swiper/css/navigation'
 
-SwiperCore.use([Pagination, Navigation])
+SwiperCore.use([Pagination, Navigation, Autoplay])
 
 const CustomSwiperContainer = styled(Swiper)<SwiperProps>(({ theme }) => ({
 	paddingBottom: '3rem',
