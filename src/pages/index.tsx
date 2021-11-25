@@ -92,6 +92,10 @@ const Index = () => {
 								xs: 'center',
 								md: 'flex-start',
 							},
+							textAlign: {
+								xs: 'center',
+								md: 'start',
+							},
 						}}
 					>
 						<Grid
