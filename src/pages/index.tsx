@@ -50,7 +50,7 @@ const Index = () => {
 					height: '100vh',
 					gridTemplateColumns: {
 						xs: '1fr',
-						md: '40% 40%',
+						md: '40% 55%',
 						lg: '35% 40%',
 					},
 					gridTemplateRows: {
@@ -85,7 +85,15 @@ const Index = () => {
 					<ProfileImage />
 				</Box>
 				<Box>
-					<Grid container justifyContent='center'>
+					<Grid
+						container
+						sx={{
+							justifyContent: {
+								xs: 'center',
+								md: 'flex-start',
+							},
+						}}
+					>
 						<Grid
 							item
 							xs={10}
