@@ -4,6 +4,9 @@ import Box from '@mui/material/Box'
 import Grid from '@mui/material/Grid'
 import Button from '@mui/material/Button'
 import Image from 'next/image'
+import { nanoid } from 'nanoid'
+
+import MuiLink from 'components/Links/MuiLink'
 
 import ProfileImage from 'components/Images/ProfileImage'
 
@@ -140,14 +143,17 @@ const Index = () => {
 							justifyContent='center'
 							sx={{ marginTop: { xs: '1rem' } }}
 						>
-							{['More about me', 'Hire me'].map((text) => (
+							{['More about me', 'Hire me'].map((text, index) => (
 								<Grid item xs={6}>
-									<Button
+									<MuiLink
+										key={nanoid()}
+										href={index ? '/contact' : '/about'}
+										MuiComponent={Button}
 										variant='outlined'
 										sx={{ fontWeight: 'bold', width: '95%', height: '100%' }}
 									>
 										{text}
-									</Button>
+									</MuiLink>
 								</Grid>
 							))}
 						</Grid>
