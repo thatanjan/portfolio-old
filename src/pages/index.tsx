@@ -121,9 +121,23 @@ const Index = () => {
 							</Typography>
 						</Grid>
 
-						<Grid item xs={10}>
-							<Button>More about me</Button>
-							<Button>Hire me</Button>
+						<Grid
+							item
+							xs={10}
+							container
+							justifyContent='center'
+							sx={{ marginTop: { xs: '1rem' } }}
+						>
+							{['More about me', 'Hire me'].map((text) => (
+								<Grid item xs={6}>
+									<Button
+										variant='outlined'
+										sx={{ fontWeight: 'bold', width: '95%', height: '100%' }}
+									>
+										{text}
+									</Button>
+								</Grid>
+							))}
 						</Grid>
 					</Grid>
 				</Box>
