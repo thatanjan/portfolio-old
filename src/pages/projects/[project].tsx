@@ -11,12 +11,20 @@ const Project = (props: Props) => {
 	return (
 		<>
 			<Grid container justifyContent='center'>
-				<Grid item container xs={8} justifyContent='space-between'>
+				<Grid
+					item
+					container
+					xs={11}
+					md={10}
+					lg={9}
+					xl={8}
+					justifyContent='space-between'
+				>
 					<Grid item xs={12}>
 						<ProjectImageSlideShow images={['/anime_19.jpg', '/anime_19.jpg']} />
 					</Grid>
 
-					<Grid item xs={7}>
+					<Grid item xs={12} xl={7}>
 						<Typography variant='h2' gutterBottom>
 							Confession
 						</Typography>
@@ -35,7 +43,7 @@ const Project = (props: Props) => {
 							minus repudiandae? Nostrum distinctio non quis?
 						</Typography>
 					</Grid>
-					<Grid item xs={4} pt={10}>
+					<Grid item xs={12} xl={4} pt={10}>
 						<Typography variant='h4'>Project Info</Typography>
 					</Grid>
 				</Grid>
