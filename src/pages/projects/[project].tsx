@@ -2,8 +2,10 @@ import React from 'react'
 import Typography from '@mui/material/Typography'
 import Grid from '@mui/material/Grid'
 
-import CenterLayout from 'components/Layouts/CenterLayout'
 import ProjectImageSlideShow from 'components/Slides/ImageSlideShow'
+import SkillsShow from 'components/Skills/SkillsShow'
+
+import { frontSkills, backSkills, tools } from 'components/Skills/AllSkills'
 
 interface Props {}
 
@@ -45,6 +47,14 @@ const Project = (props: Props) => {
 					</Grid>
 					<Grid item xs={12} xl={4} pt={10}>
 						<Typography variant='h4'>Project Info</Typography>
+					</Grid>
+
+					<Grid item xs={12} mt='2rem'>
+						<Typography variant='h2' align='center' mb='3rem'>
+							Project Technologies
+						</Typography>
+						<SkillsShow title='Front End' skills={frontSkills} />
+						<SkillsShow title='Back End' skills={backSkills} />
 					</Grid>
 				</Grid>
 			</Grid>
