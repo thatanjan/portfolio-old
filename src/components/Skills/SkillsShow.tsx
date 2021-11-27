@@ -3,7 +3,7 @@ import Typography from '@mui/material/Typography'
 import Grid from '@mui/material/Grid'
 import { nanoid } from 'nanoid'
 
-import Skill from 'components/Skills/SkillClass'
+import Skill from 'classes/Skills/SkillClass'
 import SingleSkill from 'components/Skills/SingleSkill'
 
 interface Props {
