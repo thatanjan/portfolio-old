@@ -2,11 +2,10 @@ import React from 'react'
 import Typography from '@mui/material/Typography'
 import Box from '@mui/material/Box'
 import Grid from '@mui/material/Grid'
-import Button from '@mui/material/Button'
 import Image from 'next/image'
 import { nanoid } from 'nanoid'
 
-import MuiLink from 'components/Links/MuiLink'
+import LinkButton from 'components/Buttons/LinkButton'
 
 import ProfileImage from 'components/Images/ProfileImage'
 
@@ -145,15 +144,14 @@ const Index = () => {
 						>
 							{['More about me', 'Hire me'].map((text, index) => (
 								<Grid item xs={6}>
-									<MuiLink
+									<LinkButton
 										key={nanoid()}
 										href={index ? '/contact' : '/about'}
-										MuiComponent={Button}
 										variant='outlined'
 										sx={{ fontWeight: 'bold', width: '95%', height: '100%' }}
 									>
 										{text}
-									</MuiLink>
+									</LinkButton>
 								</Grid>
 							))}
 						</Grid>
