@@ -9,7 +9,7 @@ interface Props extends ButtonProps {
 }
 
 const LinkButton = ({ children, ...others }: Props) => (
-	<MuiLink MuiComponent={Button} {...others}>
+	<MuiLink MuiComponent={Button} {...others} button>
 		{children}
 	</MuiLink>
 )
