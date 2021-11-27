@@ -49,6 +49,27 @@ function Link(props: Props) {
 		)
 	}
 
+	const linkStyle = {
+		textDecoration: 'none',
+		color: 'secondary.dark',
+
+		'&:hover': {
+			textDecoration: 'underline',
+		},
+	}
+
+	if (button) {
+		return (
+			<MuiComponent
+				component={NextComposed}
+				className={className}
+				ref={innerRef}
+				href={href}
+				{...other}
+			/>
+		)
+	}
+
 	return (
 		<MuiComponent
 			component={NextComposed}
@@ -56,6 +77,7 @@ function Link(props: Props) {
 			ref={innerRef}
 			href={href}
 			{...other}
+			sx={linkStyle}
 		/>
 	)
 }
