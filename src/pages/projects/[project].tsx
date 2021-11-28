@@ -7,6 +7,7 @@ import { nanoid } from 'nanoid'
 import ProjectImageSlideShow from 'components/Slides/ImageSlideShow'
 import SkillsShow from 'components/Skills/SkillsShow'
 import ProjectInfo from 'components/Project/ProjectInfo'
+import ProjectFeatures from 'components/Project/ProjectFeatures'
 
 import allProject, { allProjectPaths } from 'data/projects/allProject'
 
@@ -21,7 +22,7 @@ interface Props {
 }
 
 const ProjectPage = ({
-	project: { title, description, images, projectInfos },
+	project: { title, description, images, projectInfos, features },
 }: Props) => {
 	return (
 		<>
@@ -58,6 +59,14 @@ const ProjectPage = ({
 						<Typography variant='h4'>Project Info</Typography>
 
 						<ProjectInfo infos={projectInfos} />
+					</Grid>
+
+					<Grid item xs={12} mt='2rem'>
+						<Typography variant='h2' align='center' mb='3rem'>
+							Project Features
+						</Typography>
+
+						<ProjectFeatures features={features} />
 					</Grid>
 
 					<Grid item xs={12} mt='2rem'>
