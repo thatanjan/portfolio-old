@@ -15,14 +15,21 @@ import Project from 'classes/Project/Project'
 
 import { convertDashToSpace } from 'utils/convertString'
 
-import { frontSkills, backSkills, tools } from 'components/Skills/AllSkills'
-
 interface Props {
 	project: Project
 }
 
 const ProjectPage = ({
-	project: { title, description, images, projectInfos, features },
+	project: {
+		title,
+		description,
+		images,
+		projectInfos,
+		features,
+		frontEndTechs,
+		backEndTechs,
+		toolsUsed,
+	},
 }: Props) => {
 	return (
 		<>
@@ -73,8 +80,9 @@ const ProjectPage = ({
 						<Typography variant='h2' align='center' mb='3rem'>
 							Project Technologies
 						</Typography>
-						<SkillsShow title='Front End' skills={frontSkills} />
-						<SkillsShow title='Back End' skills={backSkills} />
+						<SkillsShow title='Front End' skills={frontEndTechs} />
+						<SkillsShow title='Back End' skills={backEndTechs} />
+						<SkillsShow title='Tools used' skills={toolsUsed} />
 					</Grid>
 				</Grid>
 			</Grid>
