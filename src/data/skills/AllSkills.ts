@@ -13,6 +13,7 @@ const sass = new Skill('Sass', 'sass.png')
 const seo = new Skill('SEO', 'seo.png')
 const markdown = new Skill('Markdown', 'markdown.webp')
 
+const nextjsApiRoutes = new Skill('Next.js Api Routes', 'nextjs.png')
 const nodejs = new Skill('Node.js', 'nodejs.png')
 const express = new Skill('Express', 'express.png')
 const mongodb = new Skill('MongoDB', 'mongodb.png')
@@ -53,6 +54,7 @@ const backSkills: Skill[] = [
 	rest,
 	mongoose,
 	stripe,
+	nextjsApiRoutes,
 ]
 
 const tools: Skill[] = [
@@ -84,6 +86,7 @@ export {
 	mui,
 	markdown,
 	nodejs,
+	nextjsApiRoutes,
 	express,
 	mongodb,
 	graphql,
