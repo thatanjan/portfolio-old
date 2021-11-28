@@ -1,15 +1,22 @@
 import React from 'react'
+import { GetStaticProps, GetStaticPaths } from 'next'
 import Typography from '@mui/material/Typography'
 import Grid from '@mui/material/Grid'
 
 import ProjectImageSlideShow from 'components/Slides/ImageSlideShow'
 import SkillsShow from 'components/Skills/SkillsShow'
 
+import allProject, { allProjectPaths } from 'data/projects/allProject'
+
+import Project from 'classes/Project/Project'
+
 import { frontSkills, backSkills, tools } from 'components/Skills/AllSkills'
 
-interface Props {}
+interface Props {
+	project: Project
+}
 
-const Project = (props: Props) => {
+const ProjectPage = (props: Props) => {
 	return (
 		<>
 			<Grid container justifyContent='center'>
@@ -62,4 +69,31 @@ const Project = (props: Props) => {
 	)
 }
 
-export default Project
+export default ProjectPage
+
+export const getStaticPaths: GetStaticPaths = async () => {
+	return {
+		paths: allProjectPaths,
+		fallback: false,
+	}
+}
+
+interface Params {
+	params: {
+		project: string
+	}
+}
+
+export const getStaticProps: GetStaticProps<Props> = async ({
+	params,
+}: Params) => {
+	const project = allProject.find(
+		({ title }) => title === params.project
+	) as Project
+
+	return {
+		props: {
+			project: JSON.parse(JSON.stringify(project)),
+		},
+	}
+}
