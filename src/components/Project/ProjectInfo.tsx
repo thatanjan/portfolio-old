@@ -1,28 +1,32 @@
 import React from 'react'
 import Grid from '@mui/material/Grid'
 
-interface Props {}
+import Info from 'classes/Project/ProjectInfo'
 
-const ProjectInfo = (props: Props) => {
+import { convertUnderScoreToSpace } from 'utils/convertString'
+
+interface Props {
+	infos: Info[]
+}
+
+const ProjectInfo = ({ infos }: Props) => {
 	return (
 		<Grid container pt='2rem'>
-			{Array(5)
-				.fill(0)
-				.map(() => (
-					<>
-						<Grid item xs={12} container>
-							<Grid item xs={4}>
-								Category
-							</Grid>
-							<Grid item xs={1}>
-								:
-							</Grid>
-							<Grid item xs={7}>
-								Full stack web application
-							</Grid>
+			{infos.map(({ field, value }) => (
+				<>
+					<Grid item xs={12} container sx={{ textTransform: 'capitalize' }}>
+						<Grid item xs={4}>
+							{convertUnderScoreToSpace(field)}
 						</Grid>
-					</>
-				))}
+						<Grid item xs={1}>
+							:
+						</Grid>
+						<Grid item xs={7}>
+							{value}
+						</Grid>
+					</Grid>
+				</>
+			))}
 		</Grid>
 	)
 }
