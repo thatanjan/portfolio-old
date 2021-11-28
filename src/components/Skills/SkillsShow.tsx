@@ -15,7 +15,13 @@ const SkillsShow = ({ title, skills }: Props) => {
 	return (
 		<Grid container justifyContent='space-around' spacing={4} sx={{ mb: '5rem' }}>
 			<Grid item xs={12}>
-				<Typography component='h1' variant='h3' gutterBottom align='center'>
+				<Typography
+					component='h1'
+					variant='h3'
+					gutterBottom
+					align='center'
+					sx={{ textTransform: 'capitalize' }}
+				>
 					{title}
 				</Typography>
 			</Grid>
