@@ -9,7 +9,8 @@ const subtitle =
 	'An open source social media plattform for people to overcome their imposter syndrome.'
 
 const description = [
-	`A social media application to help people overcome their imposter syndrome. It's name is Confession. It has user authentication, Newsfeed, picture upload and almost every feature that a social media application needs. The basic idea here is, if people could share their failure stories freely then other will not have the feeling of 'not good enough'. That's how we can kill our imposter syndrome.`,
+	`A social media application to help people overcome their imposter syndrome. It's name is Confession. It has user authentication, Newsfeed, picture upload and almost every feature that a social media application needs.`,
+	`The basic idea here is, if people could share their failure stories freely then other will not have the feeling of 'not good enough'. That's how we can kill our imposter syndrome.`,
 ]
 
 const features: string[] = [
