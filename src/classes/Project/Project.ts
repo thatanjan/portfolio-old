@@ -1,4 +1,5 @@
 import ProjectInfo from './ProjectInfo'
+import Tech from '../Skills/SkillClass'
 
 class Project {
 	title: string
@@ -12,6 +13,10 @@ class Project {
 	features: string[]
 
 	images: string[]
+
+	frontEndTechs: Tech[]
+	backEndTechs: Tech[]
+	toolsUsed: Tech[]
 
 	constructor(title: string) {
 		this.title = title
@@ -41,6 +46,21 @@ class Project {
 
 	addProjectInfos(infos: ProjectInfo[]) {
 		this.projectInfos = infos
+		return this
+	}
+
+	addFrontEndTechs(techs: Tech[]) {
+		this.frontEndTechs = techs
+		return this
+	}
+
+	addBackEndTechs(techs: Tech[]) {
+		this.backEndTechs = techs
+		return this
+	}
+
+	addToolsUsed(techs: Tech[]) {
+		this.toolsUsed = techs
 		return this
 	}
 }
