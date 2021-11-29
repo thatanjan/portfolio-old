@@ -68,6 +68,7 @@ function Link(props: Props) {
 				ref={innerRef}
 				href={href}
 				{...other}
+				sx={sx}
 			/>
 		)
 	}
