@@ -51,6 +51,7 @@ const NavFab = () => {
 							bottom: 16,
 							right: 16,
 							color: 'white',
+							zIndex: 11,
 						}}
 						color='primary'
 						onClick={handleChangeIndex}
