@@ -7,6 +7,8 @@ import Box from '@mui/material/Box'
 import MenuIcon from '@mui/icons-material/Menu'
 import CloseIcon from '@mui/icons-material/Close'
 
+import Navigation from './Navigation'
+
 const NavFab = () => {
 	const theme = useTheme()
 	const transitionDuration = {
@@ -33,6 +35,7 @@ const NavFab = () => {
 
 	return (
 		<Box>
+			<Navigation show={Boolean(value)} />
 			{fabs.map(({ icon }, index) => (
 				<Zoom
 					in={value === index}
