@@ -6,20 +6,23 @@ import Grid from '@mui/material/Grid'
 import ProjectImageSlideShow from 'components/Slides/ImageSlideShow'
 import LinkButton from 'components/Buttons/LinkButton'
 
+import { convertDashToSpace } from 'utils/convertString'
+
 interface Props {
 	title: string
-	description: string
+	subtitle: string
+	images: string[]
 }
 
-const ProjectPreview = ({ title, description }: Props) => {
+const ProjectPreview = ({ title, subtitle, images }: Props) => {
 	return (
 		<Box sx={{ marginBottom: '5rem' }}>
-			<ProjectImageSlideShow images={['/anime_19.jpg', '/anime_19.jpg']} />
+			<ProjectImageSlideShow images={images} />
 
-			<Typography variant='h2' gutterBottom>
-				{title}
+			<Typography variant='h2' gutterBottom sx={{ textTransform: 'capitalize' }}>
+				{convertDashToSpace(title)}
 			</Typography>
-			<Typography>{description}</Typography>
+			<Typography>{subtitle}</Typography>
 
 			<Grid
 				container
