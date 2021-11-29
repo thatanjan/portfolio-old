@@ -35,7 +35,7 @@ const NavFab = () => {
 
 	return (
 		<Box>
-			<Navigation show={Boolean(value)} />
+			<Navigation show={Boolean(value)} closeNav={() => setValue(0)} />
 			{fabs.map(({ icon }, index) => (
 				<Zoom
 					in={value === index}

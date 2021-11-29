@@ -7,6 +7,7 @@ import TypographyLink from 'components/Links/TypographyLink'
 
 interface Props {
 	show: boolean
+	closeNav: () => void
 }
 
 const links = [
@@ -41,7 +42,7 @@ const links = [
 	},
 ]
 
-const Navigation = ({ show }: Props) => {
+const Navigation = ({ show, closeNav }: Props) => {
 	const baseFontSize = 1
 	return (
 		<Slide
@@ -85,6 +86,7 @@ const Navigation = ({ show }: Props) => {
 							},
 							color: 'white',
 						}}
+						onClick={closeNav}
 					>
 						{text}
 					</TypographyLink>
