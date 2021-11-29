@@ -51,13 +51,13 @@ function Link(props: Props) {
 	}
 
 	const linkStyle = {
-		...sx,
 		textDecoration: 'none',
 		color: 'secondary.dark',
 
 		'&:hover': {
 			textDecoration: 'underline',
 		},
+		...sx,
 	}
 
 	if (button) {
