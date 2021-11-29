@@ -1,13 +1,20 @@
 import React from 'react'
-import Grid from '@mui/material/Grid'
+import { GetStaticProps } from 'next'
+import { nanoid } from 'nanoid'
 
 import TitleHeader from 'components/Headers/TitleHeader'
 import ProjectPreview from 'components/Project/ProjectPreview'
 import CenterLayout from 'components/Layouts/CenterLayout'
 
-interface Props {}
+import Project from 'classes/Project/Project'
 
-const Projects = (props: Props) => {
+import allProject, { allProjectPaths } from 'data/projects/allProject'
+
+interface Props {
+	projects: Project[]
+}
+
+const Projects = ({ projects }: Props) => {
 	return (
 		<CenterLayout>
 			<TitleHeader
@@ -16,16 +23,21 @@ const Projects = (props: Props) => {
 '
 			/>
 
-			{Array(3)
-				.fill(0)
-				.map(() => (
-					<ProjectPreview
-						title='Project 1'
-						description='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
-					/>
-				))}
+			{projects.map((project) => (
+				<ProjectPreview {...project} key={nanoid()} />
+			))}
 		</CenterLayout>
 	)
+}
+
+// export getStaticProps function
+
+export const getStaticProps: GetStaticProps<Props> = async () => {
+	return {
+		props: {
+			projects: JSON.parse(JSON.stringify(allProject)),
+		},
+	}
 }
 
 export default Projects
