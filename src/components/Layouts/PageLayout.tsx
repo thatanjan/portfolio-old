@@ -1,6 +1,8 @@
 import React, { ReactNode } from 'react'
 import Paper from '@mui/material/Paper'
 
+import NavFab from 'components/Navigations/NavFab'
+
 interface Props {
 	children: ReactNode
 }
@@ -16,6 +18,8 @@ const PageLayout = ({ children }: Props) => {
 				}}
 			>
 				{children}
+
+				<NavFab />
 			</Paper>
 		</>
 	)
