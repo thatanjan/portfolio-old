@@ -3,10 +3,14 @@ import Grid from '@mui/material/Grid'
 import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
 import Divider from '@mui/material/Divider'
+import { nanoid } from 'nanoid'
 
 import CenterLayout from 'components/Layouts/CenterLayout'
 import TitleHeader from 'components/Headers/TitleHeader'
 import ProfileImage from 'components/Images/ProfileImage'
+import AboutMeQuestions from 'components/Questions/AboutMeQuestions'
+
+import allQuestions from 'data/aboutMe/questions'
 
 interface Props {}
 
@@ -54,13 +58,15 @@ const About = (props: Props) => {
 					</Grid>
 
 					<Grid item xs={12}>
-						<Typography align='center' variant='h2'>
+						<Typography align='center' variant='h2' sx={{ mt: '3rem' }}>
 							Anjan Shomodder
 						</Typography>
 					</Grid>
 				</Grid>
 
 				<Divider sx={{ margin: '3rem 0' }} />
+
+				<AboutMeQuestions data={allQuestions} />
 			</CenterLayout>
 		</>
 	)
