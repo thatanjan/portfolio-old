@@ -46,10 +46,16 @@ const ProjectImageSlideShow = ({ images }: Props) => {
 				}}
 				navigation
 			>
-				{images.map((imagePath) => (
+				{images.map((imagePath, index) => (
 					<SwiperSlide key={nanoid()}>
 						<Box>
-							<Image src={imagePath} layout='responsive' width={16} height={9} />
+							<Image
+								src={imagePath}
+								layout='responsive'
+								width={16}
+								height={9}
+								priority={!index}
+							/>
 						</Box>
 					</SwiperSlide>
 				))}
