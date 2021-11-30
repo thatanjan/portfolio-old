@@ -48,8 +48,25 @@ const NavFab = () => {
 					<Fab
 						sx={{
 							position: 'fixed',
-							bottom: 16,
-							right: 16,
+							bottom: {
+								xs: '2rem',
+								md: 0,
+							},
+							right: {
+								xs: '2rem',
+								sm: '3rem',
+								md: 0,
+							},
+							top: {
+								md: '6rem',
+								xl: '6rem',
+							},
+							left: {
+								md: '3rem',
+								lg: '5rem',
+								xl: '7rem',
+							},
+
 							color: 'white',
 							zIndex: 11,
 						}}
