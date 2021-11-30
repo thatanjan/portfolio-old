@@ -33,7 +33,7 @@ const ProjectPreview = ({ title, subtitle, images }: Props) => {
 			>
 				<Grid item xs={12}>
 					<LinkButton
-						href='/'
+						href={`/projects/${title}`}
 						variant='contained'
 						sx={{
 							width: {
