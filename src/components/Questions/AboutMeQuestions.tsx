@@ -1,6 +1,9 @@
 import React from 'react'
-import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
+import Accordion from '@mui/material/Accordion'
+import AccordionSummary from '@mui/material/AccordionSummary'
+import AccordionDetails from '@mui/material/AccordionDetails'
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore'
 import { nanoid } from 'nanoid'
 
 import AboutMeQuestion from 'classes/aboutMe/AboutMeQuestion'
@@ -12,19 +15,21 @@ interface Props {
 const AboutMeQuestions = ({ data }: Props) => {
 	return (
 		<>
-			{data.map(({ question, answer }) => (
-				<Box sx={{ mb: '1rem' }} key={nanoid()}>
-					<Typography
-						variant='h3'
-						gutterBottom
-						sx={{ textTransform: 'capitalize' }}
-						color='primary'
+			{data.map(({ question, answer }, index) => (
+				<Accordion
+					key={nanoid()}
+					TransitionProps={{ unmountOnExit: true }}
+					defaultExpanded={!index}
+				>
+					<AccordionSummary
+						expandIcon={<ExpandMoreIcon />}
+						aria-controls='panel1a-content'
+						id='panel1a-header'
 					>
-						{question}
-					</Typography>
-
-					{answer}
-				</Box>
+						<Typography>{question}</Typography>
+					</AccordionSummary>
+					<AccordionDetails> {answer}</AccordionDetails>
+				</Accordion>
 			))}
 		</>
 	)
