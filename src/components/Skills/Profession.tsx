@@ -1,6 +1,6 @@
 import React from 'react'
 import Typed from 'typed.js'
-import Typography, { TypographyProps } from '@mui/material/Typography'
+import Typography from '@mui/material/Typography'
 import Box from '@mui/material/Box'
 
 const professionData = [
@@ -13,7 +13,7 @@ const professionData = [
 
 const Type = () => {
 	const el = React.useRef<HTMLHeadingElement>(null)
-	const typed = React.useRef<HTMLHeadingElement | null>(null)
+	const typed = React.useRef<Typed | null>(null)
 
 	React.useEffect(() => {
 		if (el.current || typed.current) {
@@ -24,11 +24,11 @@ const Type = () => {
 				loop: true,
 			}
 
-			typed.current = new Typed(el.current, options)
+			typed.current = new Typed(el.current as HTMLHeadingElement, options)
 		}
 
 		return () => {
-			typed.current.destroy()
+			if (typed && typed.current) typed.current.destroy()
 		}
 	}, [])
 
