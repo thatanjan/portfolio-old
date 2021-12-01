@@ -19,7 +19,8 @@
 		"next": "latest",
 		"react": "latest",
 		"react-dom": "latest",
-		"swiper": "^7.3.1"
+		"swiper": "^7.3.1",
+		"typed.js": "^2.0.12"
 	},
 	"devDependencies": {
 		"eslint": "^8.3.0",
