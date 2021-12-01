@@ -137,9 +137,11 @@ const Index = () => {
 						</Grid>
 						<Grid item xs={10}>
 							<Typography>
-								I'm a Freelance UI/UX Designer and Developer based in London, England. I
-								strives to build immersive and beautiful web applications through
-								carefully crafted code and user-centric design.
+								I am a full stack developer who can develop applications from UI to
+								backend systems. I am looking for a company where I can prove myself by
+								providing great value with my skills and knowledge. I Want to join a
+								team where I can collaborate with intelligent people and learn from
+								them.
 							</Typography>
 						</Grid>
 
