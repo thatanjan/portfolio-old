@@ -54,7 +54,7 @@ const ProjectImageSlideShow = ({ images }: Props) => {
 								layout='responsive'
 								width={16}
 								height={9}
-								priority={!index}
+								priority={index < 3}
 							/>
 						</Box>
 					</SwiperSlide>
