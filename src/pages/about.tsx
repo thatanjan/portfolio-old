@@ -9,6 +9,7 @@ import CenterLayout from 'components/Layouts/CenterLayout'
 import TitleHeader from 'components/Headers/TitleHeader'
 import ProfileImage from 'components/Images/ProfileImage'
 import AboutMeQuestions from 'components/Questions/AboutMeQuestions'
+import Profession from 'components/Skills/Profession'
 
 import allQuestions from 'data/aboutMe/questions'
 
@@ -57,9 +58,18 @@ const About = (props: Props) => {
 						<ProfileImage />
 					</Grid>
 
-					<Grid item xs={12}>
-						<Typography align='center' variant='h2' sx={{ mt: '3rem' }}>
+					<Grid item xs={12} sx={{ display: 'grid', placeItems: 'center' }}>
+						<Typography align='center' variant='h4' sx={{ mt: '3rem' }}>
 							Anjan Shomodder
+						</Typography>
+
+						<Typography
+							variant='h3'
+							color='primary'
+							sx={{ mt: '1rem', textTransform: 'uppercase' }}
+							align='center'
+						>
+							<Profession />
 						</Typography>
 					</Grid>
 				</Grid>
