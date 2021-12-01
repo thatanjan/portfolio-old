@@ -8,6 +8,7 @@ interface Props {
 }
 
 const TitleHeader = ({ text, description }: Props) => {
+	const marginForDescriptionBars = '1rem'
 	return (
 		<Box
 			sx={{
@@ -27,7 +28,33 @@ const TitleHeader = ({ text, description }: Props) => {
 				{text}
 			</Typography>
 
-			<Typography align='center'>{description}</Typography>
+			<Typography
+				align='center'
+				sx={{
+					'&:after, &:before': {
+						content: `''`,
+						height: '.2rem',
+						width: {
+							md: '9%',
+							lg: '11%',
+						},
+						display: {
+							xs: 'none',
+							md: 'inline-block',
+						},
+						backgroundColor: 'primary.main',
+						mb: '0.6%',
+					},
+					'&:after': {
+						ml: marginForDescriptionBars,
+					},
+					'&:before': {
+						mr: marginForDescriptionBars,
+					},
+				}}
+			>
+				{description}
+			</Typography>
 		</Box>
 	)
 }
