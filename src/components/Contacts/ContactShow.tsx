@@ -10,7 +10,7 @@ import Contact from 'classes/Contact/Contact'
 import TypographyLink from 'components/Links/TypographyLink'
 
 const SingleContact = ({ name, href, image }: Contact) => {
-	const dimension = 200
+	const dimension = 120
 
 	return (
 		<Grid container rowSpacing={2}>
