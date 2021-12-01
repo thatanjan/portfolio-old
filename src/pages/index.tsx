@@ -8,6 +8,7 @@ import { nanoid } from 'nanoid'
 import LinkButton from 'components/Buttons/LinkButton'
 
 import ProfileImage from 'components/Images/ProfileImage'
+import Profession from 'components/Skills/Profession'
 
 const BackgroundImage = () => (
 	<Box
@@ -122,9 +123,16 @@ const Index = () => {
 								}}
 							>
 								I'm a{' '}
-								<Box sx={{ color: 'primary.main' }} component='span'>
-									full stack developer
-								</Box>
+								<Typography
+									color='primary'
+									sx={{
+										fontSize: 'inherit',
+										fontWeight: 'bold',
+										display: 'inline-block',
+									}}
+								>
+									<Profession />
+								</Typography>
 							</Typography>{' '}
 						</Grid>
 						<Grid item xs={10}>
