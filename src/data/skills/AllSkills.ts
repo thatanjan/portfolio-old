@@ -2,7 +2,7 @@ import Skill from 'classes/Skills/SkillClass'
 
 const git = new Skill('Git', 'git.png')
 const react = new Skill('React', 'react.png')
-const redux = new Skill('Redux', 'redux.jpeg')
+const redux = new Skill('Redux', 'redux.png')
 const javascript = new Skill('Javascript', 'javascript.png')
 const nextjs = new Skill('Next.js', 'nextjs.png')
 const mui = new Skill('Material-UI', 'mui.png')
