@@ -13,13 +13,20 @@ const SingleContact = ({ name, href, image }: Contact) => {
 	const dimension = 200
 
 	return (
-		<>
-			<Image src={image} height={dimension} width={dimension} objectFit='cover' />
+		<Grid container rowSpacing={2}>
+			<Grid item xs={12}>
+				<Image src={image} height={dimension} width={dimension} objectFit='cover' />
+			</Grid>
 
-			<TypographyLink href={href} sx={{ marginTop: '4rem' }}>
-				{name}
-			</TypographyLink>
-		</>
+			<Grid item xs={12}>
+				<TypographyLink
+					href={href}
+					sx={{ marginTop: '4rem', wordBreak: 'break-word' }}
+				>
+					{name}
+				</TypographyLink>
+			</Grid>
+		</Grid>
 	)
 }
 
