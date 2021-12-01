@@ -76,6 +76,15 @@ const About = (props: Props) => {
 
 				<Divider sx={{ margin: '3rem 0' }} />
 
+				<Typography
+					align='center'
+					variant='h3'
+					color='primary'
+					sx={{ textTransform: 'capitalize', mb: '2rem' }}
+				>
+					Your questions about me
+				</Typography>
+
 				<AboutMeQuestions data={allQuestions} />
 			</CenterLayout>
 		</>
