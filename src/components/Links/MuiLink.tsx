@@ -4,10 +4,7 @@ import clsx from 'clsx'
 import { useRouter } from 'next/router'
 import NextLink from 'next/link'
 
-const NextComposed = React.forwardRef(function NextComposed(
-	props: any,
-	ref: any
-) {
+const NextComposed = React.forwardRef((props: any, ref: any) => {
 	const { as, href, ...other } = props
 
 	return (
@@ -25,7 +22,7 @@ interface Props {
 	button?: boolean
 }
 
-function Link(props: Props) {
+const Link = (props: Props) => {
 	const {
 		MuiComponent,
 		href,

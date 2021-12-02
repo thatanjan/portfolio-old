@@ -43,12 +43,10 @@ const whatHaveYouDone = new AboutMeQuestion('What have you done').addAnswer(
 const whatProblemsDoYouSolve = new AboutMeQuestion(
 	'What problems do you solve'
 ).addAnswer(
-	<>
-		<Typography>
-			I can develop complex full stack web applications from UI to backEnd systems
-			like social media application, blogging, e-commerce website and many more.
-		</Typography>
-	</>
+	<Typography>
+		I can develop complex full stack web applications from UI to backEnd systems
+		like social media application, blogging, e-commerce website and many more.
+	</Typography>
 )
 
 const whyDoYouDoWhatYouDo = new AboutMeQuestion(
@@ -63,37 +61,35 @@ const whyDoYouDoWhatYouDo = new AboutMeQuestion(
 )
 
 const workTogather = new AboutMeQuestion(
-	"Let's work together. How can I contact you?"
+	"Let's work together. How can I contact you"
 ).addAnswer(
-	<>
-		<TypographyLink href='/contact'>Feel free to contact me</TypographyLink>
-	</>
+	<Typography>
+		I’m always open to discussing web development work. Feel free to contact me
+		any time. You can find the information from{' '}
+		<TypographyLink href='/contact'>here.</TypographyLink>
+	</Typography>
 )
 
 const whatAreYouLookingFor = new AboutMeQuestion(
 	'What are you looking for'
 ).addAnswer(
-	<>
-		<Typography>
-			I am looking for a company where I can prove myself by providing great value
-			with my skills and knowledge. Though I lack professional experience. But I am
-			hungry to learn more. I want to join a team where I can collaborate with
-			intelligent people and learn from them.
-		</Typography>
-	</>
+	<Typography>
+		I am looking for a company where I can prove myself by providing great value
+		with my skills and knowledge. Though I lack professional experience. But I am
+		hungry to learn more. I want to join a team where I can collaborate with
+		intelligent people and learn from them.
+	</Typography>
 )
 
 const whereIsYourDegree = new AboutMeQuestion('Where is your degree').addAnswer(
-	<>
-		<Typography>
-			I don't have a college degree. I believe a well-educated person is a
-			self-educated person. I taught myself programming through online courses,
-			podcasts and books. I didn't let a piece of paper stop me from learning. As a
-			self-taught person, I am always learning new things because knowledge is
-			power. I don't wait for others to teach me something. I am always looking for
-			new ways to improve my skills.
-		</Typography>
-	</>
+	<Typography>
+		I don't have a college degree. I believe a well-educated person is a
+		self-educated person. I taught myself programming through online courses,
+		podcasts and books. I didn't let a piece of paper stop me from learning. As a
+		self-taught person, I am always learning new things because knowledge is
+		power. I don't wait for others to teach me something. I am always looking for
+		new ways to improve my skills.
+	</Typography>
 )
 
 const allQuestions = [

@@ -7,9 +7,7 @@ import SkillsShow from 'components/Skills/SkillsShow'
 
 import { frontSkills, backSkills, tools } from 'data/skills/AllSkills'
 
-interface Props {}
-
-const Skills = (props: Props) => {
+const Skills = () => {
 	return (
 		<CenterLayout>
 			<TitleHeader

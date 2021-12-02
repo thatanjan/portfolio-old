@@ -17,6 +17,7 @@ interface MyAppProps extends AppProps {
 	emotionCache?: EmotionCache
 }
 
+// eslint-disable-next-line react/function-component-definition
 export default function MyApp(props: MyAppProps) {
 	const { Component, emotionCache = clientSideEmotionCache, pageProps } = props
 	return (

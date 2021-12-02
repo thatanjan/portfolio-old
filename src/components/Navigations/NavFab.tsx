@@ -3,6 +3,7 @@ import { useTheme } from '@mui/material/styles'
 import Zoom from '@mui/material/Zoom'
 import Fab from '@mui/material/Fab'
 import Box from '@mui/material/Box'
+import { nanoid } from 'nanoid'
 
 import MenuIcon from '@mui/icons-material/Menu'
 import CloseIcon from '@mui/icons-material/Close'
@@ -38,6 +39,7 @@ const NavFab = () => {
 			<Navigation show={Boolean(value)} closeNav={() => setValue(0)} />
 			{fabs.map(({ icon }, index) => (
 				<Zoom
+					key={nanoid()}
 					in={value === index}
 					timeout={transitionDuration}
 					style={{

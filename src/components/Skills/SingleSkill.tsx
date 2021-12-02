@@ -12,7 +12,13 @@ const SingleSkill = ({ name, image }: Props) => {
 
 	return (
 		<>
-			<Image src={image} height={dimension} width={dimension} objectFit='cover' />
+			<Image
+				alt={name}
+				src={image}
+				height={dimension}
+				width={dimension}
+				objectFit='cover'
+			/>
 
 			<Typography sx={{ textTransform: 'capitalize' }}>{name}</Typography>
 		</>

@@ -7,13 +7,11 @@ interface Props {
 
 const CenterLayout = ({ children }: Props) => {
 	return (
-		<>
-			<Grid container justifyContent='center'>
-				<Grid item xs={11} md={9} lg={7} xl={6}>
-					{children}
-				</Grid>
+		<Grid container justifyContent='center'>
+			<Grid item xs={11} md={9} lg={7} xl={6}>
+				{children}
 			</Grid>
-		</>
+		</Grid>
 	)
 }
 

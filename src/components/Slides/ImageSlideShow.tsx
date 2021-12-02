@@ -1,3 +1,6 @@
+/* eslint-disable import/no-unresolved */
+/* eslint-disable import/extensions */
+/* eslint-disable import/no-extraneous-dependencies */
 import React from 'react'
 
 import Image from 'next/image'
@@ -32,36 +35,35 @@ interface Props {
 	images: string[]
 }
 
-const ProjectImageSlideShow = ({ images }: Props) => {
-	return (
-		<Box sx={{ margin: '2rem auto' }}>
-			<CustomSwiperContainer
-				grabCursor
-				pagination={{
-					clickable: true,
-				}}
-				loop
-				autoplay={{
-					delay: 3000,
-				}}
-				navigation
-			>
-				{images.map((imagePath, index) => (
-					<SwiperSlide key={nanoid()}>
-						<Box>
-							<Image
-								src={imagePath}
-								layout='responsive'
-								width={16}
-								height={9}
-								priority={index < 3}
-							/>
-						</Box>
-					</SwiperSlide>
-				))}
-			</CustomSwiperContainer>
-		</Box>
-	)
-}
+const ProjectImageSlideShow = ({ images }: Props) => (
+	<Box sx={{ margin: '2rem auto' }}>
+		<CustomSwiperContainer
+			grabCursor
+			pagination={{
+				clickable: true,
+			}}
+			loop
+			autoplay={{
+				delay: 3000,
+			}}
+			navigation
+		>
+			{images.map((imagePath, index) => (
+				<SwiperSlide key={nanoid()}>
+					<Box>
+						<Image
+							src={imagePath}
+							layout='responsive'
+							width={16}
+							height={9}
+							priority={index < 3}
+							alt='Project images'
+						/>
+					</Box>
+				</SwiperSlide>
+			))}
+		</CustomSwiperContainer>
+	</Box>
+)
 
 export default ProjectImageSlideShow

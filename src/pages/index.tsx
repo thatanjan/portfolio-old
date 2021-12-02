@@ -23,6 +23,7 @@ const BackgroundImage = () => (
 		}}
 	>
 		<Image
+			alt='Anjan Shomodder'
 			src='dfdf'
 			loader={() => 'https://pbs.twimg.com/media/DYd2UBlX4AA_ysG.jpg:large'}
 			layout='fill'
@@ -122,7 +123,7 @@ const Index = () => {
 									},
 								}}
 							>
-								I'm a{' '}
+								I&apos;m a{' '}
 								<Typography
 									color='primary'
 									sx={{
@@ -153,7 +154,7 @@ const Index = () => {
 							sx={{ marginTop: { xs: '1rem' } }}
 						>
 							{['More about me', 'Hire me'].map((text, index) => (
-								<Grid item xs={6}>
+								<Grid item xs={6} key={nanoid()}>
 									<LinkButton
 										key={nanoid()}
 										href={index ? '/contact' : '/about'}

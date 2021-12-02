@@ -32,61 +32,55 @@ const ProjectPage = ({
 	},
 }: Props) => {
 	return (
-		<>
-			<Grid container justifyContent='center'>
-				<Grid
-					item
-					container
-					xs={11}
-					md={10}
-					lg={9}
-					xl={8}
-					justifyContent='space-between'
-				>
-					<Grid item xs={12}>
-						<ProjectImageSlideShow images={images} />
-					</Grid>
+		<Grid container justifyContent='center'>
+			<Grid
+				item
+				container
+				xs={11}
+				md={10}
+				lg={9}
+				xl={8}
+				justifyContent='space-between'
+			>
+				<Grid item xs={12}>
+					<ProjectImageSlideShow images={images} />
+				</Grid>
 
-					<Grid item xs={12} xl={7}>
-						<Typography
-							variant='h2'
-							gutterBottom
-							sx={{ textTransform: 'capitalize' }}
-						>
-							{convertDashToSpace(title)}
+				<Grid item xs={12} xl={7}>
+					<Typography variant='h2' gutterBottom sx={{ textTransform: 'capitalize' }}>
+						{convertDashToSpace(title)}
+					</Typography>
+
+					{description.map(paragraph => (
+						<Typography gutterBottom sx={{ lineHeight: 2 }} key={nanoid()}>
+							{paragraph}
 						</Typography>
+					))}
+				</Grid>
+				<Grid item xs={12} xl={4} pt={10}>
+					<Typography variant='h4'>Project Info</Typography>
 
-						{description.map((paragraph) => (
-							<Typography gutterBottom sx={{ lineHeight: 2 }} key={nanoid()}>
-								{paragraph}
-							</Typography>
-						))}
-					</Grid>
-					<Grid item xs={12} xl={4} pt={10}>
-						<Typography variant='h4'>Project Info</Typography>
+					<ProjectInfo infos={projectInfos} />
+				</Grid>
 
-						<ProjectInfo infos={projectInfos} />
-					</Grid>
+				<Grid item xs={12} mt='2rem'>
+					<Typography variant='h2' align='center' mb='3rem'>
+						Project Features
+					</Typography>
 
-					<Grid item xs={12} mt='2rem'>
-						<Typography variant='h2' align='center' mb='3rem'>
-							Project Features
-						</Typography>
+					<ProjectFeatures features={features} />
+				</Grid>
 
-						<ProjectFeatures features={features} />
-					</Grid>
-
-					<Grid item xs={12} mt='2rem'>
-						<Typography variant='h2' align='center' mb='3rem'>
-							Project Technologies
-						</Typography>
-						<SkillsShow title='Front End' skills={frontEndTechs} />
-						<SkillsShow title='Back End' skills={backEndTechs} />
-						<SkillsShow title='Tools used' skills={toolsUsed} />
-					</Grid>
+				<Grid item xs={12} mt='2rem'>
+					<Typography variant='h2' align='center' mb='3rem'>
+						Project Technologies
+					</Typography>
+					<SkillsShow title='Front End' skills={frontEndTechs} />
+					<SkillsShow title='Back End' skills={backEndTechs} />
+					<SkillsShow title='Tools used' skills={toolsUsed} />
 				</Grid>
 			</Grid>
-		</>
+		</Grid>
 	)
 }
 

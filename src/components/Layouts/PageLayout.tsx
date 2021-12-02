@@ -9,19 +9,17 @@ interface Props {
 
 const PageLayout = ({ children }: Props) => {
 	return (
-		<>
-			<Paper
-				sx={{
-					minHeight: '100vh',
-					maxWidth: '100vw',
-					overflowX: 'hidden',
-				}}
-			>
-				{children}
+		<Paper
+			sx={{
+				minHeight: '100vh',
+				maxWidth: '100vw',
+				overflowX: 'hidden',
+			}}
+		>
+			{children}
 
-				<NavFab />
-			</Paper>
-		</>
+			<NavFab />
+		</Paper>
 	)
 }
 

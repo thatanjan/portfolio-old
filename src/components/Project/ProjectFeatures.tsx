@@ -1,7 +1,6 @@
 import React from 'react'
 import { nanoid } from 'nanoid'
 import Grid from '@mui/material/Grid'
-import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
 
 interface Props {
@@ -13,7 +12,7 @@ interface Feature {
 	index: number
 }
 
-const Feature = ({ title, index }: Feature) => {
+const SingleFeature = ({ title, index }: Feature) => {
 	return (
 		<>
 			<Typography
@@ -47,27 +46,20 @@ const Feature = ({ title, index }: Feature) => {
 
 const ProjectFeatures = ({ features }: Props) => {
 	return (
-		<>
-			<Grid
-				container
-				justifyContent='space-around'
-				spacing={4}
-				sx={{ mb: '5rem' }}
-			>
-				{features.map((feature, index) => (
-					<Grid
-						item
-						xs={5}
-						sm={4}
-						xl={3}
-						key={nanoid()}
-						sx={{ textAlign: 'center', display: 'grid', placeItems: 'center' }}
-					>
-						<Feature key={nanoid()} title={feature} index={index + 1} />
-					</Grid>
-				))}
-			</Grid>
-		</>
+		<Grid container justifyContent='space-around' spacing={4} sx={{ mb: '5rem' }}>
+			{features.map((feature, index) => (
+				<Grid
+					item
+					xs={5}
+					sm={4}
+					xl={3}
+					key={nanoid()}
+					sx={{ textAlign: 'center', display: 'grid', placeItems: 'center' }}
+				>
+					<SingleFeature key={nanoid()} title={feature} index={index + 1} />
+				</Grid>
+			))}
+		</Grid>
 	)
 }
 

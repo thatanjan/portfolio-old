@@ -1,5 +1,6 @@
 import React from 'react'
 import Image, { ImageProps } from 'next/image'
+// eslint-disable-next-line import/no-extraneous-dependencies
 import { styled } from '@mui/system'
 import { useRouter } from 'next/router'
 

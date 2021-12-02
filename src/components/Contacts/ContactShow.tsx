@@ -15,7 +15,13 @@ const SingleContact = ({ name, href, image }: Contact) => {
 	return (
 		<Grid container rowSpacing={2}>
 			<Grid item xs={12}>
-				<Image src={image} height={dimension} width={dimension} objectFit='cover' />
+				<Image
+					alt={name}
+					src={image}
+					height={dimension}
+					width={dimension}
+					objectFit='cover'
+				/>
 			</Grid>
 
 			<Grid item xs={12}>
@@ -45,7 +51,7 @@ const ContactShow = () => {
 				</Typography>
 			</Grid>
 
-			{allContacts.map((contact) => (
+			{allContacts.map(contact => (
 				<Grid item xs={5} sm={4} xl={3} key={nanoid()} sx={{ textAlign: 'center' }}>
 					<SingleContact {...contact} />
 				</Grid>
