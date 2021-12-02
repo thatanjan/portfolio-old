@@ -4,9 +4,8 @@
 		"es2021": true
 	},
 	"extends": [
-		"airbnb",
 		"plugin:react/recommended",
-		"prettier/react",
+		"airbnb",
 		"prettier",
 		"next/core-web-vitals"
 	],
