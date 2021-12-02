@@ -1,6 +1,7 @@
 import React from 'react'
 import { GetStaticProps } from 'next'
 import { nanoid } from 'nanoid'
+import { NextSeo } from 'next-seo'
 
 import TitleHeader from 'components/Headers/TitleHeader'
 import ProjectPreview from 'components/Project/ProjectPreview'
@@ -16,16 +17,20 @@ interface Props {
 
 const Projects = ({ projects }: Props) => {
 	return (
-		<CenterLayout>
-			<TitleHeader
-				text='My projects'
-				description='All web development projects from front end to full stack'
-			/>
+		<>
+			<NextSeo title='Projects' description='Projects of Anjan Shomodder' />
 
-			{projects.map((project) => (
-				<ProjectPreview {...project} key={nanoid()} />
-			))}
-		</CenterLayout>
+			<CenterLayout>
+				<TitleHeader
+					text='My projects'
+					description='All web development projects from front end to full stack'
+				/>
+
+				{projects.map(project => (
+					<ProjectPreview {...project} key={nanoid()} />
+				))}
+			</CenterLayout>
+		</>
 	)
 }
 

@@ -4,6 +4,7 @@ import Box from '@mui/material/Box'
 import Grid from '@mui/material/Grid'
 import Image from 'next/image'
 import { nanoid } from 'nanoid'
+import { NextSeo } from 'next-seo'
 
 import LinkButton from 'components/Buttons/LinkButton'
 
@@ -46,6 +47,11 @@ const BackgroundImage = () => (
 const Index = () => {
 	return (
 		<>
+			<NextSeo
+				title='Anjan Shomodder'
+				description="Portfolio website of Anjan Shomodder. Anjan is a full stack web developer, Blogger and instructor at Cules Coding youtube channel. Creator of open source Social media application 'Confession'"
+			/>
+
 			<BackgroundImage />
 
 			<Box
