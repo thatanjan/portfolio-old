@@ -16,7 +16,7 @@ const Contact = (props: Props) => {
 			<CenterLayout>
 				<TitleHeader
 					text='GET IN TOUCH'
-					description='I’M ALWAYS OPEN TO DISCUSSING PRODUCT DESIGN WORK OR PARTNERSHIPS.'
+					description='i’m always open to discussing web development work'
 				/>
 
 				<Box sx={{ mb: '5rem' }}>

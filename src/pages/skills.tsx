@@ -14,7 +14,7 @@ const Skills = (props: Props) => {
 		<CenterLayout>
 			<TitleHeader
 				text='My Skills'
-				description='A FEW RECENT DESIGN AND CODING PROJECTS. WANT TO SEE MORE? EMAIL ME.'
+				description='I am a Full stack developer. Here are some of the technologies and tools that I work with'
 			/>
 
 			<SkillsShow title='Front End Skills' skills={frontSkills} />

@@ -21,7 +21,7 @@ const About = (props: Props) => {
 			<CenterLayout>
 				<TitleHeader
 					text='ABOUT ME'
-					description='I DESIGN AND CODE BEAUTIFUL THINGS, AND I LOVE WHAT I DO.'
+					description='I develop full stack web applications, AND I LOVE WHAT I DO'
 				/>
 
 				<Grid

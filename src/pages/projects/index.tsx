@@ -8,7 +8,7 @@ import CenterLayout from 'components/Layouts/CenterLayout'
 
 import Project from 'classes/Project/Project'
 
-import allProject, { allProjectPaths } from 'data/projects/allProject'
+import allProject from 'data/projects/allProject'
 
 interface Props {
 	projects: Project[]
@@ -19,8 +19,7 @@ const Projects = ({ projects }: Props) => {
 		<CenterLayout>
 			<TitleHeader
 				text='My projects'
-				description='A FEW RECENT DESIGN AND CODING PROJECTS. WANT TO SEE MORE? EMAIL ME.
-'
+				description='All web development projects from front end to full stack'
 			/>
 
 			{projects.map((project) => (
@@ -29,8 +28,6 @@ const Projects = ({ projects }: Props) => {
 		</CenterLayout>
 	)
 }
-
-// export getStaticProps function
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
 	return {
