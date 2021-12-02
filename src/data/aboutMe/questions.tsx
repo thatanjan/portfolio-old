@@ -77,7 +77,7 @@ const whatAreYouLookingFor = new AboutMeQuestion(
 		<Typography>
 			I am looking for a company where I can prove myself by providing great value
 			with my skills and knowledge. Though I lack professional experience. But I am
-			hungry to learn more. I Want to join a team where I can collaborate with
+			hungry to learn more. I want to join a team where I can collaborate with
 			intelligent people and learn from them.
 		</Typography>
 	</>
