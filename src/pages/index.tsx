@@ -139,7 +139,7 @@ const Index = () => {
 							<Typography>
 								I am a full stack developer who can develop applications from UI to
 								backend systems. I am looking for a company where I can prove myself by
-								providing great value with my skills and knowledge. I Want to join a
+								providing great value with my skills and knowledge. I want to join a
 								team where I can collaborate with intelligent people and learn from
 								them.
 							</Typography>
